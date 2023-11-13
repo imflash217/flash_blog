@@ -99,6 +99,13 @@ This is pre text
 #### Code block with backticks and language specified
 
 ```html {linenos=true}
+import numpy as np
+def main():
+    x = np.array(10,10);
+    print(x.shape)
+```
+
+```html {linenos=true}
 <!DOCTYPE html>
 <html lang="en">
     <head>
