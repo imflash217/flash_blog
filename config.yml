@@ -140,12 +140,20 @@ markup:
     renderer:
       unsafe: true
   highlight:
-    noClasses: false
-    # anchorLineNos: true
     codeFences: true
-    guessSyntax: true
-    lineNos: false
     style: monokai
+    anchorLineNos: false
+    guessSyntax: false
+    hl_Lines: ""
+    hl_inline: false
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    noHl: false
+    tabWidth: 4
+    wrapperClass: highlight
 
 privacy:
   vimeo:
