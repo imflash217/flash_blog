@@ -80,20 +80,18 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "PaperMod"
+    Title: "About Me"
     Content: >
       My name is Vinay Kumar. I am a Machine Learning Engineer working on Transformer based Language & Vision models.
       I love doing research and build products that serves to large number of users.
 
-      <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="imflash217" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/imflash217?trk=profile-badge">Vinay Kumar</a></div>
+      # <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="imflash217" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/imflash217?trk=profile-badge">Vinay Kumar</a></div>
 
   socialIcons:
     - name: github
       url: "https://github.com/imflash217"
-    - name: KoFi
-      url: "https://ko-fi.com/imflash217"
-    - name: Rss
-      url: "index.xml"
+    - name: linkedin
+      url: "https://linkedin.com/in/imflash217"
 
   editPost:
     URL: "https://github.com/imflash217/hugo-PaperMod/tree/exampleSite/content"
