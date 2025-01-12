@@ -1,6 +1,6 @@
 baseURL: "https://imflash217.github.io/" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 title: Vinay Kumar # Flash🚀Log
-paginate: 5
+paginate: 5 # the number of posts per-page before pagination starts
 theme: PaperMod
 
 enableInlineShortcodes: true
@@ -82,7 +82,7 @@ params:
   homeInfoParams:
     Title: "About Me"
     Content: >
-      My name is Vinay Kumar. I am a <mark> Machine Learning Engineer </mark> working on Transformer based Language & Vision models.
+      My name is Vinay Kumar. I am a <mark>Machine Learning Engineer</mark> working on Transformer based Language & Vision models.
       I love doing research and build products that serves to large number of users.
 
   socialIcons:
