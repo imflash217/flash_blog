@@ -11,7 +11,7 @@ ShowToc: true
 TocOpen: true
 
 cover:
-  image: https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png # "<image path/url>"
+  image:  https://avatars.githubusercontent.com/u/12234745?v=4  # "<image path/url>"
   # can also paste direct link from external site
   # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
   # ex. https://avatars.githubusercontent.com/u/12234745?v=4
