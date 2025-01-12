@@ -123,7 +123,7 @@ def train(task_name:str, model_name:str, *args, **kwargs)->None:
 
 #### Code block with backticks and language specified
 
-```python {linenos=true}
+```Python
 import numpy as np
 def main():
     x = np.array(10,10);
