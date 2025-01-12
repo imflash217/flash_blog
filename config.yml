@@ -35,10 +35,10 @@ languages:
         - name: Tags
           url: tags/
           weight: 10
-        - name: WiKi
-          url: https://github.com/imflash217/hugo-PaperMod/wiki/
-        - name: Discord
-          url: https://discord.gg/ahpmTvhVmp
+        - name: Github
+          url: https://github.com/imflash217/
+        - name: LinkedIn
+          url: https://www.linkedin.com/in/imflash217
 
 outputs:
   home:
@@ -48,7 +48,7 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Theme PaperMod - https://github.com/imflash217/hugo-PaperMod"
+  description: "Blogs & Articles on Machine Learning by @imflash217"
   author: Vinay Kumar
   # author: ["Me", "You"] # multiple authors
 
@@ -64,11 +64,11 @@ params:
   ShowRssButtonInSectionTermList: true
   ShowToc: true
   # comments: false
-  images: ["papermod-cover.png"]
+  # images: ["papermod-cover.png"]
 
   profileMode:
     enabled: false
-    title: PaperMod
+    title: Vinay Kumar
     imageUrl: "#"
     imageTitle: my image
     # imageWidth: 120
@@ -82,17 +82,14 @@ params:
   homeInfoParams:
     Title: "PaperMod"
     Content: >
-      Welcome to demo of hugo's theme PaperMod.
+      My name is Vinay Kumar. I am a Machine Learning Engineer working on Transformer based Language & Vision models.
+      I love doing research and build products that serves to large number of users.
 
-      - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
-
-      - Do give a 🌟 on Github !
-
-      - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
+      <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="imflash217" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/imflash217?trk=profile-badge">Vinay Kumar</a></div>
 
   socialIcons:
     - name: github
-      url: "https://github.com/imflash217/hugo-PaperMod"
+      url: "https://github.com/imflash217"
     - name: KoFi
       url: "https://ko-fi.com/imflash217"
     - name: Rss
@@ -141,7 +138,7 @@ markup:
       unsafe: true
   highlight:
     codeFences: true
-    # style: monokai
+    # style: monokai # dracula
     anchorLineNos: false
     guessSyntax: false
     hl_Lines: ""

@@ -5,7 +5,7 @@ date: "2019-03-05"
 description: "Guide to emoji usage in Hugo"
 tags: ["emoji"]
 ShowToc: false
-ShowBreadCrumbs: false
+ShowBreadCrumbs: true
 cover:
   image: https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png # "<image path/url>"
   # these have a recommended image aspect ratio which is 4:3 in most of the cases.
