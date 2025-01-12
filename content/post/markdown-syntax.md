@@ -96,7 +96,19 @@ This is pre text
 
 #### Code block with backticks
 
+```python
+import torch
+from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
+
+def train(task_name:str, model_name:str, *args, **kwargs)->None:
+    """
+    Do something here
+    """
+    classifier_pipe = pipeline(task_name, model_name)
+    return None
 ```
+
+```html
 <!DOCTYPE html>
 <html lang="en">
     <head>
