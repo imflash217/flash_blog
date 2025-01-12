@@ -10,6 +10,7 @@ cover:
   image: https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png # "<image path/url>"
   # can also paste direct link from external site
   # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
+  # ex. https://avatars.githubusercontent.com/u/12234745?v=4
   alt: "<alt text>"
   caption: "<text>"
   relative: false # To use relative path for cover image, used in hugo Page-bundles
