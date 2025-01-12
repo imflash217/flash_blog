@@ -150,7 +150,7 @@ markup:
     lineNoStart: 1
     lineNos: false
     lineNumbersInTable: true
-    noClasses: true
+    noClasses: false
     noHl: false
     tabWidth: 4
     wrapperClass: highlight
