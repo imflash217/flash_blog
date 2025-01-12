@@ -1,7 +1,7 @@
 baseURL = "https://imflash217.github.io/"
 languageCode = "zh-cn"
 title = "MeiK's blog"
-theme = "github-style"
+theme = "PaperMod"                        #"github-style"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
