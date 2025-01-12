@@ -96,7 +96,7 @@ This is pre text
 
 #### Code block with backticks
 
-```python
+```python {linenos=true}
 import torch
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 
@@ -123,7 +123,7 @@ def train(task_name:str, model_name:str, *args, **kwargs)->None:
 
 #### Code block with backticks and language specified
 
-```html {linenos=true}
+```python {linenos=true}
 import numpy as np
 def main():
     x = np.array(10,10);
