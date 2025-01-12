@@ -141,7 +141,7 @@ markup:
       unsafe: true
   highlight:
     codeFences: true
-    style: monokai
+    # style: monokai
     anchorLineNos: false
     guessSyntax: false
     hl_Lines: ""
