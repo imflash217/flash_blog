@@ -1,6 +1,6 @@
 baseURL: "https://imflash217.github.io/" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 title: Vinay Kumar # Flash🚀Log
-paginate: 5 # the number of posts per-page before pagination starts
+paginate: 20 # the number of posts per-page before pagination starts
 theme: PaperMod
 
 enableInlineShortcodes: true
