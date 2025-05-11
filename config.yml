@@ -149,25 +149,24 @@ markup:
     wrapperClass: highlight
 
 privacy:
-  vimeo:
-    disabled: false
-    simple: true
+  # vimeo:
+  #   disabled: false
+  #   simple: true
 
-  twitter:
-    disabled: false
-    enableDNT: true
-    simple: true
+  # twitter:
+  #   disabled: false
+  #   enableDNT: true
+  #   simple: true
 
-  instagram:
-    disabled: false
-    simple: true
+  # instagram:
+  #   disabled: false
+  #   simple: true
 
   youtube:
     disabled: false
     privacyEnhanced: true
-
-services:
-  instagram:
-    disableInlineCSS: true
-  twitter:
-    disableInlineCSS: true
+# services:
+#   instagram:
+#     disableInlineCSS: true
+#   twitter:
+#     disableInlineCSS: true
