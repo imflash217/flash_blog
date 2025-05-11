@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ronalds Vilcins - http://localhost:1313/">
+  <title> | Vinay Kumar</title>
+  <meta name="description" content="Blogs &amp; Articles on Machine Learning by @imflash217">
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Lets start by introducing a Vector class
+from array import array import math class Vector2D: typecode = &#34;d&#34; def __init__(self, x, y): self.x = float(x) self.y = float(y) def __iter__(self): return (i for i in (self.x, self.y)) def __repr__(self): class_name = type(self).__name__ return &#34;{}({!r}, {!r})&#34;.format(class_name, *self) def __str__(self): return str(tuple(self)) def __bytes__(self): return (bytes([ord(self.typecode)]) &#43; bytes(array(self.typecode, self))) def __eq__(self, other): return tuple(self) == tuple(other) def __abs__(self): return math.hypot(self.x, self.y) def __bool__(self): return bool(abs(self)) An alternative constructor # Since in above example, we export a Vector2D as bytes; we also need a method to imports a vector2D from binary sequence."/>
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Lets start by introducing a Vector class
+from array import array import math class Vector2D: typecode = &#34;d&#34; def __init__(self, x, y): self.x = float(x) self.y = float(y) def __iter__(self): return (i for i in (self.x, self.y)) def __repr__(self): class_name = type(self).__name__ return &#34;{}({!r}, {!r})&#34;.format(class_name, *self) def __str__(self): return str(tuple(self)) def __bytes__(self): return (bytes([ord(self.typecode)]) &#43; bytes(array(self.typecode, self))) def __eq__(self, other): return tuple(self) == tuple(other) def __abs__(self): return math.hypot(self.x, self.y) def __bool__(self): return bool(abs(self)) An alternative constructor # Since in above example, we export a Vector2D as bytes; we also need a method to imports a vector2D from binary sequence." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/python/pythonic_object/" /><meta property="article:section" content="post" />
+
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Lets start by introducing a Vector class
+from array import array import math class Vector2D: typecode = &#34;d&#34; def __init__(self, x, y): self.x = float(x) self.y = float(y) def __iter__(self): return (i for i in (self.x, self.y)) def __repr__(self): class_name = type(self).__name__ return &#34;{}({!r}, {!r})&#34;.format(class_name, *self) def __str__(self): return str(tuple(self)) def __bytes__(self): return (bytes([ord(self.typecode)]) &#43; bytes(array(self.typecode, self))) def __eq__(self, other): return tuple(self) == tuple(other) def __abs__(self): return math.hypot(self.x, self.y) def __bool__(self): return bool(abs(self)) An alternative constructor # Since in above example, we export a Vector2D as bytes; we also need a method to imports a vector2D from binary sequence.">
+
+<meta itemprop="wordCount" content="468">
+<meta itemprop="keywords" content="" />
+  <link rel="canonical" href="http://localhost:1313/post/python/pythonic_object/">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
+  <link rel="alternate" type="application/atom+xml" title="Vinay Kumar" href="http://localhost:1313/atom.xml" />
+  <link rel="alternate" type="application/json" title="Vinay Kumar" href="http://localhost:1313/feed.json" />
+  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
+  
+  <style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style>
+
+  
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "post",
+    "name": "",
+    "headline": "",
+    "alternativeHeadline": "",
+    "description": "Lets start by introducing a Vector class\nfrom array import array import math class Vector2D: typecode = \u0026#34;d\u0026#34; def __init__(self, x, y): self.x = float(x) self.y = float(y) def __iter__(self): return (i for i in (self.x, self.y)) def __repr__(self): class_name = type(self).__name__ return \u0026#34;{}({!r}, {!r})\u0026#34;.format(class_name, *self) def __str__(self): return str(tuple(self)) def __bytes__(self): return (bytes([ord(self.typecode)]) \u002b bytes(array(self.typecode, self))) def __eq__(self, other): return tuple(self) == tuple(other) def __abs__(self): return math.hypot(self.x, self.y) def __bool__(self): return bool(abs(self)) An alternative constructor # Since in above example, we export a Vector2D as bytes; we also need a method to imports a vector2D from binary sequence.",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http:\/\/localhost:1313\/post\/python\/pythonic_object\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "copyrightHolder" : "Vinay Kumar",
+    "copyrightYear" : "0001",
+    "dateCreated": "0001-01-01T00:00:00.00Z",
+    "datePublished": "0001-01-01T00:00:00.00Z",
+    "dateModified": "0001-01-01T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Vinay Kumar",
+        "url": "http://localhost:1313/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http:\/\/localhost:1313\/",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "http://localhost:1313/",
+    "url" : "http:\/\/localhost:1313\/post\/python\/pythonic_object\/",
+    "wordCount" : "468",
+    "genre" : [ ],
+    "keywords" : [ ]
+}
+</script>
+
+
+</head>
+<body>
+<main>
+      <header>
+    <nav>
+      
+  <ul>
+    <li>
+      
+      
+      
+      
+      <a href="archives" >Archive</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="search/" >Search</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="tags/" >Tags</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.github.com/imflash217/" >Github</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.linkedin.com/in/imflash217" >LinkedIn</a>
+    </li>
+  
+  </ul>
+    </nav>
+  </header>
+  <hr>
+
+
+
+  <section>
+
+      
+
+      <span itemprop="articleBody">
+      <p>Lets start by introducing a <code>Vector</code> class</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">array</span> <span class="kn">import</span> <span class="n">array</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">math</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Vector2D</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">typecode</span> <span class="o">=</span> <span class="s2">&#34;d&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">class_name</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s2">&#34;</span><span class="si">{}</span><span class="s2">(</span><span class="si">{!r}</span><span class="s2">, </span><span class="si">{!r}</span><span class="s2">)&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">class_name</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__bytes__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">(</span><span class="nb">bytes</span><span class="p">([</span><span class="nb">ord</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">typecode</span><span class="p">)])</span> <span class="o">+</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">typecode</span><span class="p">,</span> <span class="bp">self</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">==</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__abs__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__bool__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
+</span></span></code></pre></div><h2 id="an-alternative-constructor">An alternative constructor <a href="#an-alternative-constructor" class="hash">#</a></h2>
+<p>Since in above example, we <strong>export</strong> a <code>Vector2D</code> as bytes;
+we also need a method to <strong>imports</strong> a <code>vector2D</code> from binary sequence.</p>
+<p>Looking at the standard library for inspiration, we see that <code>array.array</code>
+has a class method <code>frombytes()</code>. Lets adopt this nomenclature in our <code>Vector2D</code> class.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## adding a import method from a binary sequence</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## inside Vector2D class definition</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@classmethod</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">frombytes</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">octets</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">typecode</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">octets</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="n">memv</span> <span class="o">=</span> <span class="nb">memoryview</span><span class="p">(</span><span class="n">octets</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">typecode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">*</span><span class="n">memv</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="classmethod-vs-staticmethod">@classmethod v/s @staticmethod <a href="#classmethod-vs-staticmethod" class="hash">#</a></h2>
+<p><strong><code>@classmethod</code></strong>:</p>
+<ol>
+<li>It is used to define a method that operates on <strong>class</strong>; not on <strong>instances</strong>.</li>
+<li>It receives the <strong>class</strong> itself as the 1st argument (eg. <code>cls</code> in above code)
+instead of an instance (eg. <code>self</code>)</li>
+<li>Most commonly used as <strong>alternate constructors</strong> (eg. <code>frombytes</code> in above code)
+Note: (in the above <code>frombyytes()</code>) how the last line in <code>frombytes()</code> uses <code>cls</code> argument by invoking
+it to build a new instance (<code>cls(*memv)</code>)</li>
+<li>By convention the 1st argument of the <code>@classmethod</code> should be named <code>cls</code>
+(but Python does not care about the name though)</li>
+</ol>
+<p><strong><code>@staticmethod</code></strong></p>
+<p>A static method is just like a plain old <strong>function</strong> that happens to live inside the body of a <strong>class</strong>
+instead of being defind outside the class.
+It does not have access to internal state variables of the class or the instance.
+It is kept inside the class definition to provide easy access to related functions/method,
+so the user have access to all necessary method for a class within itself instead of finding it elsewhere.</p>
+<p>An example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Demo</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@classmethod</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">klassmeth</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">*</span><span class="n">args</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nd">@staticmethod</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">statmeth</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">*</span><span class="n">args</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## no matter how it is invoked, Demo.klassmethod always receives Demo class as its 1st argument</span>
+</span></span><span class="line"><span class="cl"><span class="n">Demo</span><span class="o">.</span><span class="n">klassmeth</span><span class="p">()</span>            <span class="c1">## (&lt;class &#34;__main__.Demo&#34;&gt;,)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Demo</span><span class="o">.</span><span class="n">klassmeth</span><span class="p">(</span><span class="s2">&#34;spam&#34;</span><span class="p">)</span>      <span class="c1">## (&lt;class &#34;__main__.Demo&#34;&gt;, &#34;spam&#34;)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Demo</span><span class="o">.</span><span class="n">statmeth</span><span class="p">()</span>             <span class="c1">## ()</span>
+</span></span><span class="line"><span class="cl"><span class="n">Demo</span><span class="o">.</span><span class="n">statmeth</span><span class="p">(</span><span class="s2">&#34;spam&#34;</span><span class="p">)</span>       <span class="c1">## (&#34;spam&#34;)</span>
+</span></span></code></pre></div><h2 id="formatted-displays">Formatted displays <a href="#formatted-displays" class="hash">#</a></h2>
+<ol>
+<li><code>int</code> type supports <code>b</code> (for base=2 integers) and <code>x</code> (for base=16 integers).</li>
+<li><code>float</code> type implements <code>f</code> (for fixed-points) and <code>%</code> (for a percentage display).</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">format</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="s2">&#34;b&#34;</span><span class="p">)</span>         <span class="c1">## &#34;101010&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">format</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="s2">&#34;x&#34;</span><span class="p">)</span>         <span class="c1">## &#34;2a&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">format</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">)</span>        <span class="c1">## 0.666667</span>
+</span></span><span class="line"><span class="cl"><span class="nb">format</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&#34;.3f&#34;</span><span class="p">)</span>      <span class="c1">## 0.667</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">format</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&#34;%&#34;</span><span class="p">)</span>        <span class="c1">## 66.666667%</span>
+</span></span><span class="line"><span class="cl"><span class="nb">format</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&#34;.2%&#34;</span><span class="p">)</span>      <span class="c1">## 66.67%</span>
+</span></span></code></pre></div><p>The Format Specifier Mini Language is extensible because each class gets to interpret
+the <code>format_spec</code> argument as it likes.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</span></span><span class="line"><span class="cl"><span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">format</span><span class="p">(</span><span class="n">now</span><span class="p">,</span> <span class="s2">&#34;%H:%M:%S&#34;</span><span class="p">)</span>             <span class="c1">## &#34;18:49:05&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Its now {:%I:%M %p}&#34;</span><span class="p">)</span>        <span class="c1">## &#34;Its now 06:49 PM&#34;</span>
+</span></span></code></pre></div><p>If a class has no <code>__format__()</code> method, the method inherited from <code>object</code> return <code>str(my_object)</code>.</p>
+
+      </span>
+       
+
+    </section>
+    <hr>
+<footer>
+	  <nav>
+      
+  <ul>
+    <li>
+      © 2025
+    </li>
+  
+  </ul>
+    </nav>
+</footer>
+
+  </main>
+</body>
+</html>

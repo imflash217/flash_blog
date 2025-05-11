@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ronalds Vilcins - http://localhost:1313/">
+  <title> | Vinay Kumar</title>
+  <meta name="description" content="Blogs &amp; Articles on Machine Learning by @imflash217">
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Deep Learning Interviews # Introduction # Q1: Distribution of maximum entropy # What is the distribution of maximum entropy; i.e. the distribution that has the maximum entropy among all distributions in a bounded interval [a, b], (-\inf, &#43;\inf)?
+??? success &ldquo;Solution&rdquo; In a bounded interval [a, b], the UNIFORM DISTRIBUTION has the maximum entropy. The variance of the Uniform Distribution $\mathcal{U}(a, b)$ is $\sigma^2 = \frac{(b-a)^2}{12}$. Therefore, the maximum entropy in a bounded interval [a, b] is $\left(\frac{\log{12}}{2} &#43; \log(\sigma)\right)$"/>
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Deep Learning Interviews # Introduction # Q1: Distribution of maximum entropy # What is the distribution of maximum entropy; i.e. the distribution that has the maximum entropy among all distributions in a bounded interval [a, b], (-\inf, &#43;\inf)?
+??? success &ldquo;Solution&rdquo; In a bounded interval [a, b], the UNIFORM DISTRIBUTION has the maximum entropy. The variance of the Uniform Distribution $\mathcal{U}(a, b)$ is $\sigma^2 = \frac{(b-a)^2}{12}$. Therefore, the maximum entropy in a bounded interval [a, b] is $\left(\frac{\log{12}}{2} &#43; \log(\sigma)\right)$" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/blogs/deep_learning/dl_interviews/" /><meta property="article:section" content="post" />
+
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Deep Learning Interviews # Introduction # Q1: Distribution of maximum entropy # What is the distribution of maximum entropy; i.e. the distribution that has the maximum entropy among all distributions in a bounded interval [a, b], (-\inf, &#43;\inf)?
+??? success &ldquo;Solution&rdquo; In a bounded interval [a, b], the UNIFORM DISTRIBUTION has the maximum entropy. The variance of the Uniform Distribution $\mathcal{U}(a, b)$ is $\sigma^2 = \frac{(b-a)^2}{12}$. Therefore, the maximum entropy in a bounded interval [a, b] is $\left(\frac{\log{12}}{2} &#43; \log(\sigma)\right)$">
+
+<meta itemprop="wordCount" content="616">
+<meta itemprop="keywords" content="" />
+  <link rel="canonical" href="http://localhost:1313/post/blogs/deep_learning/dl_interviews/">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
+  <link rel="alternate" type="application/atom+xml" title="Vinay Kumar" href="http://localhost:1313/atom.xml" />
+  <link rel="alternate" type="application/json" title="Vinay Kumar" href="http://localhost:1313/feed.json" />
+  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
+  
+  <style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style>
+
+  
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "post",
+    "name": "",
+    "headline": "",
+    "alternativeHeadline": "",
+    "description": "Deep Learning Interviews # Introduction # Q1: Distribution of maximum entropy # What is the distribution of maximum entropy; i.e. the distribution that has the maximum entropy among all distributions in a bounded interval [a, b], (-\\inf, \u002b\\inf)?\n??? success \u0026ldquo;Solution\u0026rdquo; In a bounded interval [a, b], the UNIFORM DISTRIBUTION has the maximum entropy. The variance of the Uniform Distribution $\\mathcal{U}(a, b)$ is $\\sigma^2 = \\frac{(b-a)^2}{12}$. Therefore, the maximum entropy in a bounded interval [a, b] is $\\left(\\frac{\\log{12}}{2} \u002b \\log(\\sigma)\\right)$",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http:\/\/localhost:1313\/post\/blogs\/deep_learning\/dl_interviews\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "copyrightHolder" : "Vinay Kumar",
+    "copyrightYear" : "0001",
+    "dateCreated": "0001-01-01T00:00:00.00Z",
+    "datePublished": "0001-01-01T00:00:00.00Z",
+    "dateModified": "0001-01-01T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Vinay Kumar",
+        "url": "http://localhost:1313/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http:\/\/localhost:1313\/",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "http://localhost:1313/",
+    "url" : "http:\/\/localhost:1313\/post\/blogs\/deep_learning\/dl_interviews\/",
+    "wordCount" : "616",
+    "genre" : [ ],
+    "keywords" : [ ]
+}
+</script>
+
+
+</head>
+<body>
+<main>
+      <header>
+    <nav>
+      
+  <ul>
+    <li>
+      
+      
+      
+      
+      <a href="archives" >Archive</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="search/" >Search</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="tags/" >Tags</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.github.com/imflash217/" >Github</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.linkedin.com/in/imflash217" >LinkedIn</a>
+    </li>
+  
+  </ul>
+    </nav>
+  </header>
+  <hr>
+
+
+
+  <section>
+
+      
+
+      <span itemprop="articleBody">
+      <!-- ---
+hide:
+  - navigation # Hide navigation
+  - toc        # Hide table of contents
+--- -->
+<h1 id="deep-learning-interviews">Deep Learning Interviews <a href="#deep-learning-interviews" class="hash">#</a></h1>
+<!-- ######################################################################################################### -->
+<h2 id="introduction">Introduction <a href="#introduction" class="hash">#</a></h2>
+<hr>
+<h3 id="q1-distribution-of-maximum-entropy">Q1: Distribution of maximum entropy <a href="#q1-distribution-of-maximum-entropy" class="hash">#</a></h3>
+<blockquote>
+<p>What is the distribution of <strong>maximum entropy</strong>; i.e. the distribution that has the maximum entropy among all distributions in a bounded interval <code>[a, b]</code>, <code>(-\inf, +\inf)</code>?</p>
+</blockquote>
+<p>??? success &ldquo;Solution&rdquo;
+In a bounded interval <code>[a, b]</code>, the <strong>UNIFORM DISTRIBUTION</strong> has the maximum entropy. The variance of the Uniform Distribution $\mathcal{U}(a, b)$ is $\sigma^2 = \frac{(b-a)^2}{12}$.
+Therefore, the maximum entropy in a bounded interval <code>[a, b]</code> is $\left(\frac{\log{12}}{2} + \log(\sigma)\right)$</p>
+<hr>
+<h3 id="q2-whats-the-purpose-of-this-code-snippet">Q2: What&rsquo;s the purpose of this code-snippet? <a href="#q2-whats-the-purpose-of-this-code-snippet" class="hash">#</a></h3>
+<blockquote>
+<p>Describe in your own words. what is the purpose of this code snippet?</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="bp">self</span><span class="o">.</span><span class="n">transforms</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">rotate</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">RandomRotate</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">flip</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">RandomFLip</span><span class="p">())</span>
+</span></span></code></pre></div></blockquote>
+<p>??? success &ldquo;Solution&rdquo;
+<strong>Overfitting</strong> is a common problem that occurs during training of machine learning systems. Among various strategies to overcome the problem of overfitting; <strong>data-augmentation</strong> is a very handy method. <strong>Data Augmentation</strong> is a regularization technique that synthetically expands the data-set by utilizing <em>label-preserving</em> transformations to add more <strong>invariant examples</strong> of the same data samples. Data Augmentation is very important in balancing the data distribution across various classes in the datatset. Some of the data-augmentation techniques are: <code>random rotation</code>, <code>cropping</code>, <code>random flip</code>, <code>zooming</code>etc.</p>
+<pre><code>Usually, the data-augmentation process is done in the CPU before uploading the batched-data for training the model on the GPU.
+</code></pre>
+<hr>
+<h2 id="logistic-regression">Logistic Regression <a href="#logistic-regression" class="hash">#</a></h2>
+<h3 id="q3-drawbacks-of-model-fitting">Q3: Drawbacks of model fitting <a href="#q3-drawbacks-of-model-fitting" class="hash">#</a></h3>
+<blockquote>
+<p>For a fixed number of observations in a dataset, introducing more number of variables normally generate a model that has a better fit to the data. What may be drawbacks of such a model fitting strategy?</p>
+</blockquote>
+<p>??? success &ldquo;Solution&rdquo;
+Introducing more number of variables increasing the capacity of the model. If the number of data points in teh dataset is kept fixed, and then increasing the number of model parameters (variables) leads to <strong>OVERFITTING</strong>. Overfitting is a scenario where the trained model performs very well on the training data but performs poorly in the test daatset due to lack of generalization capabilites as the overly sized model just remembered the data points instead of understanding teh features &amp; data distribution in the traning set.</p>
+<p>??? quote &ldquo;हिन्दी में&rdquo;
+&gt; <strong>प्रश्न:</strong>
+&gt; Training data में data-points की संख्या निश्चित रखते हुए, model-variables की संख्या बढ़ाने से हम एक ऐसे trained model को प्राप्त कर सकते हैं जो training data को अत्यंत अच्छी प्रकार से <strong>fit</strong> कर सकता है। <strong>इस प्रक्रिया के करने से क्या-क्या हानियाँ होती हैं?</strong></p>
+<pre><code>**उत्तर:**
+Model के variables बढ़ाने से model की capacity बढ़ती है और इससे वो training data को आचे से समझ सकता है और training data-distribution के बारे में समझ सकता है। परंतु अगर variables की संख्या बढ़ाने के साथ-साथ अगर हम training-data की संख्या नहीं बढ़ाते हैं तो trained model में एक विकृति होने लगती है जिसे हम **OVERFITTING** कहते हैं। Overfitting होने से हमारा trained model, training-data के विषय में तो बहुत अच्छे से जानता है परंतु वो test-data पर वो अच्छे से कार्य नहीं करता है क्योंकि training के समय वो अपनी generalization क्षमता को विक्षित नहीं कर पाया और संभवतः एक रटंत (memorized training data) model ही बन पाया। अतः हमे *overfitting* को यथा संभव रोकने का प्रयास करना चाहिए जिसके लिये अनेक पथ अपनाए जाते हैं जैसे: (१) dropout (२) data augmentation (३) pruning
+</code></pre>
+<hr>
+<h3 id="q4-odds-of-success">Q4: Odds of Success <a href="#q4-odds-of-success" class="hash">#</a></h3>
+<blockquote>
+<p>Define the term <strong><code>odds of success</code></strong>, both <em>qualitively</em> and <em>formally</em>.
+Give a numerical example that stresses the relationship the relationship between <em>probability</em> and <em>odds of an event occuring</em>.</p>
+</blockquote>
+<p>??? success &ldquo;Solution&rdquo;
+<strong>Odds of Success</strong> of an event in an experiment is the ratio of <em>probability of the event occuring</em> and the <em>probability of the event not occuring</em>
+i.e. $\left(\frac{\text{probability of occurance of an event E}}{1 - \text{(probability of the occurance of the event E)}}\right)$</p>
+
+      </span>
+       
+
+    </section>
+    <hr>
+<footer>
+	  <nav>
+      
+  <ul>
+    <li>
+      © 2025
+    </li>
+  
+  </ul>
+    </nav>
+</footer>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ronalds Vilcins - http://localhost:1313/">
+  <title> | Vinay Kumar</title>
+  <meta name="description" content="Blogs &amp; Articles on Machine Learning by @imflash217">
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Hash Tables # Author: Vinay Kumar (@imflash217) | Date: 29/January/2021
+Definition # ???&#43; note &ldquo;Definition&rdquo; Hash Table is a data structure which stores data in an associative manner (i.e. in a (key, value) pair).
+- In a hash table, the data is stored in an array format where each data-value has its own unique index-value. Due to this feature, the access to data becomes very fast if we know the desired index-value; irrespective of the size of the data."/>
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Hash Tables # Author: Vinay Kumar (@imflash217) | Date: 29/January/2021
+Definition # ???&#43; note &ldquo;Definition&rdquo; Hash Table is a data structure which stores data in an associative manner (i.e. in a (key, value) pair).
+- In a hash table, the data is stored in an array format where each data-value has its own unique index-value. Due to this feature, the access to data becomes very fast if we know the desired index-value; irrespective of the size of the data." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/algorithms/hashtables/" /><meta property="article:section" content="post" />
+
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Hash Tables # Author: Vinay Kumar (@imflash217) | Date: 29/January/2021
+Definition # ???&#43; note &ldquo;Definition&rdquo; Hash Table is a data structure which stores data in an associative manner (i.e. in a (key, value) pair).
+- In a hash table, the data is stored in an array format where each data-value has its own unique index-value. Due to this feature, the access to data becomes very fast if we know the desired index-value; irrespective of the size of the data.">
+
+<meta itemprop="wordCount" content="454">
+<meta itemprop="keywords" content="" />
+  <link rel="canonical" href="http://localhost:1313/post/algorithms/hashtables/">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
+  <link rel="alternate" type="application/atom+xml" title="Vinay Kumar" href="http://localhost:1313/atom.xml" />
+  <link rel="alternate" type="application/json" title="Vinay Kumar" href="http://localhost:1313/feed.json" />
+  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
+  
+  <style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style>
+
+  
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "post",
+    "name": "",
+    "headline": "",
+    "alternativeHeadline": "",
+    "description": "Hash Tables # Author: Vinay Kumar (@imflash217) | Date: 29\/January\/2021\nDefinition # ???\u002b note \u0026ldquo;Definition\u0026rdquo; Hash Table is a data structure which stores data in an associative manner (i.e. in a (key, value) pair).\n- In a hash table, the data is stored in an array format where each data-value has its own unique index-value. Due to this feature, the access to data becomes very fast if we know the desired index-value; irrespective of the size of the data.",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http:\/\/localhost:1313\/post\/algorithms\/hashtables\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "copyrightHolder" : "Vinay Kumar",
+    "copyrightYear" : "0001",
+    "dateCreated": "0001-01-01T00:00:00.00Z",
+    "datePublished": "0001-01-01T00:00:00.00Z",
+    "dateModified": "0001-01-01T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Vinay Kumar",
+        "url": "http://localhost:1313/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http:\/\/localhost:1313\/",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "http://localhost:1313/",
+    "url" : "http:\/\/localhost:1313\/post\/algorithms\/hashtables\/",
+    "wordCount" : "454",
+    "genre" : [ ],
+    "keywords" : [ ]
+}
+</script>
+
+
+</head>
+<body>
+<main>
+      <header>
+    <nav>
+      
+  <ul>
+    <li>
+      
+      
+      
+      
+      <a href="archives" >Archive</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="search/" >Search</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="tags/" >Tags</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.github.com/imflash217/" >Github</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.linkedin.com/in/imflash217" >LinkedIn</a>
+    </li>
+  
+  </ul>
+    </nav>
+  </header>
+  <hr>
+
+
+
+  <section>
+
+      
+
+      <span itemprop="articleBody">
+      <!-- ---
+hide:
+  - navigation # Hide navigation
+  - toc        # Hide table of contents
+--- -->
+<h1 id="hash-tables">Hash Tables <a href="#hash-tables" class="hash">#</a></h1>
+<p><code>Author: Vinay Kumar (@imflash217) | Date: 29/January/2021</code></p>
+<!-- ######################################################################################################### -->
+<h2 id="definition">Definition <a href="#definition" class="hash">#</a></h2>
+<p>???+ note &ldquo;Definition&rdquo;
+<strong>Hash Table</strong> is a data structure which stores data in an <strong>associative manner</strong> (i.e. in a (key, value) pair).</p>
+<pre><code>- In a hash table, the data is stored in an array format where each data-value has its own unique index-value. Due to this feature, the access to data becomes very fast if we know the desired index-value; irrespective of the size of the data.
+- Hash Table uses an array as a storage medium and uses **hashing** to generate the index where an element is to be inserted or to be located from.
+</code></pre>
+<!-- ######################################################################################################### -->
+<h2 id="hashing">Hashing <a href="#hashing" class="hash">#</a></h2>
+<p>???+ note &ldquo;Hashing&rdquo;
+<img src="https://www.tutorialspoint.com/data_structures_algorithms/images/hash_function.jpg" alt="Hashing" loading="lazy" />
+</p>
+<pre><code>Hashing is a technique to **map a range of keys into a range of indexes** (usually of an array).
+
+- A very generic hashing function is **modulo operator** (`x % y`).
+</code></pre>
+<!-- ######################################################################################################### -->
+<h3 id="example">Example <a href="#example" class="hash">#</a></h3>
+<p>???+ quote &ldquo;Example of Hashing&rdquo;
+- Consider a hash-table of <code>size=20</code>
+- Following (<code>key</code>, <code>value</code>) pairs to be stored using the hash-table</p>
+<pre><code>```python
+dict = {9: 20,
+        12: 70,
+        42: 80,
+        7: 25,
+        2: 21}
+```
+
+| Key | Hash           | Array index |
+| --- | -------------- | ----------- |
+| 9   | `9 % 20 = 9`   | `9`         |
+| 12  | `12 % 20 = 12` | `12`        |
+| 42  | `42 % 20 = 2`  | `2`         |
+| 7   | `7 % 20 = 7`   | `7`         |
+| 2   | `2 % 20 = 2`   | `2`         |
+
+As we can see that a given **hashing function** can create the same hash-value from two different keys. (in above table keys `42` and `2`). So we use **`Linear Probing`** to resolve conflicts.
+</code></pre>
+<!-- ######################################################################################################### -->
+<h2 id="linear-probing">Linear Probing <a href="#linear-probing" class="hash">#</a></h2>
+<p>???+ note &ldquo;Linear Probing&rdquo;
+<strong>Linear Probing</strong> is a method used to resolve conflicts in the hash-value. It may happen that the hash-function creates an already used index of the array. In such case we search the next empty location of the array <strong>by looking into the next cell until we find an empty cell</strong></p>
+<pre><code>So in our above example, the updated hash-table would map `key = 2` to `index = 3`:
+
+| Key | Hash           | Array index |
+| --- | -------------- | ----------- |
+| 9   | `9 % 20 = 9`   | `9`         |
+| 12  | `12 % 20 = 12` | `12`        |
+| 42  | `42 % 20 = 2`  | `2`         |
+| 7   | `7 % 20 = 7`   | `7`         |
+| 2   | `2 % 20 = 2`   | **`3`**     |
+</code></pre>
+<h2 id="search">Search <a href="#search" class="hash">#</a></h2>
+<p>???+ success &ldquo;search() method for hash-table&rdquo;
+<strong><code>Search</code></strong></p>
+<h2 id="delete">Delete <a href="#delete" class="hash">#</a></h2>
+<p>???+ danger &ldquo;delete() method for hash-table&rdquo;
+<strong><code>Delete</code></strong></p>
+<!-- ######################################################################################################### -->
+<h2 id="python-implementation">Python Implementation <a href="#python-implementation" class="hash">#</a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">--</span><span class="mi">8</span><span class="o">&lt;--</span> <span class="s2">&#34;../ProgrammingContests/ctci/hashtable.py&#34;</span>
+</span></span></code></pre></div><!-- ######################################################################################################### -->
+<h2 id="references">References <a href="#references" class="hash">#</a></h2>
+<!-- ######################################################################################################### -->
+
+      </span>
+       
+
+    </section>
+    <hr>
+<footer>
+	  <nav>
+      
+  <ul>
+    <li>
+      © 2025
+    </li>
+  
+  </ul>
+    </nav>
+</footer>
+
+  </main>
+</body>
+</html>

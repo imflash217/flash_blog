@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ronalds Vilcins - http://localhost:1313/">
+  <title> | Vinay Kumar</title>
+  <meta name="description" content="Blogs &amp; Articles on Machine Learning by @imflash217">
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="STRATEGY Pattern # from abc import ABC, abstractmethod from collections import namedtuple Customer = namedtuple(&#34;Customer&#34;, &#34;name fidelity&#34;) class LineItem: def __init__(self, product, quantity, price): self.product = product self.quantity = quantity self.price = price def total(self): return self.price * self.quantity class Order: &#34;&#34;&#34;This is the CONTEXT part of the Strategy-Pattern&#34;&#34;&#34; def __init__(self, customer, cart, promotion=None): self.customer = customer self.cart = list(cart) self.promotion = promotion def total(self): if not hasattr(self, &#34;__total&#34;): self."/>
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="STRATEGY Pattern # from abc import ABC, abstractmethod from collections import namedtuple Customer = namedtuple(&#34;Customer&#34;, &#34;name fidelity&#34;) class LineItem: def __init__(self, product, quantity, price): self.product = product self.quantity = quantity self.price = price def total(self): return self.price * self.quantity class Order: &#34;&#34;&#34;This is the CONTEXT part of the Strategy-Pattern&#34;&#34;&#34; def __init__(self, customer, cart, promotion=None): self.customer = customer self.cart = list(cart) self.promotion = promotion def total(self): if not hasattr(self, &#34;__total&#34;): self." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/python/design_patterns/" /><meta property="article:section" content="post" />
+
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="STRATEGY Pattern # from abc import ABC, abstractmethod from collections import namedtuple Customer = namedtuple(&#34;Customer&#34;, &#34;name fidelity&#34;) class LineItem: def __init__(self, product, quantity, price): self.product = product self.quantity = quantity self.price = price def total(self): return self.price * self.quantity class Order: &#34;&#34;&#34;This is the CONTEXT part of the Strategy-Pattern&#34;&#34;&#34; def __init__(self, customer, cart, promotion=None): self.customer = customer self.cart = list(cart) self.promotion = promotion def total(self): if not hasattr(self, &#34;__total&#34;): self.">
+
+<meta itemprop="wordCount" content="1113">
+<meta itemprop="keywords" content="" />
+  <link rel="canonical" href="http://localhost:1313/post/python/design_patterns/">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
+  <link rel="alternate" type="application/atom+xml" title="Vinay Kumar" href="http://localhost:1313/atom.xml" />
+  <link rel="alternate" type="application/json" title="Vinay Kumar" href="http://localhost:1313/feed.json" />
+  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
+  
+  <style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style>
+
+  
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "post",
+    "name": "",
+    "headline": "",
+    "alternativeHeadline": "",
+    "description": "STRATEGY Pattern # from abc import ABC, abstractmethod from collections import namedtuple Customer = namedtuple(\u0026#34;Customer\u0026#34;, \u0026#34;name fidelity\u0026#34;) class LineItem: def __init__(self, product, quantity, price): self.product = product self.quantity = quantity self.price = price def total(self): return self.price * self.quantity class Order: \u0026#34;\u0026#34;\u0026#34;This is the CONTEXT part of the Strategy-Pattern\u0026#34;\u0026#34;\u0026#34; def __init__(self, customer, cart, promotion=None): self.customer = customer self.cart = list(cart) self.promotion = promotion def total(self): if not hasattr(self, \u0026#34;__total\u0026#34;): self.",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http:\/\/localhost:1313\/post\/python\/design_patterns\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "copyrightHolder" : "Vinay Kumar",
+    "copyrightYear" : "0001",
+    "dateCreated": "0001-01-01T00:00:00.00Z",
+    "datePublished": "0001-01-01T00:00:00.00Z",
+    "dateModified": "0001-01-01T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Vinay Kumar",
+        "url": "http://localhost:1313/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http:\/\/localhost:1313\/",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "http://localhost:1313/",
+    "url" : "http:\/\/localhost:1313\/post\/python\/design_patterns\/",
+    "wordCount" : "1113",
+    "genre" : [ ],
+    "keywords" : [ ]
+}
+</script>
+
+
+</head>
+<body>
+<main>
+      <header>
+    <nav>
+      
+  <ul>
+    <li>
+      
+      
+      
+      
+      <a href="archives" >Archive</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="search/" >Search</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="tags/" >Tags</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.github.com/imflash217/" >Github</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.linkedin.com/in/imflash217" >LinkedIn</a>
+    </li>
+  
+  </ul>
+    </nav>
+  </header>
+  <hr>
+
+
+
+  <section>
+
+      
+
+      <span itemprop="articleBody">
+      <!-- ---
+hide:
+  - navigation # Hide navigation
+  - toc        # Hide table of contents
+--- -->
+<h2 id="strategy-pattern">STRATEGY Pattern <a href="#strategy-pattern" class="hash">#</a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Customer</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s2">&#34;Customer&#34;</span><span class="p">,</span> <span class="s2">&#34;name fidelity&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">LineItem</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">product</span><span class="p">,</span> <span class="n">quantity</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">product</span> <span class="o">=</span> <span class="n">product</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">quantity</span> <span class="o">=</span> <span class="n">quantity</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="n">price</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">quantity</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Order</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;This is the CONTEXT part of the Strategy-Pattern&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">customer</span><span class="p">,</span> <span class="n">cart</span><span class="p">,</span> <span class="n">promotion</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">customer</span> <span class="o">=</span> <span class="n">customer</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">cart</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">cart</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">promotion</span> <span class="o">=</span> <span class="n">promotion</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&#34;__total&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">__total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">total</span><span class="p">()</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cart</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__total</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">due</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">promotion</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">discount</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">discount</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">promotion</span><span class="o">.</span><span class="n">discount</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">total</span><span class="p">()</span> <span class="o">-</span> <span class="n">discount</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fmt</span> <span class="o">=</span> <span class="s2">&#34;&lt; Order total = </span><span class="si">{:.2f}</span><span class="s2">; DUE = </span><span class="si">{:.2f}</span><span class="s2"> &gt;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">fmt</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">total</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">due</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Promotion</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    The STRATEGY part of the Strategy-pattern
+</span></span></span><span class="line"><span class="cl"><span class="s2">    An Abstract Base Class
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@abstractmethod</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">discount</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;Return discount as a positive dollar amount&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">FidelityPromot</span><span class="p">(</span><span class="n">Promotion</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    First CONCRETE implementation of STRATEGY ABC
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    5</span><span class="si">% d</span><span class="s2">isount for customer with 1000 or more fidelity points
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">discount</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">order</span><span class="o">.</span><span class="n">total</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.05</span> <span class="k">if</span> <span class="n">order</span><span class="o">.</span><span class="n">customer</span><span class="o">.</span><span class="n">fidelity</span> <span class="o">&gt;=</span> <span class="mi">1000</span> <span class="k">else</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">BulkPromo</span><span class="p">(</span><span class="n">Promotion</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Second CONCRETE implementation of the Strategy-pattern
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    10</span><span class="si">% d</span><span class="s2">iscount for each line-item with 20 or more units
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">discount</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">discount</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">order</span><span class="o">.</span><span class="n">cart</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">quantity</span> <span class="o">&gt;=</span> <span class="mi">20</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">discount</span> <span class="o">+=</span> <span class="n">item</span><span class="o">.</span><span class="n">total</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">discount</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">LargeOrderPromo</span><span class="p">(</span><span class="n">Promotion</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Third CONCRETE implementation of the Strategy-pattern
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    7</span><span class="si">% d</span><span class="s2">iscount for orders with 10 or more distinct items
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">discount</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">distinct_items</span> <span class="o">=</span> <span class="p">{</span><span class="n">item</span><span class="o">.</span><span class="n">product</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">order</span><span class="o">.</span><span class="n">cart</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">distinct_items</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">order</span><span class="o">.</span><span class="n">total</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.07</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span>
+</span></span></code></pre></div><p>???+ quote &ldquo;Example Usage&rdquo;
+Sample usage of <code>Order</code> class with different promotions applied</p>
+<pre><code>```python
+joe = Customer(&quot;John Doe&quot;, 0)
+ann = Customer(&quot;Ann Smith&quot;, 1100)
+
+cart = [LineItem(&quot;banana&quot;, 4, 0.5),
+        LineItem(&quot;apple&quot;, 10, 1.5),
+        LineItem(&quot;watermelon&quot;, 5, 5.0)]
+```
+```python
+Order(joe, cart, FidelityPromo())       ## &lt; Order total = 42.00; DUE = 42.00 &gt;
+Order(ann, cart, FidelityPromo())       ## &lt; Order total = 42.00; DUE = 39.90 &gt;
+```
+Few more example usage with differnt cart types
+```python
+banana_cart = [LineItem(&quot;banana&quot;, 30, 0.5),
+               LineItem(&quot;apple&quot;, 10, 1.5)]
+
+Order(joe, banana_cart, BulkItemPromo())    ## &lt; Order total = 30.00; DUE = 28.50 &gt;
+```
+```python
+long_order = [LineItem(str(item_code), 1, 1.0) for item_code in range(10)]
+
+Order(joe, long_order, LargeOrderPromo())   ## &lt; Order total = 10.00; DUE = 9.30 &gt;
+Order(joe, cart, LargeOrderPromo())         ## &lt; Order total = 42.00; DUE = 42.00 &gt;
+```
+</code></pre>
+<h2 id="function-oriented-strategy-pattern">Function-oriented STRATEGY Pattern <a href="#function-oriented-strategy-pattern" class="hash">#</a></h2>
+<p>Each concrete implementation of the Strategy Pattern in above code is a <code>class</code>
+with a single method <code>discount()</code>. Furthermore, the strategy instances have no state
+(i.e. no instance attributes).</p>
+<p>They look a lot like plain functions.
+So, below we re-write the <strong>concrete implementations</strong> of the Strategy Pattern as plain <em>function</em>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Customer</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s2">&#34;Customer&#34;</span><span class="p">,</span> <span class="s2">&#34;name fidelity&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">LineItem</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">product</span><span class="p">,</span> <span class="n">quantity</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">product</span> <span class="o">=</span> <span class="n">product</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">quantity</span> <span class="o">=</span> <span class="n">quantity</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="n">price</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">quantity</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Order</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;The CONTEXT&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">customer</span><span class="p">,</span> <span class="n">cart</span><span class="p">,</span> <span class="n">promotion</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">customer</span> <span class="o">=</span> <span class="n">customer</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">cart</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">cart</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">promotion</span> <span class="o">=</span> <span class="n">promotion</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&#34;__total&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">__total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">total</span><span class="p">()</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cart</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__total</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">due</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">discount</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">promotion</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">discount</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">promotion</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">total</span><span class="p">()</span> <span class="o">-</span> <span class="n">discount</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fmt</span> <span class="o">=</span> <span class="s2">&#34;&lt;Order total = </span><span class="si">{:.2f}</span><span class="s2">; DUE = </span><span class="si">{:.2f}</span><span class="s2">&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fmt</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">total</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">due</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">########################################################################################</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## Redesign of the concrete-implementations of STRATEGY PATTERN as functions</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">fidelity_promot</span><span class="p">(</span><span class="n">order</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;5</span><span class="si">% d</span><span class="s2">iscount for customers with &gt;= 1000 fidelity points&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">order</span><span class="o">.</span><span class="n">total</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.05</span> <span class="k">if</span> <span class="n">order</span><span class="o">.</span><span class="n">customer</span><span class="o">.</span><span class="n">fidelity</span> <span class="o">&gt;=</span> <span class="mi">1000</span> <span class="k">else</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">bulk_item_promo</span><span class="p">(</span><span class="n">order</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;10</span><span class="si">% d</span><span class="s2">iscount for each LineItem with &gt;= 20 units in cart&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">discount</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">oder</span><span class="o">.</span><span class="n">cart</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">quantity</span> <span class="o">&gt;=</span> <span class="mi">20</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">discount</span> <span class="o">+=</span> <span class="n">item</span><span class="o">.</span><span class="n">total</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">discount</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">large_order_promo</span><span class="p">(</span><span class="n">order</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;7</span><span class="si">% d</span><span class="s2">iscount for orders with &gt;= 10 distinct items&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">distinct_items</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">product</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">order</span><span class="o">.</span><span class="n">cart</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">distinct_items</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">order</span><span class="o">.</span><span class="n">total</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.07</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span>
+</span></span></code></pre></div><p>???+ quote &ldquo;Example Usage&rdquo;
+Smaple usage examples of <code>Order</code> class with promotion Strategy as <strong>functions</strong>
+```python
+joe = Customer(&ldquo;John Doe&rdquo;, 0)
+ann = Customer(&ldquo;Ann Smith&rdquo;, 1100)</p>
+<pre><code>cart = [LineItem(&quot;banana&quot;, 4, 0.5),
+        LineItem(&quot;apple&quot;, 10, 1.5),
+        LineItem(&quot;watermelon&quot;, 5, 5.0)]
+```
+```python
+Order(joe, cart, fidelity_promo)                ## &lt; Order total = 42.00; DUE = 42.00 &gt;
+Order(ann, cart, fidelity_promo)                ## &lt; Order total = 42.00; DUE = 39.90 &gt;
+```
+
+Another Example
+
+```python
+banana_cart = [LineItem(&quot;banana&quot;, 30, 0.5),
+               LineItem(&quot;apple&quot;, 10, 1.5)]
+Order(joe, banana_cart, bulk_item_promo)        ## &lt; Order total = 30.00; DUE = 28.50 &gt;
+```
+
+Yet another Example
+
+```python
+long_order = [LineItem(str(item_id), 1, 1.0) for item_id in range(10)]
+
+Order(joe, long_order, large_order_promo)       ## &lt; Order total = 10.00; DUE = 9.30 &gt;
+Order(joe, cart, large_order_promo)             ## &lt; Order total = 42.00; DUE = 42.00 &gt;
+```
+</code></pre>
+<ol>
+<li><strong>STRATEGY</strong> objects often make good <strong>FLYWEIGHTS</strong></li>
+<li>A <strong>FLYWIGHT</strong> is a <em>shared</em> object that cane be use din multiple contexts simulatenously.</li>
+<li>Sharing is encouraged to reduce the creation of a new <strong>concrete</strong> strategy object when the
+same strategy is applied over and over again in different contexts (i.e. with every new <code>Order</code> instance)</li>
+<li>If the <strong>strategies</strong> have no internal state (often the case);
+then use plain old <strong>functions</strong> else adapt to use <strong>class</strong> version.</li>
+<li>A <strong>function</strong> is more lightweight than an user-defined <code>class</code></li>
+<li>A plain <strong>functions</strong> is also a_shared_ object that can be used in multiple contexts simulateneously.</li>
+</ol>
+<h2 id="choosing-the-best-strategy">Choosing the best Strategy <a href="#choosing-the-best-strategy" class="hash">#</a></h2>
+<p>Given the same customers and carts from above examples; we now add additional tests.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">Order</span><span class="p">(</span><span class="n">joe</span><span class="p">,</span> <span class="n">long_order</span><span class="p">,</span> <span class="n">best_promo</span><span class="p">)</span>          <span class="c1">## &lt; Order total = 10.00; DUE = 9.30 &gt;      ## case-1</span>
+</span></span><span class="line"><span class="cl"><span class="n">Order</span><span class="p">(</span><span class="n">joe</span><span class="p">,</span> <span class="n">banana_cart</span><span class="p">,</span> <span class="n">best_promo</span><span class="p">)</span>         <span class="c1">## &lt; Order total = 30.00; DUE = 28.50 &gt;     ## case-2</span>
+</span></span><span class="line"><span class="cl"><span class="n">Order</span><span class="p">(</span><span class="n">ann</span><span class="p">,</span> <span class="n">cart</span><span class="p">,</span> <span class="n">best_promo</span><span class="p">)</span>                <span class="c1">## &lt; Order total = 42.00; DUE = 39.90 &gt;     ## case-3</span>
+</span></span></code></pre></div><ul>
+<li>case-1: <code>best_promo</code> selected the <code>large_order_promo</code> for customer <code>joe</code></li>
+<li>case-2: <code>best_promo</code> selected the <code>bulk_item_promo</code> for customer <code>joe</code> (for ordering lots of bananas)</li>
+<li>case-3: <code>best_promo</code> selected the <code>fidelity_promo</code> for <code>ann</code>&rsquo;s loyalty.</li>
+</ul>
+<p>Below is the implementation of <code>best_promo</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">all_promos</span> <span class="o">=</span> <span class="p">[</span><span class="n">fidelity_promo</span><span class="p">,</span> <span class="n">bulk_item_promo</span><span class="p">,</span> <span class="n">large_order_promo</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">best_promo</span><span class="p">(</span><span class="n">order</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Selects the best discount avaailable. Only one discount applicable&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">best_discount</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">promo</span><span class="p">(</span><span class="n">order</span><span class="p">)</span> <span class="k">for</span> <span class="n">promo</span> <span class="ow">in</span> <span class="n">all_promos</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">best_discount</span>
+</span></span></code></pre></div><h2 id="finding-strategies-in-a-module">Finding Strategies in a module <a href="#finding-strategies-in-a-module" class="hash">#</a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## Method-1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## using globals()</span>
+</span></span><span class="line"><span class="cl"><span class="n">all_promos</span> <span class="o">=</span> <span class="p">[</span><span class="nb">globals</span><span class="p">()[</span><span class="n">name</span><span class="p">]</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">              <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&#34;_promo&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">              <span class="ow">and</span> <span class="n">name</span> <span class="o">!=</span> <span class="s2">&#34;best_promo&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">best_promo</span><span class="p">(</span><span class="n">order</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">best_discount</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">promo</span><span class="p">(</span><span class="n">order</span><span class="p">)</span> <span class="k">for</span> <span class="n">order</span> <span class="ow">in</span> <span class="n">all_promos</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">best_discount</span>
+</span></span></code></pre></div><p>But a more flexible way to handle this is using inbuilt <code>inspect</code> module
+and storing all the promos functions in a file <code>promotions.py</code>.
+This works regardless of the names given to promos.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## Method-2</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## using modules to store the promos separately</span>
+</span></span><span class="line"><span class="cl"><span class="n">all_promos</span> <span class="o">=</span> <span class="p">[</span><span class="n">func</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getmembers</span><span class="p">(</span><span class="n">promotions</span><span class="p">,</span> <span class="n">inspect</span><span class="o">.</span><span class="n">isfunction</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">best_promo</span><span class="p">(</span><span class="n">order</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">best_discount</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">promo</span><span class="p">(</span><span class="n">order</span><span class="p">)</span> <span class="k">for</span> <span class="n">promo</span> <span class="ow">in</span> <span class="n">all_promos</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">best_discount</span>
+</span></span></code></pre></div><p>Both the methods have pros &amp; cons. Choose as you see fit.</p>
+<blockquote>
+<p>We could add more stringent tests to filter the functions,
+by inspecting their arguments for instance.</p>
+</blockquote>
+<blockquote>
+<p>A more elegant solution would be use a <strong>decorator</strong>. (we will study this in later blogs)</p>
+</blockquote>
+<h2 id="references">References <a href="#references" class="hash">#</a></h2>
+
+      </span>
+       
+
+    </section>
+    <hr>
+<footer>
+	  <nav>
+      
+  <ul>
+    <li>
+      © 2025
+    </li>
+  
+  </ul>
+    </nav>
+</footer>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ronalds Vilcins - http://localhost:1313/">
+  <title> | Vinay Kumar</title>
+  <meta name="description" content="Blogs &amp; Articles on Machine Learning by @imflash217">
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="The Preface of the key technological stuffs here # Tips &amp; Tricks # LR Scheduler # Similar to the learning rate, the lr-scheduler to apply depends on the classifier &amp; the model. For image classifiers and SGD optimizer, the Multi-Step LR Scheduler is shown to be a good choice. Models trained with Adam commonly use a smooth exponential-decay in the lr or a cosine-like scheduler. For TRANSFORMERS: &#x1f6a8; Remember to use a learning rate WARMUP &#x1f6a8; The cosine-scheduler is often used for decaying the lr afterwards (but can also be replaced by exponential decay) Regularizaation # Regularization is important in networks when we see a significantly higher training performance than test performance."/>
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="The Preface of the key technological stuffs here # Tips &amp; Tricks # LR Scheduler # Similar to the learning rate, the lr-scheduler to apply depends on the classifier &amp; the model. For image classifiers and SGD optimizer, the Multi-Step LR Scheduler is shown to be a good choice. Models trained with Adam commonly use a smooth exponential-decay in the lr or a cosine-like scheduler. For TRANSFORMERS: &#x1f6a8; Remember to use a learning rate WARMUP &#x1f6a8; The cosine-scheduler is often used for decaying the lr afterwards (but can also be replaced by exponential decay) Regularizaation # Regularization is important in networks when we see a significantly higher training performance than test performance." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/blogs/notes/" /><meta property="article:section" content="post" />
+
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="The Preface of the key technological stuffs here # Tips &amp; Tricks # LR Scheduler # Similar to the learning rate, the lr-scheduler to apply depends on the classifier &amp; the model. For image classifiers and SGD optimizer, the Multi-Step LR Scheduler is shown to be a good choice. Models trained with Adam commonly use a smooth exponential-decay in the lr or a cosine-like scheduler. For TRANSFORMERS: &#x1f6a8; Remember to use a learning rate WARMUP &#x1f6a8; The cosine-scheduler is often used for decaying the lr afterwards (but can also be replaced by exponential decay) Regularizaation # Regularization is important in networks when we see a significantly higher training performance than test performance.">
+
+<meta itemprop="wordCount" content="770">
+<meta itemprop="keywords" content="" />
+  <link rel="canonical" href="http://localhost:1313/post/blogs/notes/">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
+  <link rel="alternate" type="application/atom+xml" title="Vinay Kumar" href="http://localhost:1313/atom.xml" />
+  <link rel="alternate" type="application/json" title="Vinay Kumar" href="http://localhost:1313/feed.json" />
+  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
+  
+  <style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style>
+
+  
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "post",
+    "name": "",
+    "headline": "",
+    "alternativeHeadline": "",
+    "description": "The Preface of the key technological stuffs here # Tips \u0026amp; Tricks # LR Scheduler # Similar to the learning rate, the lr-scheduler to apply depends on the classifier \u0026amp; the model. For image classifiers and SGD optimizer, the Multi-Step LR Scheduler is shown to be a good choice. Models trained with Adam commonly use a smooth exponential-decay in the lr or a cosine-like scheduler. For TRANSFORMERS: \u0026#x1f6a8; Remember to use a learning rate WARMUP \u0026#x1f6a8; The cosine-scheduler is often used for decaying the lr afterwards (but can also be replaced by exponential decay) Regularizaation # Regularization is important in networks when we see a significantly higher training performance than test performance.",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http:\/\/localhost:1313\/post\/blogs\/notes\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "copyrightHolder" : "Vinay Kumar",
+    "copyrightYear" : "0001",
+    "dateCreated": "0001-01-01T00:00:00.00Z",
+    "datePublished": "0001-01-01T00:00:00.00Z",
+    "dateModified": "0001-01-01T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Vinay Kumar",
+        "url": "http://localhost:1313/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http:\/\/localhost:1313\/",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "http://localhost:1313/",
+    "url" : "http:\/\/localhost:1313\/post\/blogs\/notes\/",
+    "wordCount" : "770",
+    "genre" : [ ],
+    "keywords" : [ ]
+}
+</script>
+
+
+</head>
+<body>
+<main>
+      <header>
+    <nav>
+      
+  <ul>
+    <li>
+      
+      
+      
+      
+      <a href="archives" >Archive</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="search/" >Search</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="tags/" >Tags</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.github.com/imflash217/" >Github</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.linkedin.com/in/imflash217" >LinkedIn</a>
+    </li>
+  
+  </ul>
+    </nav>
+  </header>
+  <hr>
+
+
+
+  <section>
+
+      
+
+      <span itemprop="articleBody">
+      <!--
+---
+hide:
+    - toc        # Hide table of contents
+    - navigation # Hide navigation 
+---
+-->
+<h1 id="the-preface-of-the-key-technological-stuffs-here">The Preface of the key technological stuffs here <a href="#the-preface-of-the-key-technological-stuffs-here" class="hash">#</a></h1>
+<h2 id="tips--tricks">Tips &amp; Tricks <a href="#tips--tricks" class="hash">#</a></h2>
+<h3 id="lr-scheduler">LR Scheduler <a href="#lr-scheduler" class="hash">#</a></h3>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Similar to the <code>learning rate</code>, the <code>lr-scheduler</code> to apply depends on the
+classifier &amp; the model.</li>
+<li><input checked="" disabled="" type="checkbox"> For image classifiers and <strong><code>SGD</code> optimizer</strong>, the <strong><code>Multi-Step LR Scheduler</code></strong>
+is shown to be a good choice.</li>
+<li><input checked="" disabled="" type="checkbox"> Models trained with <strong><code>Adam</code></strong> commonly use a smooth exponential-decay
+in the <code>lr</code> or a cosine-like scheduler.</li>
+<li><input checked="" disabled="" type="checkbox"> For TRANSFORMERS:
+<ul>
+<li>&#x1f6a8; Remember to use a <strong><code>learning rate WARMUP</code></strong></li>
+<li>&#x1f6a8; The <code>cosine-scheduler</code> is often used for decaying the <code>lr</code>
+afterwards (but can also be replaced by <code>exponential decay</code>)</li>
+</ul>
+</li>
+</ul>
+<h3 id="regularizaation">Regularizaation <a href="#regularizaation" class="hash">#</a></h3>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Regularization is important in networks when we see a significantly higher
+<strong>training</strong> performance than <strong>test</strong> performance.</li>
+<li><input checked="" disabled="" type="checkbox"> The regularization parameters all interact with each other and hence
+<strong>must be tuned together</strong>. The most commonly used regularization techniques are:
+<ul>
+<li><strong><code>Weight Decaay</code></strong></li>
+<li><strong><code>Dropout</code></strong></li>
+<li><strong><code>Augmentation</code></strong></li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> Dropout is a good regularization technique as it has shown to be
+applicable on most architectures and has shown to <strong>reduce overfitting</strong>.</li>
+<li><input checked="" disabled="" type="checkbox"> If you want to use <strong>weight-decay in Adam</strong>, use <strong><code>torch.optim.AdamW</code></strong> instead of <code>torch.optim.Adam</code>.</li>
+<li><input checked="" disabled="" type="checkbox"> Domain specific regularization: There are a couple of regularization techniques that
+depend on the input-data / domain as shown below.
+<ul>
+<li>&#x1f6a8; Computer Vision: Image augmenatation like
+<ul>
+<li><strong><code>horizontal_flip</code></strong>,</li>
+<li><strong><code>rotation</code></strong>,</li>
+<li><strong><code>scale_and_crop</code></strong>,</li>
+<li><strong><code>color_distortion</code></strong>,</li>
+<li><strong><code>gaussian_noise</code></strong> etc.</li>
+</ul>
+</li>
+<li>&#x1f6a8; NLP: input dropout of <strong>whole words</strong></li>
+<li>&#x1f6a8; Graphs:
+<ul>
+<li>Dropping edges</li>
+<li>Dropping nodes</li>
+<li>Dropping part of the features of all nodes</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="debugging-in-pytorch">Debugging in PyTorch <a href="#debugging-in-pytorch" class="hash">#</a></h2>
+<h3 id="under-performing-model">Under-performing model <a href="#under-performing-model" class="hash">#</a></h3>
+<p>???+ danger &ldquo;Situation/Problem&rdquo;
+Your model is not reaching the performance it should,
+but PyTorch is not telling you why that happens!! These are very annoying bugs.</p>
+<hr>
+<h4 id="softmax-crossentropy--nllloss">Softmax, CrossEntropy &amp; NLLLoss <a href="#softmax-crossentropy--nllloss" class="hash">#</a></h4>
+<p>&#x1f3c6; The most common mistake is the mismatch between the loss function
+and the output activations. A very usual common source of confusion is the relationship
+between <strong><code>nn.Softmax</code>, <code>nn.LogSoftmax</code>, <code>nn.NLLLoss</code>, &amp; <code>nn.CrossEntropyLoss</code></strong></p>
+<ol>
+<li>
+<p><strong><code>nn.CrossEntropyLoss</code></strong> does two operations on its inputs: <strong><code>nn.LogSoftmax</code></strong> &amp; <strong><code>nn.NLLLoss</code></strong>.
+Hence, the input to the <code>nn.CrossEntropyLoss</code> should be the output of the last layer of the network.</p>
+<p>&#x1f6a8; <strong>Don&rsquo;t apply <code>nn.Softmax</code> before the <code>nn.CrossEntropyLoss</code>.</strong>
+Otherwise, PyTorch will apply the Softmax TWICE which will signifacntly worsen the performance.</p>
+</li>
+<li>
+<p>If you use <strong><code>nn.NLLLoss</code></strong>, you need to apply <strong>log-softmax</strong> before yourselves.
+<code>nn.NLLLoss</code> requires <strong>log-probabilities</strong> as its input not just plain <em>probabilities</em>.
+So, make sure to use <code>F.log_softmax()</code> instead of <code>nn.Softmax</code></p>
+</li>
+</ol>
+<hr>
+<h4 id="softmax-over-correct-dimensionaxis">Softmax over correct dimension/axis <a href="#softmax-over-correct-dimensionaxis" class="hash">#</a></h4>
+<p>Be careful to apply softmax over correct dimensio/axis in your output.
+For eg. you apply softamx over <strong>last dimension</strong> like this: <strong><code>nn.Softmax(dim=-1)</code></strong></p>
+<hr>
+<h4 id="categorical-data--embeddings">Categorical Data &amp; Embeddings <a href="#categorical-data--embeddings" class="hash">#</a></h4>
+<h4 id="hidden-size-mismatch">Hidden size mismatch <a href="#hidden-size-mismatch" class="hash">#</a></h4>
+<p>If you perform matrix multiplications and have a shape mismatch between two matrices,
+PyTorch will contain and throw error.</p>
+<p>However, there are situations where PyTorch does not throw any error because the misaligned
+dimensions have (unluckily) the same dimension. For example, imagine you have a weight matrix
+<strong><code>W</code></strong> of shape <strong><code>[d_in, d_out]</code></strong>. If you take an inout <strong><code>x</code></strong> of shape <strong><code>[batch_size, d_in]</code></strong>.
+And you want to do the matrix multiplication as <strong><code>out = W.matmul(x)</code></strong> then the shape of the output <code>out</code>
+will be correct as <strong><code>[batch_size, d_out]</code></strong>. But, suppose if by chance <strong><code>batch_size == d_in</code></strong>
+then both <strong><code>W.matmul(x)</code></strong> and <strong><code>x.matmul(W)</code></strong> will produce the same sized output <code>[d_in, d_out]</code>.
+This is definitely not the behaviour we want as it hides the error in the order of
+matrix maultiplication over different dimension.</p>
+<p>&#x1f6a8; So, <strong>always test your code with multiple different batch sizes to prevent
+shape misalignments with the batch dimension</strong>.</p>
+<h3 id="use-nnsequential--nnmodulelist">Use nn.Sequential &amp; nn.ModuleList <a href="#use-nnsequential--nnmodulelist" class="hash">#</a></h3>
+<p>If you have a model with lots of layers, you might waant to summarize them into
+<code>nn.Sequential</code> or <code>nn.ModuleList</code> object. In the forward pass, you only need to call the
+<code>Sequential</code> or iterate through the <code>ModuleList</code>.</p>
+<p>A multi-layer-perceptron (MLP) can be implemented as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MLP</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">input_dims</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">hidden_dims</span><span class="o">=</span><span class="p">[</span><span class="mi">128</span><span class="p">,</span> <span class="mi">256</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="n">output_dims</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">hidden_dims</span> <span class="o">=</span> <span class="p">[</span><span class="n">input_dims</span><span class="p">]</span> <span class="o">+</span> <span class="n">hidden_dims</span>
+</span></span><span class="line"><span class="cl">        <span class="n">layers</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">hidden_dims</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">layers</span> <span class="o">+=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">hidden_dims</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">hidden_dims</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">*</span><span class="n">layers</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="in-place-activation-functions">In-place Activation functions <a href="#in-place-activation-functions" class="hash">#</a></h3>
+<p>Some activation functions such as <strong><code>nn.ReLU</code></strong> and <strong><code>nn.LeakyReLU</code></strong> have an argument <strong><code>inplace</code></strong>.
+By default, it is set to <strong><code>False</code></strong>, but it is highly recommended to set it to <strong><code>True</code></strong> in neural networks.</p>
+<blockquote>
+<p>Setting it to <code>True</code>, makes the original value of the <strong>input</strong> overridden by the <strong>new output</strong> during the
+forward pass.</p>
+</blockquote>
+<p>&#x1f3c6; This option of <code>inplace</code> is ONLY available to activations functions
+<strong>where we don&rsquo;t need to know the original input for backpropagation.</strong></p>
+<p>For example, in <strong><code>nn.ReLU</code></strong>, the value sthat are set to zero have a gradient of ZERO independent
+of the specific input values.</p>
+<p>&#x1f6a8; In-place operations can save a lot of memory, especially if you have a very large feature map.</p>
+<hr>
+<h2 id="references">References <a href="#references" class="hash">#</a></h2>
+
+      </span>
+       
+
+    </section>
+    <hr>
+<footer>
+	  <nav>
+      
+  <ul>
+    <li>
+      © 2025
+    </li>
+  
+  </ul>
+    </nav>
+</footer>
+
+  </main>
+</body>
+</html>

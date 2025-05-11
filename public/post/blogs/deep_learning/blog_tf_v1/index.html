@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ronalds Vilcins - http://localhost:1313/">
+  <title> | Vinay Kumar</title>
+  <meta name="description" content="Blogs &amp; Articles on Machine Learning by @imflash217">
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Tensorflow Tutorial # In this session you will learn to do the following in TensorFlow v1.0
+Initialize Variables Start your own session Train Algorithms Implement a Neural Network Exploring the Tensorflow Library # Example-1: General Overview # import tensorflow as tf y_hat = tf.constant(36, name=&#34;y_hat&#34;) ## Defins a &#34;y_hat&#34; constant. Sets its value to 36 y = tf.constant(39, name=&#34;y&#34;) ## Defins a &#34;y&#34; constant. Sets its value to 39 loss = tf."/>
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Tensorflow Tutorial # In this session you will learn to do the following in TensorFlow v1.0
+Initialize Variables Start your own session Train Algorithms Implement a Neural Network Exploring the Tensorflow Library # Example-1: General Overview # import tensorflow as tf y_hat = tf.constant(36, name=&#34;y_hat&#34;) ## Defins a &#34;y_hat&#34; constant. Sets its value to 36 y = tf.constant(39, name=&#34;y&#34;) ## Defins a &#34;y&#34; constant. Sets its value to 39 loss = tf." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/blogs/deep_learning/blog_tf_v1/" /><meta property="article:section" content="post" />
+
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Tensorflow Tutorial # In this session you will learn to do the following in TensorFlow v1.0
+Initialize Variables Start your own session Train Algorithms Implement a Neural Network Exploring the Tensorflow Library # Example-1: General Overview # import tensorflow as tf y_hat = tf.constant(36, name=&#34;y_hat&#34;) ## Defins a &#34;y_hat&#34; constant. Sets its value to 36 y = tf.constant(39, name=&#34;y&#34;) ## Defins a &#34;y&#34; constant. Sets its value to 39 loss = tf.">
+
+<meta itemprop="wordCount" content="1006">
+<meta itemprop="keywords" content="" />
+  <link rel="canonical" href="http://localhost:1313/post/blogs/deep_learning/blog_tf_v1/">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
+  <link rel="alternate" type="application/atom+xml" title="Vinay Kumar" href="http://localhost:1313/atom.xml" />
+  <link rel="alternate" type="application/json" title="Vinay Kumar" href="http://localhost:1313/feed.json" />
+  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
+  
+  <style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style>
+
+  
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "post",
+    "name": "",
+    "headline": "",
+    "alternativeHeadline": "",
+    "description": "Tensorflow Tutorial # In this session you will learn to do the following in TensorFlow v1.0\nInitialize Variables Start your own session Train Algorithms Implement a Neural Network Exploring the Tensorflow Library # Example-1: General Overview # import tensorflow as tf y_hat = tf.constant(36, name=\u0026#34;y_hat\u0026#34;) ## Defins a \u0026#34;y_hat\u0026#34; constant. Sets its value to 36 y = tf.constant(39, name=\u0026#34;y\u0026#34;) ## Defins a \u0026#34;y\u0026#34; constant. Sets its value to 39 loss = tf.",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http:\/\/localhost:1313\/post\/blogs\/deep_learning\/blog_tf_v1\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "copyrightHolder" : "Vinay Kumar",
+    "copyrightYear" : "0001",
+    "dateCreated": "0001-01-01T00:00:00.00Z",
+    "datePublished": "0001-01-01T00:00:00.00Z",
+    "dateModified": "0001-01-01T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Vinay Kumar",
+        "url": "http://localhost:1313/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http:\/\/localhost:1313\/",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "http://localhost:1313/",
+    "url" : "http:\/\/localhost:1313\/post\/blogs\/deep_learning\/blog_tf_v1\/",
+    "wordCount" : "1006",
+    "genre" : [ ],
+    "keywords" : [ ]
+}
+</script>
+
+
+</head>
+<body>
+<main>
+      <header>
+    <nav>
+      
+  <ul>
+    <li>
+      
+      
+      
+      
+      <a href="archives" >Archive</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="search/" >Search</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="tags/" >Tags</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.github.com/imflash217/" >Github</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.linkedin.com/in/imflash217" >LinkedIn</a>
+    </li>
+  
+  </ul>
+    </nav>
+  </header>
+  <hr>
+
+
+
+  <section>
+
+      
+
+      <span itemprop="articleBody">
+      <!-- ---
+hide:
+  - navigation # Hide navigation
+  - toc        # Hide table of contents
+--- -->
+<h1 id="tensorflow-tutorial">Tensorflow Tutorial <a href="#tensorflow-tutorial" class="hash">#</a></h1>
+<!-- ######################################################################################################### -->
+<p>In this session you will learn to do the following in <code>TensorFlow v1.0</code></p>
+<ol>
+<li>Initialize Variables</li>
+<li>Start your own session</li>
+<li>Train Algorithms</li>
+<li>Implement a Neural Network</li>
+</ol>
+<!-- ######################################################################################################### -->
+<h2 id="exploring-the-tensorflow-library">Exploring the Tensorflow Library <a href="#exploring-the-tensorflow-library" class="hash">#</a></h2>
+<h3 id="example-1-general-overview">Example-1: General Overview <a href="#example-1-general-overview" class="hash">#</a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">y_hat</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">36</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;y_hat&#34;</span><span class="p">)</span>           <span class="c1">## Defins a &#34;y_hat&#34; constant. Sets its value to 36</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">39</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;y&#34;</span><span class="p">)</span>                   <span class="c1">## Defins a &#34;y&#34; constant. Sets its value to 39</span>
+</span></span><span class="line"><span class="cl"><span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">((</span><span class="n">y</span><span class="o">-</span><span class="n">y_hat</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;loss&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">init</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">()</span>        <span class="c1">## Used to initialize the variables with the</span>
+</span></span><span class="line"><span class="cl">                                                <span class="c1">## respective values when &#34;sess.run(init)&#34; is called</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>                      <span class="c1">## Creates a session to execute our program</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>                              <span class="c1">## initializes the global variables</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>                              <span class="c1">## executes the program stored in &#34;loss&#34; variable</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>                                 <span class="c1">## prints the value stored in &#34;loss&#34; variable</span>
+</span></span></code></pre></div><p>Writing and running programs in <code>Tensorflow</code> has the following steps:</p>
+<ol>
+<li><strong>Create tensors</strong> (variables) that are not yet evaluated/executed.</li>
+<li><strong>Write operations</strong> between those tensors.</li>
+<li><strong>Initialize</strong> the tensors.</li>
+<li><strong>Create a Session</strong>.</li>
+<li><strong>Run the session</strong>. This will run the operations written in step-2.</li>
+</ol>
+<p>So, when we created a variable for <code>loss</code>, we simply defined the loss as a function of other
+quantities but did not evaluate its value. To evaluate it, we had to run
+<code>tf.global_variables_initializer()</code> to intialize the values and then inside <code>sess.run(init)</code>
+we calculated the updated value and prited it in the last line above.</p>
+<h3 id="example-2-tfsession">Example-2: <code>tf.Session()</code> <a href="#example-2-tfsession" class="hash">#</a></h3>
+<p>Now, let&rsquo;s take a look at</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>Tensor(&#34;Mul:0&#34;, shape=(), dtype=int32)
+</code></pre><p>As expected we will not see <code>20</code>. We got a tensor saying that the result of the tensor
+does not have the <code>shape</code> attribute and is of the type <code>int32</code>. All we did was to put in
+the <strong>computation graph</strong>; but we haven&rsquo;t run this computation yet! In order to actually
+multiply the two numbers we have to create a sessiona nd run it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sess</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+</span></span></code></pre></div><pre tabindex="0"><code>20
+</code></pre><p><strong>Awesome!!</strong>. To summarize, remember the following:</p>
+<ol>
+<li>Initialize your variables.</li>
+<li>Create a session.</li>
+<li>Run the operations inside the session.</li>
+</ol>
+<h3 id="example-3-tfplaceholder">Example-3: <code>tf.placeholder()</code> <a href="#example-3-tfplaceholder" class="hash">#</a></h3>
+<p>Next, we will see how to use a placeholder.</p>
+<p>A <strong>placeholder</strong> is an object whose value we can specify ONLY later.</p>
+<p>To specify values for a placeholder, we can pass in values by using a
+&ldquo;feed dictionary&rdquo; (<code>feed_dict</code> variable).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## Below we create a placeholder for x.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## This allows us to pass in a number later when we run the SESSION</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">sess</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int64</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;x&#34;</span><span class="p">)</span>      <span class="c1">## the placeholder variable</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="mi">9</span><span class="p">}))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">sess</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span></code></pre></div><pre tabindex="0"><code>18
+</code></pre><h3 id="using-one-hot-encodings">Using one-hot encodings: <a href="#using-one-hot-encodings" class="hash">#</a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">one_hot_matrix</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Creates a matrix where the i-th row corresponds to the ith class number.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    j-th column corresponds to the j-th example.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    So, if the label for j-th example is i; then only the ith value is 1 in j-th column
+</span></span></span><span class="line"><span class="cl"><span class="s2">    
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Args:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        labels: the labels for each example
+</span></span></span><span class="line"><span class="cl"><span class="s2">        num_classes: the number of classes in this task
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Returns:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        a one-hot matrix
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">## create a tf.constant &amp; name it &#34;num_classes&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">num_classes</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="n">num_classes</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;num_classes&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">## Use tf.one_hot (be careful with &#34;axis&#34;)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">one_hot_matrix</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">one_hot</span><span class="p">(</span><span class="n">indices</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="n">num_classes</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">## Create a session</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sess</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">## Execute the one_hot_matrix graph inside the session</span>
+</span></span><span class="line"><span class="cl">    <span class="n">one_hot</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">one_hot_matrix</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">## Close the session</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sess</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">## return the one_hot matrix</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">one_hot</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">num_classes</span> <span class="o">=</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="n">one_hot</span> <span class="o">=</span> <span class="n">one_hot_matrix</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">one_hot</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>[[0,0,1,0,0,0,0],
+ [1,0,0,1,0,0,0],
+ [0,1,0,0,1,1,0],
+ [0,0,0,0,0,0,1]]
+</code></pre><h3 id="initialize-with-zeros--ones">Initialize with zeros &amp; ones <a href="#initialize-with-zeros--ones" class="hash">#</a></h3>
+<p>We will use <code>tf.ones()</code> and <code>tf.zeros()</code> to initialize a tensor of shape <code>shape</code>,
+where all elements are either zeros or ones</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">ones</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">int64</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Creates a tensor of ones with shape=shape
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Args:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        shape: the shape of the resulting tensor
+</span></span></span><span class="line"><span class="cl"><span class="s2">        dtype: the datatype of every element in the resulting tensor
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Returns:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        A tensor where all elements are 1
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">## Create ones tensor using `tf.ones()`</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ones</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">## Create a session</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sess</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">## Execute the op in the session to calculate its value</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ones</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">ones</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">## Close the session</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sess</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">## Return the ones tensor</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">ones</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ones_tensor</span> <span class="o">=</span> <span class="n">ones</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">ones_tensor</span><span class="p">)</span>
+</span></span></code></pre></div><pre tabindex="0"><code>[[1,1,1],
+ [1,1,1]]
+</code></pre><h2 id="building-a-neural-network">Building a Neural Network <a href="#building-a-neural-network" class="hash">#</a></h2>
+<h3 id="building-the-model">Building the model <a href="#building-the-model" class="hash">#</a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">tf_utils</span> <span class="kn">import</span> <span class="n">load_dataset</span><span class="p">,</span> <span class="n">random_mini_batches</span><span class="p">,</span> <span class="n">convert_to_one_hot</span><span class="p">,</span> <span class="n">predict</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">tensorflow.python.framework</span> <span class="kn">import</span> <span class="n">ops</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">lr</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">num_epochs</span><span class="o">=</span><span class="mi">1500</span><span class="p">,</span> <span class="n">bs</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Implements a 3-layer Tensorflow Neural Network:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        [Linear]-&gt;[Relu]-&gt;[Linear]-&gt;[Relu]-&gt;[Linear]-[Softmax]
+</span></span></span><span class="line"><span class="cl"><span class="s2">          
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Args:
+</span></span></span><span class="line"><span class="cl"><span class="s2">            X_train: the train dataset inputs
+</span></span></span><span class="line"><span class="cl"><span class="s2">            Y_train: the train dataset labels
+</span></span></span><span class="line"><span class="cl"><span class="s2">            X_test: the test dataset inputs
+</span></span></span><span class="line"><span class="cl"><span class="s2">            Y_test: the test dataset labels
+</span></span></span><span class="line"><span class="cl"><span class="s2">            lr: the learnign rate
+</span></span></span><span class="line"><span class="cl"><span class="s2">            num_epochs: number of epochs
+</span></span></span><span class="line"><span class="cl"><span class="s2">            bs: batch-size
+</span></span></span><span class="line"><span class="cl"><span class="s2">            verbose: True if you want to print the process else False
+</span></span></span><span class="line"><span class="cl"><span class="s2">        
+</span></span></span><span class="line"><span class="cl"><span class="s2">        Returns:
+</span></span></span><span class="line"><span class="cl"><span class="s2">            the trained model parameters.
+</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="n">ops</span><span class="o">.</span><span class="n">reset_default_graph</span><span class="p">()</span>       <span class="c1">## to be able to rerun the model, w/o overwriting the tf.variables</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tf</span><span class="o">.</span><span class="n">set_random_seed</span><span class="p">(</span><span class="mi">217</span><span class="p">)</span>         <span class="c1">## to keep consistent results</span>
+</span></span><span class="line"><span class="cl">        <span class="n">seed</span> <span class="o">=</span> <span class="mi">3</span>                        <span class="c1">## to keep consistent results</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">n_x</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">shape</span>        <span class="c1">## n_x = input size; m = number of training examples</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n_y</span> <span class="o">=</span> <span class="n">Y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>          <span class="c1">## n_y = output size</span>
+</span></span><span class="line"><span class="cl">        <span class="n">costs</span> <span class="o">=</span> <span class="p">[]</span>                      <span class="c1">## to keep track of the costs</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">## Step-1: Create placeholders of shape = (n_x, n_y)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">create_placeholders</span><span class="p">(</span><span class="n">n_x</span><span class="p">,</span> <span class="n">n_y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1">## Step-2: Initialize parameters</span>
+</span></span><span class="line"><span class="cl">        <span class="n">parameters</span> <span class="o">=</span> <span class="n">initialize_parameters</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">## Step-3: Forward propagation</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">##         Build the forward propagation the tf graph</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Z3</span> <span class="o">=</span> <span class="n">forward_proagation</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">## Step-4: Cost function</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">##         Add cost function to tf graph</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cost</span> <span class="o">=</span> <span class="n">compute_cost</span><span class="p">(</span><span class="n">Z3</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">## Step-5: Backward propagation</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">##         Define the tf optimizer. Use `AdamOptimizer`</span>
+</span></span><span class="line"><span class="cl">        <span class="n">optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">AdamOptimizer</span><span class="p">(</span><span class="n">lr</span><span class="p">)</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">cost</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1">## Step-6: Initialize all variables</span>
+</span></span><span class="line"><span class="cl">        <span class="n">init</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">## Step-7: Start the session to compute the tf graph</span>
+</span></span><span class="line"><span class="cl">        <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">## Step-7.1: Run the initializer `init`</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1">## Step-7.2: Do the training loop</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_epchs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">epoch_cost</span> <span class="o">=</span> <span class="mf">0.0</span>        <span class="c1">## Define the cost for each epoch</span>
+</span></span><span class="line"><span class="cl">                <span class="n">num_batches</span> <span class="o">=</span> <span class="n">m</span> <span class="o">//</span> <span class="n">bs</span>
+</span></span><span class="line"><span class="cl">                <span class="n">seed</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">                <span class="n">minibatches</span> <span class="o">=</span> <span class="n">random_mini_batches</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">bs</span><span class="p">,</span> <span class="n">seed</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="p">(</span><span class="n">Xb</span><span class="p">,</span> <span class="n">Yb</span><span class="p">)</span> <span class="ow">in</span> <span class="n">minibatches</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">_</span><span class="p">,</span> <span class="n">minibatch_cost</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">cost</span><span class="p">],</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">X</span><span class="p">:</span><span class="n">Xb</span><span class="p">,</span> <span class="n">Y</span><span class="p">:</span><span class="n">Yb</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">epoch_cost</span> <span class="o">+=</span> <span class="n">minibatch_cost</span>
+</span></span><span class="line"><span class="cl">                <span class="n">epoch_cost</span> <span class="o">/=</span> <span class="n">num_batches</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1">## Step-8: Save the trained model parameters</span>
+</span></span><span class="line"><span class="cl">            <span class="n">parameters</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;parameters have been trained&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1">## Step-9: How to calculate the correct predictions &amp; accuracy</span>
+</span></span><span class="line"><span class="cl">            <span class="n">correct_preds</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">Z3</span><span class="p">),</span> <span class="n">tf</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">Y</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="n">accuracy</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">correct_preds</span><span class="p">,</span> <span class="s2">&#34;float&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1">## Step-10: Calculate the train &amp; test accuracies</span>
+</span></span><span class="line"><span class="cl">            <span class="n">accuracy_train</span> <span class="o">=</span> <span class="n">accuracy</span><span class="o">.</span><span class="n">eval</span><span class="p">({</span><span class="n">X</span><span class="p">:</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y</span><span class="p">:</span><span class="n">Y_train</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl">            <span class="n">accuracy_test</span> <span class="o">=</span> <span class="n">accuracy</span><span class="o">.</span><span class="n">eval</span><span class="p">({</span><span class="n">X</span><span class="p">:</span><span class="n">X_test</span><span class="p">,</span> <span class="n">Y</span><span class="p">:</span><span class="n">Y_test</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">parameters</span>
+</span></span></code></pre></div>
+      </span>
+       
+
+    </section>
+    <hr>
+<footer>
+	  <nav>
+      
+  <ul>
+    <li>
+      © 2025
+    </li>
+  
+  </ul>
+    </nav>
+</footer>
+
+  </main>
+</body>
+</html>

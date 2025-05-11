@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Vinay Kumar</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on Vinay Kumar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/post/atom.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>http://localhost:1313/post/template/markdown-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/template/markdown-syntax/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rich Content</title>
+      <link>http://localhost:1313/post/template/rich-content/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/template/rich-content/</guid>
+      <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Placeholder Text</title>
+      <link>http://localhost:1313/post/template/placeholder-text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/template/placeholder-text/</guid>
+      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Math Typesetting</title>
+      <link>http://localhost:1313/post/template/math-typesetting/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/template/math-typesetting/</guid>
+      <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Emoji Support</title>
+      <link>http://localhost:1313/post/template/emoji-support/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/template/emoji-support/</guid>
+      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/023_add_lists/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/023_add_lists/</guid>
+      <description> Problem # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/024_depth_first_values/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/024_depth_first_values/</guid>
+      <description> Problem # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/025_breadth_first_values/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/025_breadth_first_values/</guid>
+      <description> Problem # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/026_tree_includes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/026_tree_includes/</guid>
+      <description> Problem # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/027_tree_sum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/027_tree_sum/</guid>
+      <description> Problem # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/028_tree_min_value/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/028_tree_min_value/</guid>
+      <description> Problem # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/arrays/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/arrays/</guid>
+      <description>Arrays # Author: Vinay Kumar (@imflash217) | Date: 15/March/2021&#xA;Definition # ???+ note &amp;ldquo;Definition&amp;rdquo; An Array is an ordered list of data that we access with a numerical index. Generally speaking an array is allocated upfront as a single block of memory based on the number of elements and type of the data we want the array to hold. This allows us to read and write elements into the array efficiently, since our program knows exactly where each element is stored in the memory.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/binary_tree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/binary_tree/</guid>
+      <description>Introduction # A tree is a frequently used data structure to simulate a hierarchical tree-like structure. Each node of the tree will a value and list of references to otehr nodes which are called child nodes.&#xA;From a graph view, a tree can also be described as a DAG (directed acyclic graph) which has N nodes and (N-1) edges.&#xA;A binary tree is a tree data structure where each node can have maximum 2 children only.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/design_patterns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/design_patterns/</guid>
+      <description>Design Patterns for Humans 🤗 # Design Patterns are guidelines to recurring problems; {==guidelines on how to solve certain problems==} They are not classes, packages, or libraries that you can plug into an application and wait for magic to happen. These are rather guideline son how to solve certain problems in certain situations.&#xA;Design Patterns are guidelines to solving certain recurring problems.&#xA;Wikipedia describes them as:&#xA;{==&#xA;In software engineering, a software design pattern is a general reusable solution to a commonly recurring problem within a given context in software design.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/dict/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/dict/</guid>
+      <description>Dictionary Abstract Data Types # Another Solution # Can do better with Hash Tables in $O(1)$ expected time, $O(n+m)$ space; where m is the table size An example # Let keys be the student ids of students registered in class CLS201; eg. 2022CS10110. There are $100$ students in the class, so we create a hash-table of size say 100. Hash function hash() is say, the last two digits of the student-id.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/document_distance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/document_distance/</guid>
+      <description>Document Distance # ???+ note &amp;ldquo;Call Graph for the code&amp;rdquo;&#xA;``` - main() - word_frequencies_for_file() - get_words_from_line_list() - count_frequency() - vector_angle() - inner_product() ``` ???+ quote &amp;ldquo;Author Disclaimer&amp;rdquo; Author: Vinay Kumar (@imflash217)&#xA;`Date: 01/February/2021` The contents of this article were originally published at the references below. I have assembled it for my own understanding. Feel free to reuse and tag along the references. :+1: References # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/dp_factory_method/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/dp_factory_method/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/dp_simple_factory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/dp_simple_factory/</guid>
+      <description>A real world example: # Consider, you are building house and you need doors. You can either put on some carpenter clothes, bring some glue, wood, tools and make the door yourself. Or, you can call the factory and get the door delivered to you; so that you don&amp;rsquo;t need to learn anything about door making or deal with the mess it brings.&#xA;In simple words,&#xA;Simple Factory generates an instance for client without exposing any instantiation logic to the clients.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/dynamic_programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/dynamic_programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/hashtables/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/hashtables/</guid>
+      <description>Hash Tables # Author: Vinay Kumar (@imflash217) | Date: 29/January/2021&#xA;Definition # ???+ note &amp;ldquo;Definition&amp;rdquo; Hash Table is a data structure which stores data in an associative manner (i.e. in a (key, value) pair).&#xA;- In a hash table, the data is stored in an array format where each data-value has its own unique index-value. Due to this feature, the access to data becomes very fast if we know the desired index-value; irrespective of the size of the data.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/linked_list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/linked_list/</guid>
+      <description>Linked List Data Structure # In this tutorial we will talk about a widely useful Linked List data structure. Previously, we had tried to implement dynamic lists using arrays, but we encountered several issues with its inefficiency in terms of memory usage. To understand LInked List properly, we first need to understand theses limitations encountered while trying to implement dynamic lists using arrays.&#xA;So, let&amp;rsquo;s start with a story, imagine a computer&amp;rsquo;s memory (RAM) and imagine that to be represented as separate partitions where each partition represents a byte of the memory and each byte has its memory-address as well.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/priority_queue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/priority_queue/</guid>
+      <description>Priority Queue # ???+ note &amp;ldquo;Definition&amp;rdquo; Implements a set S of elements; each of the elements is associated with a key&#xA;Operations: `search()`, `insert()`, `delete()`, `change_priorities()`, `max_priority()`, `min_priority()` ???+ quote &amp;ldquo;Author Disclaimer&amp;rdquo; Author: Vinay Kumar (@imflash217)&#xA;`Date: 01/February/2021` The contents of this article were originally published at the references below. I have assembled it for my own understanding. Feel free to reuse and tag along the references. :+1: References # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/qa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/qa/</guid>
+      <description>Linked List # ???+ quote &amp;ldquo;Question #1&amp;rdquo; &amp;gt; What two properties are typically stored in the nodes of a singly linked list?&#xA;:trophy: **`value`** and **`next`** ???+ quote &amp;ldquo;Question #2&amp;rdquo; &amp;gt; What terms are commonly used to describe the first node &amp;amp; last node of a linked list?&#xA;:trophy: **HEAD** for first-node :trophy: **TAIL** for last-node ???+ quote &amp;ldquo;Question #3&amp;rdquo; &amp;gt; What is the dummy head pattern for a linked-list?</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/algorithms/sorting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/algorithms/sorting/</guid>
+      <description>Sorting Algorithms # Insertion Sort # Vanilla Insertion Sort # ???+ note &amp;ldquo;Vanilla Insertion Sort&amp;rdquo;&#xA;``` for i = 1, 2, 3, ..., n{ insert A[i] into sorted array A[0:i-1] by &amp;quot;pairwise swaps&amp;quot; down to the correct position } ``` ![insertion sort](../../assets/blogs/algorithms/blog_01312021_insertion_sort/1.jpg) This above version has **$\theta(n)$** steps and each step has **$\theta(n)$** comparisons. SO this version of the algorithm is **$\theta(n^2)$** runtime complexity. Binary Insertion Sort # ???+ note &amp;ldquo;Binary Insertion Sort&amp;rdquo; This improved version is slightly improved by using Binary Search while searching for the position to place the key A[i] in the sorted part of the array (i.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/assets/report_gridtr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/assets/report_gridtr/</guid>
+      <description>&lt;!DOCTYPE html&gt; Previous slide Next slide Toggle fullscreen Open presenter view #_Thesis Lit. Review vkumar24@ncsu.edu &amp;amp; twu19@ncsu.edu Update @ Feb-11-2022 Thesis Project #_GridTr | Vinay Kumar, Dr. Tianfu Wu | |&amp;gt; Research papers reviewed here: #_THA: Talking Head Attention #_TUPE: Rethinking positional Encodings in language pre-training #_DETR: #_GridCells: Thesis Project #_GridTr | Vinay Kumar, Dr. Tianfu Wu | #_THA: Talking-Heads Attention =&amp;gt; #_THA Talking-Heads Attention #[Shazeer et al.; 2020 (Google)]</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/awesome/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/awesome/</guid>
+      <description>&amp;ndash;8&amp;lt;&amp;ndash; &amp;ldquo;./report_GridTr.html&amp;rdquo;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/deep_learning/blog_dataloaders/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/deep_learning/blog_dataloaders/</guid>
+      <description> PyTorch Dataloaders # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/deep_learning/blog_tf_v1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/deep_learning/blog_tf_v1/</guid>
+      <description>Tensorflow Tutorial # In this session you will learn to do the following in TensorFlow v1.0&#xA;Initialize Variables Start your own session Train Algorithms Implement a Neural Network Exploring the Tensorflow Library # Example-1: General Overview # import tensorflow as tf y_hat = tf.constant(36, name=&amp;#34;y_hat&amp;#34;) ## Defins a &amp;#34;y_hat&amp;#34; constant. Sets its value to 36 y = tf.constant(39, name=&amp;#34;y&amp;#34;) ## Defins a &amp;#34;y&amp;#34; constant. Sets its value to 39 loss = tf.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/deep_learning/dl_04_09/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/deep_learning/dl_04_09/</guid>
+      <description>Correction of Distribution Shifts # Covariate Shift Correction # Label Shift Correction # Concept Shift Correction # Concept Shift is much harder to fix in a principled manner. For instance, in a situation where the problem suddenly changes from classifying cats v/s dogs to classying white v/s black animals; it will be unreasonable to assume that we can do much better by collecting new labels and training from scratch.&#xA;Fortunately, in practice such concept-shifts are very rare, but instead it is usually observed that the task keeps on changing gradually.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/deep_learning/dl_interviews/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/deep_learning/dl_interviews/</guid>
+      <description>Deep Learning Interviews # Introduction # Q1: Distribution of maximum entropy # What is the distribution of maximum entropy; i.e. the distribution that has the maximum entropy among all distributions in a bounded interval [a, b], (-\inf, +\inf)?&#xA;??? success &amp;ldquo;Solution&amp;rdquo; In a bounded interval [a, b], the UNIFORM DISTRIBUTION has the maximum entropy. The variance of the Uniform Distribution $\mathcal{U}(a, b)$ is $\sigma^2 = \frac{(b-a)^2}{12}$. Therefore, the maximum entropy in a bounded interval [a, b] is $\left(\frac{\log{12}}{2} + \log(\sigma)\right)$</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/deep_learning/einops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/deep_learning/einops/</guid>
+      <description>Part-1 # Welcome to einops # We don&amp;rsquo;t write y = x.transpose(0,2,3,1) We write comprehensible code y = einops.rearrange(x, &amp;#34;b c h w -&amp;gt; b h w c&amp;#34;) einops supports widely used tensor packages viz. numpy, pytorch, tensorflow, chainer, gluon and extends them. What&amp;rsquo;s in this tutorial? # Fundamentals: reordering, composition, and decomposition of tensors. Operations: rearrange, reduce, repeat How much can you do with a single operation? Preparations # import numpy from utils import display_np_arrays_as_images display_np_arrays_as_images() Load a batch of images # ## there are 6 images of shape 96x96 ## with 3 color channels packed as tensors images = np.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/deep_learning/einops2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/deep_learning/einops2/</guid>
+      <description>Popular Deep Learning Architectures using EINOPS # In this section we will be rewriting the building blocks of deep learning in both the traditional PyTorch way as well as using einops library.&#xA;Imports # Firstly, we will import the necessary libraries to be used.&#xA;## importing necessary libraries import math import numpy as np import torch import torch.nn as nn import torch.nn.functional as F from einops import rearrange, reduce, repeat, asnumpy, parse_shape from einops.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/deep_learning/loss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/deep_learning/loss/</guid>
+      <description> Loss Functions # Cross Entropy # Cross Entropy is usually used in multiclass classification tasks.&#xA;Pareto Optimization: An area of multiple criteria decision making that is concerned with mathematical optimization problems involving more than one objective functions to be optimized simultaneously.&#xA;???+ quote &amp;ldquo;Cross Entropy using Numpy&amp;rdquo; ```python import numpy as np&#xA;def cross_entropy(preds, labels): xentropy = 0 for i in range(len(preds)): xentropy -= preds[i] * np.log(labels[i]) # NOTE the `-=` instead of `+=` return xentropy ``` </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/lightning/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/lightning/about/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/lightning/api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/lightning/api/</guid>
+      <description>configure_optimizers() # --8&amp;lt;-- &amp;#34;../lightning/api/configure_optimizers.py&amp;#34; forward() # --8&amp;lt;-- &amp;#34;../lightning/api/forward.py&amp;#34; freeze() # --8&amp;lt;-- &amp;#34;../lightning/api/freeze.py&amp;#34; log() # --8&amp;lt;-- &amp;#34;../lightning/api/log.py&amp;#34; training_step() # --8&amp;lt;-- &amp;#34;../lightning/api/training_step.py&amp;#34; test_step() # --8&amp;lt;-- &amp;#34;../lightning/api/test_step.py&amp;#34; </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/lightning/tut_1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/lightning/tut_1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/lightning/tut_2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/lightning/tut_2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/lightning/tut_3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/lightning/tut_3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/lightning/tut_4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/lightning/tut_4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/lightning/tut_5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/lightning/tut_5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/notes/</guid>
+      <description>The Preface of the key technological stuffs here # Tips &amp;amp; Tricks # LR Scheduler # Similar to the learning rate, the lr-scheduler to apply depends on the classifier &amp;amp; the model. For image classifiers and SGD optimizer, the Multi-Step LR Scheduler is shown to be a good choice. Models trained with Adam commonly use a smooth exponential-decay in the lr or a cosine-like scheduler. For TRANSFORMERS: &amp;#x1f6a8; Remember to use a learning rate WARMUP &amp;#x1f6a8; The cosine-scheduler is often used for decaying the lr afterwards (but can also be replaced by exponential decay) Regularizaation # Regularization is important in networks when we see a significantly higher training performance than test performance.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/physics/blog_01282021/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/physics/blog_01282021/</guid>
+      <description>Electromagnetic Spectrum, properties of material medium &amp;amp; its effects. # Electromagnetic Spectrum # ???+ quote &amp;ldquo;Electromagnetic Spectrum&amp;rdquo; ???+ quote &amp;quot;&amp;quot; The different parts of the electromagnetic spectrum have very different effects upon interaction with matter. Starting with low frequency radio waves, the human body is quite transparent (you can listen to your portable radio inside your home since the waves pass freely through the walls of your house and even through the person beside you!</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/prob/intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/prob/intro/</guid>
+      <description>Probablity Theory # A key concept in the field of pattern recognition is that of uncertainity. It arrises through:&#xA;noise on measurements finite size of datasets. Probability theory provides a consistent framework for the quantification and manipulation of uncertainity and forms one of the central foundations of Pattern Recognition.&#xA;When combined with Decision Theory, it allows us to make optimal predictions given all the informtion available to us, even though that information may be incomplete or ambiguous.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/blogs/system_design/cdn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/blogs/system_design/cdn/</guid>
+      <description>CDN अर्थात् Content Delivery Network # CDN अर्थात् servers का एक ऐसा network जो पृथ्वी पर अलग-अलग भूगौलिक क्षेत्रों में होता है; और इनका एक ही कार्य होता है: &amp;ldquo;static content जैसे images, videos, CSS, JavaScript, etc. को माँगने वाले client (जैसे apps, end-users, etc) तक पहुँचाना&amp;rdquo;। इस कार्य को करने के लिए CDN के द्वारा प्रयुक्त होने वाले technology का नाम है: Dynamic Content Caching जो request path, query strings, cookies और request headers के आधार पर HTML pages को cache करने की योग्यता प्रदान करता है।</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/gists/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/gists/about/</guid>
+      <description> Stay tuned. # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/gists/lightning/api/configure_optimizers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/gists/lightning/api/configure_optimizers/</guid>
+      <description>pl.LightningModule.configure_optimizers() # Code Snippets # --8&amp;lt;-- &amp;#34;../lightning/api/configure_optimizers.py&amp;#34; ???+ quote &amp;ldquo;Author Disclaimer&amp;rdquo; Author: Vinay Kumar (@imflash217) Date: 30/January/2021&#xA;The contents of this article were originally published at the references below. I have assembled it for my own understanding. Feel free to reuse and tag along the references. :+1: References # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/gists/lightning/api/forward/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/gists/lightning/api/forward/</guid>
+      <description>pl.LightningModule.forward() # Code Snippets # --8&amp;lt;-- &amp;#34;../lightning/api/forward.py&amp;#34; ???+ quote &amp;ldquo;Author Disclaimer&amp;rdquo; Author: Vinay Kumar (@imflash217) | Date: 30/January/2021&#xA;The contents of this article were originally published at the references below. I have assembled it for my own understanding. Feel free to reuse and tag along the references. :+1: References # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/gists/lightning/api/freeze/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/gists/lightning/api/freeze/</guid>
+      <description>pl.LightningModule.freeze() # Code Snippets # --8&amp;lt;-- &amp;#34;../lightning/api/freeze.py&amp;#34; ???+ quote &amp;ldquo;Author Disclaimer&amp;rdquo; Author: Vinay Kumar (@imflash217) | Date: 30/January/2021&#xA;The contents of this article were originally published at the references below. I have assembled it for my own understanding. Feel free to reuse and tag along the references. :+1: References # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/gists/lightning/api/log/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/gists/lightning/api/log/</guid>
+      <description>pl.LightningModule.log() # Code Snippets # --8&amp;lt;-- &amp;#34;../lightning/api/log.py&amp;#34; ???+ quote &amp;ldquo;Author Disclaimer&amp;rdquo; Author: Vinay Kumar (@imflash217) | Date: 30/January/2021&#xA;The contents of this article were originally published at the references below. I have assembled it for my own understanding. Feel free to reuse and tag along the references. :+1: References # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/gists/lightning/api/test_step/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/gists/lightning/api/test_step/</guid>
+      <description>pl.LightningModule.test_step() # Code Snippets # --8&amp;lt;-- &amp;#34;../lightning/api/test_step.py&amp;#34; ???+ quote &amp;ldquo;Author Disclaimer&amp;rdquo; Author: Vinay Kumar (@imflash217) | Date: 30/January/2021&#xA;The contents of this article were originally published at the references below. I have assembled it for my own understanding. Feel free to reuse and tag along the references. :+1: References # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/gists/lightning/api/training_step/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/gists/lightning/api/training_step/</guid>
+      <description>pl.LightningModule.training_step() # Code Snippets # --8&amp;lt;-- &amp;#34;../lightning/api/training_step.py&amp;#34; ???+ quote &amp;ldquo;Author Disclaimer&amp;rdquo; Author: Vinay Kumar (@imflash217) | Date: 30/January/2021&#xA;The contents of this article were originally published at the references below. I have assembled it for my own understanding. Feel free to reuse and tag along the references. :+1: References # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/gists/python_snippets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/gists/python_snippets/</guid>
+      <description>Python Snippets # 1: MappingProxyType # ???+ quote &amp;ldquo;Immutable Mappings&amp;rdquo; The mapping types provided by the standard library are all mutable; but you may need to gurantee that a user cannot change a mapping by mistake.&#xA;Since `Python 3.3` the `types` module provides a wrapper class `MappingProxyType` which, given a mapping returns a `mappingproxy` instance that is **read-only** but a **dynamic-view** of the original mapping. This means that the original mapping can be seen through `mappingproxy` but changes cannot be made through it.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/github_repos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/github_repos/</guid>
+      <description>Name: Vinay Kumar GitHub: https://github.com/imflash217/&#xA;Notable Repositories with original implementation of AI systems:&#xA;1. Cybertron # GitHub link: https://github.com/imflash217/cybertron/blob/main/cybertron/&#xA;Summary: It implements various Transformer based algorithms from scratch in raw-python, for auto-regressive tasks, such as:&#xA;various embedding layers like: Rotary_Embedding, Absolute_Positional, Fixed_Positional, Relative_PositionBias, Alibi_PositionBias Residual &amp;amp; GRU gates various Normalization layers like ReZero, ScaleNorm, RMSNorm etc. A unified attention layer class to support various configurations of transformer-based architectures. Vision Transformer (ViT) Wrapper Native implementation of Encoder &amp;amp; Decoder blocks.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/hobbies/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/hobbies/about/</guid>
+      <description> Stay tuned. # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/nlp/cs224n/cs224n_1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/nlp/cs224n/cs224n_1/</guid>
+      <description>Lecture #1 # Word Meaning # Denotational Semantics Distributional Semantics Localist Representation (like one-hot vectors) Distributed Representation (like word-vectors) ???+ note &amp;ldquo;NLTK example: synonyms of word good&amp;rdquo;&#xA;```python --8&amp;lt;-- &amp;quot;../CS224N/01_word_meaning.py&amp;quot; ``` ``` ❯ python 01_word_meaning.py noun: good noun: goodgoodness noun: goodgoodness noun: commoditytrade_goodgood adj: good adj (s): fullgood adj: good adj (s): estimablegoodhonorablerespectable adj (s): beneficialgood adj (s): good adj (s): goodjustupright adj (s): adeptexpertgoodpracticedproficientskillfulskilful adj (s): good adj (s): deargoodnear adj (s): dependablegoodsafesecure adj (s): goodrightripe adj (s): goodwell adj (s): effectivegoodin_effectin_force adj (s): good adj (s): goodserious adj (s): goodsound adj (s): goodsalutary adj (s): goodhonest adj (s): goodundecomposedunspoiledunspoilt adj (s): good adv: wellgood adv: thoroughlysoundlygood ``` ?</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/nlp/naive_bayes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/nlp/naive_bayes/</guid>
+      <description>Naïve Bayes Classifiers # In this article we will talk about Multinomial Naïve Bayes Classifier, so called because it is a Bayesian Classifier that makes a simplifying (naïve) assumption about the interaaction b/w features.&#xA;Let&amp;rsquo;s understand the intuition of this calssifier in the context of text classification. Given a text document we first respresnt the text document as a bag-of-words (i.e. an unordered set of words in the document with their position information removed) keeping only the word-frequency in the given document.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/nlp/nlp_book/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/nlp/nlp_book/</guid>
+      <description>NLP notes: # Text Normalization # Normalizing text means converting them into a more convenient, standard form. For example, most of what we are going to do with language relies on first separating out or tokenizing words from running text (which is called as tokenization).&#xA;Tokenization # Lemmatization # Stemming # Sentence Segmentation # Edit Distance # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/nlp/regex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/nlp/regex/</guid>
+      <description>Regular Expressions # One of the unsung successes in standardization of computer science has been the Regular Expressions (RE), a language for specifying text search strings. This practical language is in every computer language, word processor, and text processing tools like the Unix&amp;rsquo;s grep.&#xA;&amp;#x1f3c6; A regular expression is an algebraic notation for characterizing a set of strings.&#xA;They are particularly useful for searching in texts, when we have a pattern to search for and a corpus of texts to search through.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/notes/ece542/ece542_hw1a/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/notes/ece542/ece542_hw1a/</guid>
+      <description>Homework 1a # Author: Vinay Kumar (@imflash217) | Date: 31/January/2021&#xA;Q1 # ???+ question &amp;ldquo;Q1&amp;rdquo; Given a vector $v \in R^n$ and square matrices $A, B \in R^{n\times n}$; show that:&#xA;- [ ] $v^T v$ = trace($vv^T$) - [ ] trace(AB) = trace(BA) ???+ danger &amp;ldquo;Q1 Solution&amp;rdquo; Let $v = [v_1, v_2, \cdots, v_n]^T$ be a column vector of size $(n,1)$ - [ ] Then, $v^T\ v = $</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/notes/ece542/ece542_lecture1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/notes/ece542/ece542_lecture1/</guid>
+      <description>Lecture #1 # Author: Vinay Kumar (@imflash217) | Date: 30/January/2021&#xA;AI v/s ML v/s DL (Venn Diagram) One-hot-encoding Loss Function Training v/s Evaluation Error Model Selection Hyperparams Overfitting v/s Underfitting Generalization Gap Model Capacity K-fold Cross Validation Leave-one-out Cross Validation ???+ note &amp;ldquo;What is Machine Learning?&amp;rdquo; It is a field that aims to extract relationships and structures in the data. Example: How to map data to annotations?&#xA;???+ note &amp;ldquo;Loss Function&amp;rdquo; We need a measure to see how well our system is doing at learning.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/paper_reviews/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/paper_reviews/about/</guid>
+      <description> Stay tuned. # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/paper_reviews/detr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/paper_reviews/detr/</guid>
+      <description> Stay tuned. # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/projects/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/projects/about/</guid>
+      <description> Stay tuned. # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/publications/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/publications/about/</guid>
+      <description> Stay tuned. # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/publications/interspeech_2014/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/publications/interspeech_2014/</guid>
+      <description>##################################################################### ## प्रोजेक्ट-शिक्षा ##################################################################### def विभाग(भाज्य, भाजक): भागफल = 0 भाग = 1 शेषफल = 0 print(f&amp;#34;-----------------------------------&amp;#34;) print(f&amp;#34;भाज्य - (भाजक x भाग) = शेष [?] भाजक&amp;#34;) print(f&amp;#34;-----------------------------------&amp;#34;) if भाज्य &amp;lt; भाजक: # print raise ValueError(f&amp;#34;भाज्य &amp;lt; भाजक [ग़लत संख्याएँ दी गयीं. कृपया सही संख्या अंकित करें.]&amp;#34;) while True: शेष = भाज्य - (भाजक * भाग) if शेष &amp;gt;= भाजक: print(f&amp;#34;{भाज्य} - ({भाजक} x {भाग}) = {शेष} &amp;gt; {भाजक}&amp;#34;) भाग = भाग + 1 else: print(f&amp;#34;{भाज्य} - ({भाजक} x {भाग}) = {शेष} &amp;lt; {भाजक} .</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/publications/odyssey_2014/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/publications/odyssey_2014/</guid>
+      <description>##################################################################### ## प्रोजेक्ट-शिक्षा ##################################################################### def विभाग(भाज्य, भाजक): भागफल = 0 भाग = 1 शेषफल = 0 print(f&amp;#34;-----------------------------------&amp;#34;) print(f&amp;#34;भाज्य - (भाजक x भाग) = शेष [?] भाजक&amp;#34;) print(f&amp;#34;-----------------------------------&amp;#34;) if भाज्य &amp;lt; भाजक: # print raise ValueError(f&amp;#34;भाज्य &amp;lt; भाजक [ग़लत संख्याएँ दी गयीं. कृपया सही संख्या अंकित करें.]&amp;#34;) while True: शेष = भाज्य - (भाजक * भाग) if शेष &amp;gt;= भाजक: print(f&amp;#34;{भाज्य} - ({भाजक} x {भाग}) = {शेष} &amp;gt; {भाजक}&amp;#34;) भाग = भाग + 1 else: print(f&amp;#34;{भाज्य} - ({भाजक} x {भाग}) = {शेष} &amp;lt; {भाजक} .</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/context_managers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/context_managers/</guid>
+      <description>Context Managers # A context manager is a Python object that provides extra contextual information to an action. This extra contextual information takes the form of running a callable upon initiating the context using the with statement; as well as running a callable upon completing all the code inside the with block.&#xA;For eg:&#xA;with open(&amp;#34;file.txt&amp;#34;) as f: contents = f.read() Anyone familiar with this pattern knows that invoking open in this fashion ensures that f&amp;rsquo;s close() will be called at some point.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/cookbook_dabeaz/ch01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/cookbook_dabeaz/ch01/</guid>
+      <description>1.1: Unpacking a sequence into separate variables # ???+ danger &amp;ldquo;Problem&amp;rdquo; You have a N-element tuple or sequence that you would like to unpack into a collection of N variables.&#xA;???+ done &amp;ldquo;Solution&amp;rdquo; 1. Any sequence or iterable can be unpacked into variables using a simple assignment operation. 2. The only requirement is that the the number of variables and structure of the sequence must match.&#xA;```python ##---------------------------------------------------------- p = (4,5) ## create a tuple x, y = p ## unpack the tuple into variables &#39;x&#39; &amp;amp; &#39;y&#39;.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/cookbook_dabeaz/ch02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/cookbook_dabeaz/ch02/</guid>
+      <description>Almost every useful program involve some kind of text processing whether it is data or generating output. Here we discuss about challenges involving text manipulation searching, substitution, lexing, parsing etc.&#xA;&amp;#x1f6a8; Many of these problems can be easily solved with built-in methods. While more complicated operations might require the use of regular expressions.&#xA;2.1: Splitting string on any of multiple delimeters # ???+ danger &amp;ldquo;Problem&amp;rdquo; You need to split the string into fields but the delimiters (and the space around them) aren&amp;rsquo;t consistent throughtout the string.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/cookbook_dabeaz/ch03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/cookbook_dabeaz/ch03/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/cookbook_dabeaz/ch04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/cookbook_dabeaz/ch04/</guid>
+      <description>Iterators are one of Python&amp;rsquo;s most powerful features. At a high level, you might view iteration simply as a way to process items in a sequence, but there is much more than this such as creating your own iterator object, applying useful iterator patterns in itertools module, make generator functions etc.&#xA;4.1: Manually consuming an iterator # ???+ danger &amp;ldquo;problem&amp;rdquo; You wan tto consume items in an iterable but for whatever reasons you can&amp;rsquo;t or don&amp;rsquo;t want to use a for loop</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/cookbook_dabeaz/ch05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/cookbook_dabeaz/ch05/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/cookbook_dabeaz/ch06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/cookbook_dabeaz/ch06/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/cookbook_dabeaz/ch07/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/cookbook_dabeaz/ch07/</guid>
+      <description>Writing functions using def is a cornerstone of all programs. In this tutorial we will look into some of the advance usage of functions viz.&#xA;closures callback-functions control-flow keyword-only arguments default-arguments annotations any-number-of-arguments (*args &amp;amp; **kwargs) etc. 7.1: Function with any number of arguments (*args, **kwargs) # ???+ danger &amp;ldquo;Problem&amp;rdquo; You want to write a function that accepts any number of arguments.&#xA;???+ done &amp;ldquo;Solution&amp;rdquo; &amp;#x1f6a8; For a function that accepts any number of positional arguments use a * argument.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/cookbook_dabeaz/ch08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/cookbook_dabeaz/ch08/</guid>
+      <description>The primary focus in this article is to provide common programming patterns related to class definitions. Some of the topics include:&#xA;Making objects support common Python features. usage of special methods. Encapsulation techniques. Inheritence. Memory management. Useful Design Patterns. 8.1: str() &amp;amp; repr() # ???+ danger &amp;ldquo;Problem&amp;rdquo; You want to change the output produced by printing or viewing instances to something more sensible.&#xA;???+ done &amp;ldquo;Solution&amp;rdquo; To change the string representation of the class instances define __str__() &amp;amp; __repr__() methods as shown below.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/cookbook_dabeaz/ch09/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/cookbook_dabeaz/ch09/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/cookbook_dabeaz/ch10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/cookbook_dabeaz/ch10/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/cookbook_dabeaz/ch11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/cookbook_dabeaz/ch11/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/cookbook_dabeaz/ch12/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/cookbook_dabeaz/ch12/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/cookbook_dabeaz/ch13/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/cookbook_dabeaz/ch13/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/cookbook_dabeaz/ch14/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/cookbook_dabeaz/ch14/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/cookbook_dabeaz/ch15/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/cookbook_dabeaz/ch15/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/decorators/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/decorators/</guid>
+      <description>Decorators 101 # ** A decorator is a callable that takes another function as argument (the decorated func.)** The decorator may perform some processing with the decorated function, and return it or replaces it with another function or callable object.&#xA;Both these code snippet shas the same effect:&#xA;@decorate def target(): print(&amp;#34;running target()&amp;#34;) v/s&#xA;## this code snippet has the same effect as the above one (using @decorate decorator) def target(): print(&amp;#34;running target()&amp;#34;) target = decorate(target) Decorators are just syntactic sugar.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/design_patterns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/design_patterns/</guid>
+      <description>STRATEGY Pattern # from abc import ABC, abstractmethod from collections import namedtuple Customer = namedtuple(&amp;#34;Customer&amp;#34;, &amp;#34;name fidelity&amp;#34;) class LineItem: def __init__(self, product, quantity, price): self.product = product self.quantity = quantity self.price = price def total(self): return self.price * self.quantity class Order: &amp;#34;&amp;#34;&amp;#34;This is the CONTEXT part of the Strategy-Pattern&amp;#34;&amp;#34;&amp;#34; def __init__(self, customer, cart, promotion=None): self.customer = customer self.cart = list(cart) self.promotion = promotion def total(self): if not hasattr(self, &amp;#34;__total&amp;#34;): self.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/hashing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/hashing/</guid>
+      <description>Hashing in Python # Reduce # Map &amp;amp; Reduce # ZIP # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/protocols/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/protocols/</guid>
+      <description>In the context of Object Oriented Programming, a protocol is an informal interface that is defined only in the documentation, not in code.&#xA;Sequence Protocol # For eg., the sequence protocol in Python entails just the __len__() and __getitem__() methods. Any class Spam that uses those methods can be used as a sequence. Whether Spam is a subclass of this or that is irrelevant; all that matters is that it provides the necessary methods</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/python/pythonic_object/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/python/pythonic_object/</guid>
+      <description>Lets start by introducing a Vector class&#xA;from array import array import math class Vector2D: typecode = &amp;#34;d&amp;#34; def __init__(self, x, y): self.x = float(x) self.y = float(y) def __iter__(self): return (i for i in (self.x, self.y)) def __repr__(self): class_name = type(self).__name__ return &amp;#34;{}({!r}, {!r})&amp;#34;.format(class_name, *self) def __str__(self): return str(tuple(self)) def __bytes__(self): return (bytes([ord(self.typecode)]) + bytes(array(self.typecode, self))) def __eq__(self, other): return tuple(self) == tuple(other) def __abs__(self): return math.hypot(self.x, self.y) def __bool__(self): return bool(abs(self)) An alternative constructor # Since in above example, we export a Vector2D as bytes; we also need a method to imports a vector2D from binary sequence.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/speech/lecture-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/speech/lecture-3/</guid>
+      <description> Most of you may now that anbout 90% of the technology availabel is idle; in fact even more. Probably more than 95% of computing power is idle.&#xA;In last class we dicussed two important ideas:&#xA;Role of speech technology Signal -- to -- Symbol Scope of Speech Technology for this course # ❌ Language Translation ❌ Coding ❌ Transmission (Tx) ❌ Communication Technology in Speech (here it deals with coding &amp;amp; Tx) ✅ Signal to Symbol Transformation ✅ Language Knowledge ✅ Suprasegmental Knowledge (aka prosody) @startyaml version:3 @endyaml </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/til/042123/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/til/042123/</guid>
+      <description>numpy v/s pandas # One subtle aspect that lot of engineers miss is the access control design of numpy and pandas.&#xA;numpy uses row-major access control. pandas uses column-major access control. Genrally its seen that engineers complain about slow-nature of numpy compared to pandas. One of the prime culprits of this issue is the lack of knowledge about the access control used in these libraries.&#xA;By default, numpy uses row-major but it allows the user to specify the access control while creating the ndarray.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/til/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/til/about/</guid>
+      <description> Stay tuned. # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/transformers/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/transformers/about/</guid>
+      <description> Stay tuned. # References: # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/transformers/detr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/transformers/detr/</guid>
+      <description>ArXiv paper # Review Presentation Slides # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/transformers/layout_lm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/transformers/layout_lm/</guid>
+      <description>Layout LM # This article explains the structire and functionality of LayoutLM and its variants.&#xA;Introduction # </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/transformers/vaswani/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/transformers/vaswani/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/work/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/work/about/</guid>
+      <description>Stay tuned. # &amp;ndash;8&amp;lt;&amp;ndash; &amp;ldquo;../lightning/flashModel.py&amp;rdquo;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/work/aros/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/work/aros/</guid>
+      <description>##################################################################### ## प्रोजेक्ट-शिक्षा ##################################################################### def विभाग(भाज्य, भाजक): भागफल = 0 भाग = 1 शेषफल = 0 print(f&amp;#34;-----------------------------------&amp;#34;) print(f&amp;#34;भाज्य - (भाजक x भाग) = शेष [?] भाजक&amp;#34;) print(f&amp;#34;-----------------------------------&amp;#34;) if भाज्य &amp;lt; भाजक: # print raise ValueError(f&amp;#34;भाज्य &amp;lt; भाजक [ग़लत संख्याएँ दी गयीं. कृपया सही संख्या अंकित करें.]&amp;#34;) while True: शेष = भाज्य - (भाजक * भाग) if शेष &amp;gt;= भाजक: print(f&amp;#34;{भाज्य} - ({भाजक} x {भाग}) = {शेष} &amp;gt; {भाजक}&amp;#34;) भाग = भाग + 1 else: print(f&amp;#34;{भाज्य} - ({भाजक} x {भाग}) = {शेष} &amp;lt; {भाजक} .</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/work/boom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/work/boom/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/work/cognizant/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/work/cognizant/</guid>
+      <description>##################################################################### ## प्रोजेक्ट-शिक्षा ##################################################################### def विभाग(भाज्य, भाजक): भागफल = 0 भाग = 1 शेषफल = 0 print(f&amp;#34;-----------------------------------&amp;#34;) print(f&amp;#34;भाज्य - (भाजक x भाग) = शेष [?] भाजक&amp;#34;) print(f&amp;#34;-----------------------------------&amp;#34;) if भाज्य &amp;lt; भाजक: # print raise ValueError(f&amp;#34;भाज्य &amp;lt; भाजक [ग़लत संख्याएँ दी गयीं. कृपया सही संख्या अंकित करें.]&amp;#34;) while True: शेष = भाज्य - (भाजक * भाग) if शेष &amp;gt;= भाजक: print(f&amp;#34;{भाज्य} - ({भाजक} x {भाग}) = {शेष} &amp;gt; {भाजक}&amp;#34;) भाग = भाग + 1 else: print(f&amp;#34;{भाज्य} - ({भाजक} x {भाग}) = {शेष} &amp;lt; {भाजक} .</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/work/flashai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/work/flashai/</guid>
+      <description>##################################################################### ## प्रोजेक्ट-शिक्षा ##################################################################### def विभाग(भाज्य, भाजक): भागफल = 0 भाग = 1 शेषफल = 0 print(f&amp;#34;-----------------------------------&amp;#34;) print(f&amp;#34;भाज्य - (भाजक x भाग) = शेष [?] भाजक&amp;#34;) print(f&amp;#34;-----------------------------------&amp;#34;) if भाज्य &amp;lt; भाजक: # print raise ValueError(f&amp;#34;भाज्य &amp;lt; भाजक [ग़लत संख्याएँ दी गयीं. कृपया सही संख्या अंकित करें.]&amp;#34;) while True: शेष = भाज्य - (भाजक * भाग) if शेष &amp;gt;= भाजक: print(f&amp;#34;{भाज्य} - ({भाजक} x {भाग}) = {शेष} &amp;gt; {भाजक}&amp;#34;) भाग = भाग + 1 else: print(f&amp;#34;{भाज्य} - ({भाजक} x {भाग}) = {शेष} &amp;lt; {भाजक} .</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/work/ivmcl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/work/ivmcl/</guid>
+      <description>##################################################################### ## प्रोजेक्ट-शिक्षा ##################################################################### def विभाग(भाज्य, भाजक): भागफल = 0 भाग = 1 शेषफल = 0 print(f&amp;#34;-----------------------------------&amp;#34;) print(f&amp;#34;भाज्य - (भाजक x भाग) = शेष [?] भाजक&amp;#34;) print(f&amp;#34;-----------------------------------&amp;#34;) if भाज्य &amp;lt; भाजक: # print raise ValueError(f&amp;#34;भाज्य &amp;lt; भाजक [ग़लत संख्याएँ दी गयीं. कृपया सही संख्या अंकित करें.]&amp;#34;) while True: शेष = भाज्य - (भाजक * भाग) if शेष &amp;gt;= भाजक: print(f&amp;#34;{भाज्य} - ({भाजक} x {भाग}) = {शेष} &amp;gt; {भाजक}&amp;#34;) भाग = भाग + 1 else: print(f&amp;#34;{भाज्य} - ({भाजक} x {भाग}) = {शेष} &amp;lt; {भाजक} .</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/work/meeami/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/work/meeami/</guid>
+      <description>##################################################################### ## प्रोजेक्ट-शिक्षा ##################################################################### def विभाग(भाज्य, भाजक): भागफल = 0 भाग = 1 शेषफल = 0 print(f&amp;#34;-----------------------------------&amp;#34;) print(f&amp;#34;भाज्य - (भाजक x भाग) = शेष [?] भाजक&amp;#34;) print(f&amp;#34;-----------------------------------&amp;#34;) if भाज्य &amp;lt; भाजक: # print raise ValueError(f&amp;#34;भाज्य &amp;lt; भाजक [ग़लत संख्याएँ दी गयीं. कृपया सही संख्या अंकित करें.]&amp;#34;) while True: शेष = भाज्य - (भाजक * भाग) if शेष &amp;gt;= भाजक: print(f&amp;#34;{भाज्य} - ({भाजक} x {भाग}) = {शेष} &amp;gt; {भाजक}&amp;#34;) भाग = भाग + 1 else: print(f&amp;#34;{भाज्य} - ({भाजक} x {भाग}) = {शेष} &amp;lt; {भाजक} .</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/work/springboard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/work/springboard/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

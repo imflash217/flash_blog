@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ronalds Vilcins - http://localhost:1313/">
+  <title> | Vinay Kumar</title>
+  <meta name="description" content="Blogs &amp; Articles on Machine Learning by @imflash217">
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="The primary focus in this article is to provide common programming patterns related to class definitions. Some of the topics include:
+Making objects support common Python features. usage of special methods. Encapsulation techniques. Inheritence. Memory management. Useful Design Patterns. 8.1: str() &amp; repr() # ???&#43; danger &ldquo;Problem&rdquo; You want to change the output produced by printing or viewing instances to something more sensible.
+???&#43; done &ldquo;Solution&rdquo; To change the string representation of the class instances define __str__() &amp; __repr__() methods as shown below."/>
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="The primary focus in this article is to provide common programming patterns related to class definitions. Some of the topics include:
+Making objects support common Python features. usage of special methods. Encapsulation techniques. Inheritence. Memory management. Useful Design Patterns. 8.1: str() &amp; repr() # ???&#43; danger &ldquo;Problem&rdquo; You want to change the output produced by printing or viewing instances to something more sensible.
+???&#43; done &ldquo;Solution&rdquo; To change the string representation of the class instances define __str__() &amp; __repr__() methods as shown below." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/python/cookbook_dabeaz/ch08/" /><meta property="article:section" content="post" />
+
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="The primary focus in this article is to provide common programming patterns related to class definitions. Some of the topics include:
+Making objects support common Python features. usage of special methods. Encapsulation techniques. Inheritence. Memory management. Useful Design Patterns. 8.1: str() &amp; repr() # ???&#43; danger &ldquo;Problem&rdquo; You want to change the output produced by printing or viewing instances to something more sensible.
+???&#43; done &ldquo;Solution&rdquo; To change the string representation of the class instances define __str__() &amp; __repr__() methods as shown below.">
+
+<meta itemprop="wordCount" content="1131">
+<meta itemprop="keywords" content="" />
+  <link rel="canonical" href="http://localhost:1313/post/python/cookbook_dabeaz/ch08/">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
+  <link rel="alternate" type="application/atom+xml" title="Vinay Kumar" href="http://localhost:1313/atom.xml" />
+  <link rel="alternate" type="application/json" title="Vinay Kumar" href="http://localhost:1313/feed.json" />
+  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
+  
+  <style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style>
+
+  
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "post",
+    "name": "",
+    "headline": "",
+    "alternativeHeadline": "",
+    "description": "The primary focus in this article is to provide common programming patterns related to class definitions. Some of the topics include:\nMaking objects support common Python features. usage of special methods. Encapsulation techniques. Inheritence. Memory management. Useful Design Patterns. 8.1: str() \u0026amp; repr() # ???\u002b danger \u0026ldquo;Problem\u0026rdquo; You want to change the output produced by printing or viewing instances to something more sensible.\n???\u002b done \u0026ldquo;Solution\u0026rdquo; To change the string representation of the class instances define __str__() \u0026amp; __repr__() methods as shown below.",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http:\/\/localhost:1313\/post\/python\/cookbook_dabeaz\/ch08\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "copyrightHolder" : "Vinay Kumar",
+    "copyrightYear" : "0001",
+    "dateCreated": "0001-01-01T00:00:00.00Z",
+    "datePublished": "0001-01-01T00:00:00.00Z",
+    "dateModified": "0001-01-01T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Vinay Kumar",
+        "url": "http://localhost:1313/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http:\/\/localhost:1313\/",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "http://localhost:1313/",
+    "url" : "http:\/\/localhost:1313\/post\/python\/cookbook_dabeaz\/ch08\/",
+    "wordCount" : "1131",
+    "genre" : [ ],
+    "keywords" : [ ]
+}
+</script>
+
+
+</head>
+<body>
+<main>
+      <header>
+    <nav>
+      
+  <ul>
+    <li>
+      
+      
+      
+      
+      <a href="archives" >Archive</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="search/" >Search</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="tags/" >Tags</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.github.com/imflash217/" >Github</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.linkedin.com/in/imflash217" >LinkedIn</a>
+    </li>
+  
+  </ul>
+    </nav>
+  </header>
+  <hr>
+
+
+
+  <section>
+
+      
+
+      <span itemprop="articleBody">
+      <p>The primary focus in this article is to provide common programming patterns related
+to class definitions. Some of the topics include:</p>
+<ol>
+<li>Making objects support common Python features.</li>
+<li>usage of special methods.</li>
+<li>Encapsulation techniques.</li>
+<li>Inheritence.</li>
+<li>Memory management.</li>
+<li>Useful Design Patterns.</li>
+</ol>
+<h2 id="81-__str__--__repr__">8.1: <strong>str</strong>() &amp; <strong>repr</strong>() <a href="#81-__str__--__repr__" class="hash">#</a></h2>
+<p>???+ danger &ldquo;Problem&rdquo;
+You want to change the output produced by printing or viewing instances to something more sensible.</p>
+<p>???+ done &ldquo;Solution&rdquo;
+To change the string representation of the <strong>class instances</strong> define
+<strong><code>__str__()</code></strong> &amp; <strong><code>__repr__()</code></strong> methods as shown below.</p>
+<pre><code>```python hl_lines=&quot;5 7&quot;
+class Pair:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def __str__(self):
+        return &quot;({0.x!s}, {0.y!s})&quot;.format(self)
+    def __repr__(self):
+        return &quot;Pair({0.x!r}, {0.y!r})&quot;.format(self)
+```
+
+:trophy: The **`__repr__()`** method returns the code represntation of the instance,
+and is usually the code you would type to re-create the instance.
+The built-in **`repr()`** function returns this text and so does the interactive interpreter
+while inspecting values.
+
+:trophy: The **`__str__()`** method converts the instance to a string and is the output returned by **`print()`**
+or **`str()`** methods.
+
+```ipython
+&gt;&gt;&gt; p = Pair(2, 3)
+&gt;&gt;&gt; p
+Pair(2, 3)              ## __repr__() output
+&gt;&gt;&gt; print(p)
+&gt;&gt;&gt; (2, 3)              ## __str__() output
+```
+
+:rotating_light: The implementation of the above class also show how different string representations 
+may be used during formatting. Specifically, the special **`!r`** formatting code
+indicates that the output of **`__repr__()`** should be used instead of **`__str__()`**, the default.
+An example below shows this behavior:
+
+```ipython hl_lines=&quot;3 5&quot;
+&gt;&gt;&gt; p = Pair(3, 4)
+&gt;&gt;&gt; print(&quot;p is {0!r}&quot;).format(p)
+p is Pair(3, 4)
+&gt;&gt;&gt; print(&quot;p is {0!s}&quot;).format(p)
+p is (3, 4)
+```
+</code></pre>
+<p>???+ quote &ldquo;Discussion&rdquo;
+&#x1f6a8; It is standard practice to for the output of <strong><code>__repr__()</code></strong>
+to produce text such that <strong><code>eval(repr(x)) == x</code></strong></p>
+<pre><code>If it is not prossible or desired then it is common to create a textual represntation enclosed in **`&lt;` &amp; `&gt;`** instead
+as shown in below snippet.
+
+```ipython
+&gt;&gt;&gt; f = open(&quot;file.dat&quot;)
+&gt;&gt;&gt; f
+&lt;_io.TextIOWrapper name='file.dat' mode='r' encoding='utf-8'&gt;
+
+```
+
+:rotating_light: If not **`__str__()`** is provided then **`__repr__()`** is used as a fallback.
+</code></pre>
+<h2 id="82-customizing-string-formatting">8.2: Customizing string formatting <a href="#82-customizing-string-formatting" class="hash">#</a></h2>
+<p>???+ danger &ldquo;Problem&rdquo;
+You want an object to support customized formatting through the <strong><code>formaat()</code></strong> function and string method.</p>
+<p>???+ done &ldquo;Solution&rdquo;
+To customize string formatting, define a custom <strong><code>__format__()</code></strong> method in the class definition.
+For example:</p>
+<pre><code>```python hl_lines=&quot;3-7 17&quot;
+## The format codes
+##
+_formats = {
+    &quot;ymd&quot;: &quot;{d.year}-{d.month}-{d.day}&quot;,
+    &quot;mdy&quot;: &quot;{d.month}/{d.day}/{d.year}&quot;,
+    &quot;dmy&quot;: &quot;{d.day}/{d.month}/{d.year}&quot;
+}
+
+## ----------------------------------------------- ##
+
+class date:
+    def __init__(self, day, month, year):
+        self.day = day
+        self.month = month
+        self.year = year
+
+    def __format__(self, code):
+        if code == &quot;&quot;:
+            code = &quot;ymd&quot;
+        fmt = _formats[code]
+        return fmt.format(d=self)
+```
+
+Instances of **`Date`** now supports formatting options such as the following:
+
+```ipython
+&gt;&gt;&gt; d = Date(15, 11, 2021)
+&gt;&gt;&gt;
+&gt;&gt;&gt; format(d)
+'2021-11-15'
+&gt;&gt;&gt;
+&gt;&gt;&gt; format(d, &quot;mdy&quot;)
+'11-15-2021'
+&gt;&gt;&gt;
+&gt;&gt;&gt; &quot;The date is {:ymd}&quot;.format(d)
+'The date is 2021-11-15'
+&gt;&gt;&gt;
+&gt;&gt;&gt; &quot;The date is {:mdy}&quot;.format(d)
+'The date is 11-15-2021'
+```
+
+-------------------------------
+
+The **`__format__()`** method provides HOOK into Python's string formatting functionality.
+
+:trophy: Its important to know that the interpretation of the format codes (e.g. **`_formats`** in above code)
+is entirely upto the class defintion and developer.
+</code></pre>
+<h2 id="86-creating-managed-attributes">8.6: Creating managed attributes <a href="#86-creating-managed-attributes" class="hash">#</a></h2>
+<p>???+ danger &ldquo;Problem&rdquo;
+You want to add extra processing (e.e. type checking, validation) to the <strong>getting</strong> and <strong>setting</strong>
+of the instance attributes</p>
+<p>???+ done &ldquo;Solution&rdquo;
+&#x1f6a8; A simple way to <strong>customize</strong> access to an attribute is to define it as <strong><code>property</code></strong>.</p>
+<pre><code>For example, in below code, we define a **`property`** that adds simple type checking for its
+**`getter`** and **`setter`** methods.
+
+``` python hl_lines=&quot;3 8&quot;
+class Person:
+    def __init__(self, first_name):
+        self.first_name = first_name        ## NOTE: I'm defining &quot;self.first_name&quot; not &quot;self._first_name&quot;
+
+    ## getter method
+    @property
+    def first_name(self):
+        return self._first_name
+
+    ## setter method
+    @first_name.setter
+    def first_name(self, value):
+        if not isinstance(value, str):
+            raise TypeError(&quot;Expected a string&quot;)
+        self._first_name = value
+
+    ## deleter method
+    @first_name.deleter
+    def first_name(self):
+        raise AttributeError(&quot;Can't delete attribute&quot;)
+
+```
+</code></pre>
+<h2 id="89-descriptor-class">8.9: Descriptor Class <a href="#89-descriptor-class" class="hash">#</a></h2>
+<p>???+ danger &ldquo;Creating a new kind of class or instance attribute&rdquo;
+You want to create a new kind of class with instance atrribute type with some extra functionality
+such as <strong><code>type checking</code></strong></p>
+<p>???+ done &ldquo;Solution&rdquo;
+If you want to create an entirely new kind of instance attribute, define its functionality in the form
+of a <strong>descriptor class</strong>. For example:</p>
+<pre><code>```python
+## Descriptor attribute for an integer type-checked attribute
+class Integer:
+    def __init__(self, name):
+        self.name = name
+    
+    def __get__(self, instance, cls):
+        if instance is None:
+            return self
+        else:
+            return instance.__dict__[self.name]
+
+    def __set__(self, instance, val):
+        if not isinstance(val, int):
+            raise TypeError(&quot;Expected to be an int&quot;)
+        instance.__dict__[self.name] = val
+
+    def __delete__(self, instance):
+        del instance.__dict__[self.name]
+```
+
+:rotating_light: A **Descriptor** is a class that implements three core attribute access operations
+(get, set, delete) via the special methods **`__get__(), __set__(), __delete__()`**. These methods 
+work by receiving an instance as input. The underlying dictionary of the instance is then manipulated
+as appropriate.
+
+:trophy: To use a descriptor, **instances of the descriptor are placed into the class defintion
+as class variables** as shown below.
+
+```python hl_lines=&quot;4-5&quot;
+## Using a Descriptor in a class defintion
+
+class Point:
+    x = Integer(&quot;x&quot;)
+    y = Integer(&quot;y&quot;)
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+```
+When we do this, all access to the **descriptor attributes** (**`x, y`**) are captured by 
+`__get__(), __set__(), __delete__()` methods of the descriptor class. For example:
+
+```ipython
+&gt;&gt;&gt; p = Point(2, 3)
+&gt;&gt;&gt;
+&gt;&gt;&gt; p.x                     ## calls &quot;Point.x.__get__(p, Point)&quot;
+2
+&gt;&gt;&gt; p.y = 5                 ## calls &quot;Point.y.__set__(p, Point)&quot;
+&gt;&gt;&gt; p.x = 2.5               ## calls &quot;Point.x.__set__(p, Point)&quot;
+...
+TypeError: Expected an int
+```
+
+:trophy: As input, each method of the descriptor receives the instance being manipulated.
+To carry out the requested operation, the underlying instance dictionary 
+(underlying **`__dict__()`** attribute) is manipulated. The **`self.name`** attribute of the 
+**descriptor** holds the dictionary key being used to store the actual data in the instance dictionary.
+</code></pre>
+<p>???+ quote &ldquo;Discussion&rdquo;
+Descriptors provide the underlying logic for most of the Python&rsquo;s class features
+such as <strong><code>@classmethod</code></strong>, <strong><code>@staticmethod</code></strong>, <strong><code>@property</code></strong> and even <strong><code>__slots__</code></strong> attribute.</p>
+<pre><code>By defining **descriptors**, you can capture the core instance oprtations (get, set, delete)
+at a very low level and completely customoze what they do. 
+**It is one of the most important tool used by writers of most advance librarues &amp; frameeeeworks**
+
+:trophy: One confusion with the descriptors is that they can only be defined at the **class level**
+and not at the **per-instance basis**. The following descriptor usage will not work.
+
+```python hl_lines=&quot;5-6&quot;
+## this descriptor USAGE will not work
+
+class Point:
+    def __init__(self, x, y):
+        self.x = Integer(&quot;x&quot;)            ## NO! Must be a class variable
+        self.y = Integer(&quot;y&quot;)            ## NO! Must be a class variable
+        self.x = x
+        self.y = y
+```
+</code></pre>
+<h2 id="813-implementing-a-data-model-or-type-system">8.13: Implementing a Data Model or Type System <a href="#813-implementing-a-data-model-or-type-system" class="hash">#</a></h2>
+<p>???+ danger &ldquo;Problem&rdquo;
+You want to define various kinds of Data Structures, but want to
+enforce constraints on the values that are allowed to be assigned to certain
+constraints.</p>
+<p>???+ done &ldquo;Solution&rdquo;
+&hellip;</p>
+
+      </span>
+       
+
+    </section>
+    <hr>
+<footer>
+	  <nav>
+      
+  <ul>
+    <li>
+      © 2025
+    </li>
+  
+  </ul>
+    </nav>
+</footer>
+
+  </main>
+</body>
+</html>

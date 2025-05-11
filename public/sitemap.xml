@@ -1,78 +1,614 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
-    <loc>/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/css/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/html/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/markdown/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/markdown-syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/series/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/series/themes-guide/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/privacy/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/about/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/rich-content/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/shortcodes/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/placeholder-text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/math-typesetting/</loc>
-    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/math/</loc>
-    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/emoji/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/emoji-support/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/archives/</loc>
-  </url><url>
-    <loc>/search/</loc>
   </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/cc-by-sa/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/css/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/html/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/lineageos/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/markdown/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/template/markdown-syntax/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/posts/markdown-syntax/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/series/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/syntax/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/testing/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/themes/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/themes/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/series/themes-guide/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/privacy/</loc>
+    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/template/rich-content/</loc>
+    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/posts/rich-content/</loc>
+    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/shortcodes/</loc>
+    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/template/placeholder-text/</loc>
+    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/posts/placeholder-text/</loc>
+    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/text/</loc>
+    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/template/math-typesetting/</loc>
+    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/posts/math-typesetting/</loc>
+    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/emoji/</loc>
+    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/template/emoji-support/</loc>
+    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/posts/emoji-support/</loc>
+    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/posts/lorem-ipsum/</loc>
+    <lastmod>2017-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/ipsum/</loc>
+    <lastmod>2016-09-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/lorem/</loc>
+    <lastmod>2016-09-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/posts/lorem-ipsum-sit-ale/</loc>
+    <lastmod>2016-09-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/posts/ipsum-lore-guti-sit-volu-sit-amet/</loc>
+    <lastmod>2016-07-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/posts/lorem-catu-ale/</loc>
+    <lastmod>2015-09-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/posts/ipsum-lore-de/</loc>
+    <lastmod>2014-09-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/posts/ipsum-lore-de-re-mo-mi/</loc>
+    <lastmod>2014-09-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/posts/ipsum-lore-de-re-mo/</loc>
+    <lastmod>2014-09-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/posts/ipsum-lore-de-re/</loc>
+    <lastmod>2014-05-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/posts/ipsum-lore/</loc>
+    <lastmod>2013-09-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/023_add_lists/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/024_depth_first_values/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/025_breadth_first_values/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/026_tree_includes/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/027_tree_sum/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/028_tree_min_value/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/arrays/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/binary_tree/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/design_patterns/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/dict/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/document_distance/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/dp_factory_method/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/dp_simple_factory/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/dynamic_programming/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/hashtables/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/linked_list/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/priority_queue/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/qa/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/algorithms/sorting/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/assets/report_gridtr/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/awesome/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/deep_learning/blog_dataloaders/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/deep_learning/blog_tf_v1/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/deep_learning/dl_04_09/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/deep_learning/dl_interviews/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/deep_learning/einops/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/deep_learning/einops2/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/deep_learning/loss/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/lightning/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/lightning/api/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/lightning/tut_1/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/lightning/tut_2/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/lightning/tut_3/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/lightning/tut_4/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/lightning/tut_5/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/notes/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/physics/blog_01282021/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/prob/intro/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/blogs/system_design/cdn/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/gists/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/gists/lightning/api/configure_optimizers/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/gists/lightning/api/forward/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/gists/lightning/api/freeze/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/gists/lightning/api/log/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/gists/lightning/api/test_step/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/gists/lightning/api/training_step/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/gists/python_snippets/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/github_repos/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/hobbies/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/nlp/cs224n/cs224n_1/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/nlp/naive_bayes/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/nlp/nlp_book/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/nlp/regex/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/notes/ece542/ece542_hw1a/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/notes/ece542/ece542_lecture1/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/paper_reviews/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/paper_reviews/detr/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/projects/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/publications/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/publications/interspeech_2014/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/publications/odyssey_2014/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/context_managers/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/cookbook_dabeaz/ch01/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/cookbook_dabeaz/ch02/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/cookbook_dabeaz/ch03/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/cookbook_dabeaz/ch04/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/cookbook_dabeaz/ch05/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/cookbook_dabeaz/ch06/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/cookbook_dabeaz/ch07/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/cookbook_dabeaz/ch08/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/cookbook_dabeaz/ch09/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/cookbook_dabeaz/ch10/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/cookbook_dabeaz/ch11/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/cookbook_dabeaz/ch12/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/cookbook_dabeaz/ch13/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/cookbook_dabeaz/ch14/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/cookbook_dabeaz/ch15/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/decorators/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/design_patterns/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/hashing/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/protocols/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/python/pythonic_object/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/speech/lecture-3/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/til/042123/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/til/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/transformers/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/transformers/detr/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/transformers/layout_lm/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/transformers/vaswani/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/work/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/work/aros/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/work/boom/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/work/cognizant/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/work/flashai/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/work/ivmcl/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/work/meeami/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/work/springboard/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/pages/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/archives/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/pages/</loc>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/search/</loc>
+  </url>
+  
 </urlset>
