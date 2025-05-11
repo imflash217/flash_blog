@@ -1,280 +1,82 @@
-<!doctype html>
-<html lang="en">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Ronalds Vilcins - http://localhost:1313/">
-  <title> | Vinay Kumar</title>
-  <meta name="description" content="Blogs &amp; Articles on Machine Learning by @imflash217">
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Part-1 # Welcome to einops # We don&rsquo;t write y = x.transpose(0,2,3,1) We write comprehensible code y = einops.rearrange(x, &#34;b c h w -&gt; b h w c&#34;) einops supports widely used tensor packages viz. numpy, pytorch, tensorflow, chainer, gluon and extends them. What&rsquo;s in this tutorial? # Fundamentals: reordering, composition, and decomposition of tensors. Operations: rearrange, reduce, repeat How much can you do with a single operation? Preparations # import numpy from utils import display_np_arrays_as_images display_np_arrays_as_images() Load a batch of images # ## there are 6 images of shape 96x96 ## with 3 color channels packed as tensors images = np."/>
-
-<meta property="og:title" content="" />
-<meta property="og:description" content="Part-1 # Welcome to einops # We don&rsquo;t write y = x.transpose(0,2,3,1) We write comprehensible code y = einops.rearrange(x, &#34;b c h w -&gt; b h w c&#34;) einops supports widely used tensor packages viz. numpy, pytorch, tensorflow, chainer, gluon and extends them. What&rsquo;s in this tutorial? # Fundamentals: reordering, composition, and decomposition of tensors. Operations: rearrange, reduce, repeat How much can you do with a single operation? Preparations # import numpy from utils import display_np_arrays_as_images display_np_arrays_as_images() Load a batch of images # ## there are 6 images of shape 96x96 ## with 3 color channels packed as tensors images = np." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/blogs/deep_learning/einops/" /><meta property="article:section" content="post" />
-
-
-
-
-<meta itemprop="name" content="">
-<meta itemprop="description" content="Part-1 # Welcome to einops # We don&rsquo;t write y = x.transpose(0,2,3,1) We write comprehensible code y = einops.rearrange(x, &#34;b c h w -&gt; b h w c&#34;) einops supports widely used tensor packages viz. numpy, pytorch, tensorflow, chainer, gluon and extends them. What&rsquo;s in this tutorial? # Fundamentals: reordering, composition, and decomposition of tensors. Operations: rearrange, reduce, repeat How much can you do with a single operation? Preparations # import numpy from utils import display_np_arrays_as_images display_np_arrays_as_images() Load a batch of images # ## there are 6 images of shape 96x96 ## with 3 color channels packed as tensors images = np.">
-
-<meta itemprop="wordCount" content="2514">
-<meta itemprop="keywords" content="" />
-  <link rel="canonical" href="http://localhost:1313/post/blogs/deep_learning/einops/">
-  <link rel="dns-prefetch" href="https://www.google-analytics.com">
-  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
-  <link rel="alternate" type="application/atom+xml" title="Vinay Kumar" href="http://localhost:1313/atom.xml" />
-  <link rel="alternate" type="application/json" title="Vinay Kumar" href="http://localhost:1313/feed.json" />
-  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
-  
-  <style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style>
-
-  
-
-
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "BlogPosting",
-    "articleSection": "post",
-    "name": "",
-    "headline": "",
-    "alternativeHeadline": "",
-    "description": "Part-1 # Welcome to einops # We don\u0026rsquo;t write y = x.transpose(0,2,3,1) We write comprehensible code y = einops.rearrange(x, \u0026#34;b c h w -\u0026gt; b h w c\u0026#34;) einops supports widely used tensor packages viz. numpy, pytorch, tensorflow, chainer, gluon and extends them. What\u0026rsquo;s in this tutorial? # Fundamentals: reordering, composition, and decomposition of tensors. Operations: rearrange, reduce, repeat How much can you do with a single operation? Preparations # import numpy from utils import display_np_arrays_as_images display_np_arrays_as_images() Load a batch of images # ## there are 6 images of shape 96x96 ## with 3 color channels packed as tensors images = np.",
-    "inLanguage": "en",
-    "isFamilyFriendly": "true",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "http:\/\/localhost:1313\/post\/blogs\/deep_learning\/einops\/"
-    },
-    "author" : {
-        "@type": "Person",
-        "name": ""
-    },
-    "creator" : {
-        "@type": "Person",
-        "name": ""
-    },
-    "accountablePerson" : {
-        "@type": "Person",
-        "name": ""
-    },
-    "copyrightHolder" : "Vinay Kumar",
-    "copyrightYear" : "0001",
-    "dateCreated": "0001-01-01T00:00:00.00Z",
-    "datePublished": "0001-01-01T00:00:00.00Z",
-    "dateModified": "0001-01-01T00:00:00.00Z",
-    "publisher":{
-        "@type":"Organization",
-        "name": "Vinay Kumar",
-        "url": "http://localhost:1313/",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "http:\/\/localhost:1313\/",
-            "width":"32",
-            "height":"32"
-        }
-    },
-    "image": "http://localhost:1313/",
-    "url" : "http:\/\/localhost:1313\/post\/blogs\/deep_learning\/einops\/",
-    "wordCount" : "2514",
-    "genre" : [ ],
-    "keywords" : [ ]
-}
-</script>
-
-
-</head>
-<body>
-<main>
-      <header>
-    <nav>
-      
-  <ul>
-    <li>
-      
-      
-      
-      
-      <a href="archives" >Archive</a>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <a href="search/" >Search</a>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <a href="tags/" >Tags</a>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <a href="https://www.github.com/imflash217/" >Github</a>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <a href="https://www.linkedin.com/in/imflash217" >LinkedIn</a>
-    </li>
-  
-  </ul>
-    </nav>
-  </header>
-  <hr>
-
-
-
-  <section>
-
-      
-
-      <span itemprop="articleBody">
-      <!-- ---
-hide:
-  - navigation # Hide navigation
-  - toc        # Hide table of contents
---- -->
-<h2 id="part-1">Part-1 <a href="#part-1" class="hash">#</a></h2>
-<h3 id="welcome-to-einops">Welcome to einops <a href="#welcome-to-einops" class="hash">#</a></h3>
-<ol>
-<li>We don&rsquo;t write
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-</span></span></code></pre></div></li>
-<li>We write comprehensible code
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">einops</span><span class="o">.</span><span class="n">rearrange</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&#34;b c h w -&gt; b h w c&#34;</span><span class="p">)</span>
-</span></span></code></pre></div></li>
-<li><code>einops</code> supports widely used tensor packages viz.
+<!doctype html><html lang=en><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Ronalds Vilcins - http://localhost:1313/"><title>| Vinay Kumar</title>
+<meta name=description content><meta name=twitter:card content="summary"><meta name=twitter:title content><meta name=twitter:description content='Part-1 # Welcome to einops # We don&rsquo;t write y = x.transpose(0,2,3,1) We write comprehensible code y = einops.rearrange(x, "b c h w -> b h w c") einops supports widely used tensor packages viz. numpy, pytorch, tensorflow, chainer, gluon and extends them. What&rsquo;s in this tutorial? # Fundamentals: reordering, composition, and decomposition of tensors. Operations: rearrange, reduce, repeat How much can you do with a single operation? Preparations # import numpy from utils import display_np_arrays_as_images display_np_arrays_as_images() Load a batch of images # ## there are 6 images of shape 96x96 ## with 3 color channels packed as tensors images = np.'><meta property="og:title" content><meta property="og:description" content='Part-1 # Welcome to einops # We don&rsquo;t write y = x.transpose(0,2,3,1) We write comprehensible code y = einops.rearrange(x, "b c h w -> b h w c") einops supports widely used tensor packages viz. numpy, pytorch, tensorflow, chainer, gluon and extends them. What&rsquo;s in this tutorial? # Fundamentals: reordering, composition, and decomposition of tensors. Operations: rearrange, reduce, repeat How much can you do with a single operation? Preparations # import numpy from utils import display_np_arrays_as_images display_np_arrays_as_images() Load a batch of images # ## there are 6 images of shape 96x96 ## with 3 color channels packed as tensors images = np.'><meta property="og:type" content="article"><meta property="og:url" content="http://localhost:1313/post/blogs/deep_learning/einops/"><meta property="article:section" content="post"><meta itemprop=name content><meta itemprop=description content='Part-1 # Welcome to einops # We don&rsquo;t write y = x.transpose(0,2,3,1) We write comprehensible code y = einops.rearrange(x, "b c h w -> b h w c") einops supports widely used tensor packages viz. numpy, pytorch, tensorflow, chainer, gluon and extends them. What&rsquo;s in this tutorial? # Fundamentals: reordering, composition, and decomposition of tensors. Operations: rearrange, reduce, repeat How much can you do with a single operation? Preparations # import numpy from utils import display_np_arrays_as_images display_np_arrays_as_images() Load a batch of images # ## there are 6 images of shape 96x96 ## with 3 color channels packed as tensors images = np.'><meta itemprop=wordCount content="2509"><meta itemprop=keywords content><link rel=canonical href=http://localhost:1313/post/blogs/deep_learning/einops/><link rel=dns-prefetch href=https://www.google-analytics.com><link href=https://www.google-analytics.com rel=preconnect crossorigin><link rel=alternate type=application/atom+xml title="Vinay Kumar" href=http://localhost:1313/atom.xml><link rel=alternate type=application/json title="Vinay Kumar" href=http://localhost:1313/feed.json><link rel="shortcut icon" type=image/png href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="><style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","articleSection":"post","name":"","headline":"","alternativeHeadline":"","description":"Part-1 # Welcome to einops # We don\u0026rsquo;t write y = x.transpose(0,2,3,1) We write comprehensible code y = einops.rearrange(x, \u0026quot;b c h w -\u0026gt; b h w c\u0026quot;) einops supports widely used tensor packages viz. numpy, pytorch, tensorflow, chainer, gluon and extends them. What\u0026rsquo;s in this tutorial? # Fundamentals: reordering, composition, and decomposition of tensors. Operations: rearrange, reduce, repeat How much can you do with a single operation? Preparations # import numpy from utils import display_np_arrays_as_images display_np_arrays_as_images() Load a batch of images # ## there are 6 images of shape 96x96 ## with 3 color channels packed as tensors images = np.","inLanguage":"en-us","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/localhost:1313\/post\/blogs\/deep_learning\/einops\/"},"author":{"@type":"Person","name":""},"creator":{"@type":"Person","name":""},"accountablePerson":{"@type":"Person","name":""},"copyrightHolder":"Vinay Kumar","copyrightYear":"0001","dateCreated":"0001-01-01T00:00:00.00Z","datePublished":"0001-01-01T00:00:00.00Z","dateModified":"0001-01-01T00:00:00.00Z","publisher":{"@type":"Organization","name":"Vinay Kumar","url":"http://localhost:1313/","logo":{"@type":"ImageObject","url":"http:\/\/localhost:1313\/","width":"32","height":"32"}},"image":"http://localhost:1313/","url":"http:\/\/localhost:1313\/post\/blogs\/deep_learning\/einops\/","wordCount":"2509","genre":[],"keywords":[]}</script></head><body><main><header><nav><ul><li><a href=/>Index</a></li><li><a href=/about/>About</a></li><li><a href=/atom.xml>RSS</a></li></ul></nav></header><hr><section><span itemprop=articleBody><h2 id=part-1>Part-1 <a href=#part-1 class=hash>#</a></h2><h3 id=welcome-to-einops>Welcome to einops <a href=#welcome-to-einops class=hash>#</a></h3><ol><li>We don&rsquo;t write<pre><code class=language-python>y = x.transpose(0,2,3,1)
+</code></pre></li><li>We write comprehensible code<pre><code class=language-python>y = einops.rearrange(x, &quot;b c h w -&gt; b h w c&quot;)
+</code></pre></li><li><code>einops</code> supports widely used tensor packages viz.
 <code>numpy</code>, <code>pytorch</code>, <code>tensorflow</code>, <code>chainer</code>, <code>gluon</code>
-and <strong>extends</strong> them.</li>
-</ol>
-<h3 id="whats-in-this-tutorial">What&rsquo;s in this tutorial? <a href="#whats-in-this-tutorial" class="hash">#</a></h3>
-<ol>
-<li><strong>Fundamentals</strong>: reordering, composition, and decomposition of tensors.</li>
-<li><strong>Operations</strong>: <code>rearrange</code>, <code>reduce</code>, <code>repeat</code></li>
-<li>How much can you do with a <strong>single</strong> operation?</li>
-</ol>
-<h3 id="preparations">Preparations <a href="#preparations" class="hash">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">display_np_arrays_as_images</span>
-</span></span><span class="line"><span class="cl"><span class="n">display_np_arrays_as_images</span><span class="p">()</span>
-</span></span></code></pre></div><h3 id="load-a-batch-of-images">Load a batch of images <a href="#load-a-batch-of-images" class="hash">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## there are 6 images of shape 96x96</span>
-</span></span><span class="line"><span class="cl"><span class="c1">## with 3 color channels packed as tensors</span>
-</span></span><span class="line"><span class="cl"><span class="n">images</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&#34;./resources/tes_images.npy&#34;</span><span class="p">,</span> <span class="n">allow_pickle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">images</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">images</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>   <span class="c1">## (6, 96, 96, 3), float64</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## display the 1st image (whole 4d tensor can&#39;t be rendered)</span>
-</span></span><span class="line"><span class="cl"><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span></span></code></pre></div><figure markdown class="card">
-![...](../../../assets/blogs/deep_learning/einops/images_0.png)
-</figure>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">images</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</span></span></code></pre></div><figure markdown class="card">
-![...](../../../assets/blogs/deep_learning/einops/images_1.png)
-</figure>
-<p><strong>We will use three opeartions:</strong> <code>rearrange</code>, <code>reduce</code>, <code>repeat</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">einops</span> <span class="kn">import</span> <span class="n">rearrange</span><span class="p">,</span> <span class="n">reduce</span><span class="p">,</span> <span class="n">repeat</span>
-</span></span></code></pre></div><h3 id="meet-rearrange">Meet &ldquo;rearrange&rdquo; <a href="#meet-rearrange" class="hash">#</a></h3>
-<p>???+ done &ldquo;rearrange&rdquo;
-As its name suggests; it rearranges elements. Below, we swap <code>height</code> and <code>width</code>.</p>
-<pre><code>In other words, below we **transpose** first two axes/dimensions.
+and <strong>extends</strong> them.</li></ol><h3 id=whats-in-this-tutorial>What&rsquo;s in this tutorial? <a href=#whats-in-this-tutorial class=hash>#</a></h3><ol><li><strong>Fundamentals</strong>: reordering, composition, and decomposition of tensors.</li><li><strong>Operations</strong>: <code>rearrange</code>, <code>reduce</code>, <code>repeat</code></li><li>How much can you do with a <strong>single</strong> operation?</li></ol><h3 id=preparations>Preparations <a href=#preparations class=hash>#</a></h3><pre><code class=language-python>import numpy
+from utils import display_np_arrays_as_images
+display_np_arrays_as_images()
+</code></pre><h3 id=load-a-batch-of-images>Load a batch of images <a href=#load-a-batch-of-images class=hash>#</a></h3><pre><code class=language-python>## there are 6 images of shape 96x96
+## with 3 color channels packed as tensors
+images = np.load(&quot;./resources/tes_images.npy&quot;, allow_pickle=False)
+
+print(images.shape, images.dtype)   ## (6, 96, 96, 3), float64
+</code></pre><pre><code class=language-python>## display the 1st image (whole 4d tensor can't be rendered)
+images[0]
+</code></pre><pre><code class=language-python>images[1]
+</code></pre><p><strong>We will use three opeartions:</strong> <code>rearrange</code>, <code>reduce</code>, <code>repeat</code></p><pre><code class=language-python>from einops import rearrange, reduce, repeat
+</code></pre><h3 id=meet-rearrange>Meet &ldquo;rearrange&rdquo; <a href=#meet-rearrange class=hash>#</a></h3><p>???+ done &ldquo;rearrange&rdquo;
+As its name suggests; it rearranges elements. Below, we swap <code>height</code> and <code>width</code>.</p><pre><code>In other words, below we **transpose** first two axes/dimensions.
 ```python
 rearrange(images[0], &quot;h w c -&gt; w h c&quot;)
 ```
 &lt;figure markdown class=card&gt;
     ![images_2](../../../assets/blogs/deep_learning/einops/images_2.png)
 &lt;/figure&gt;
-</code></pre>
-<h3 id="composition-of-axes">Composition of axes <a href="#composition-of-axes" class="hash">#</a></h3>
-<p>Transposition is very common and useful; but let&rsquo;s move to other
-operations provided by <code>einops</code></p>
-<p>???+ done &ldquo;composition using <code>rearrange()</code> : height&rdquo;
-<code>einops</code> allows seamlessly composing <code>batch</code> and <code>height</code> to a <code>new height</code> dimension.</p>
-<pre><code>Below we just rendered all images in the 4D tensor by collapsing it to a 3D tensor.
+</code></pre><h3 id=composition-of-axes>Composition of axes <a href=#composition-of-axes class=hash>#</a></h3><p>Transposition is very common and useful; but let&rsquo;s move to other
+operations provided by <code>einops</code></p><p>???+ done &ldquo;composition using <code>rearrange()</code> : height&rdquo;
+<code>einops</code> allows seamlessly composing <code>batch</code> and <code>height</code> to a <code>new height</code> dimension.</p><pre><code>Below we just rendered all images in the 4D tensor by collapsing it to a 3D tensor.
 ```python
 rearrange(images, &quot;b h w c -&gt; (b h) w c&quot;)
 ```
 &lt;figure markdown class=&quot;card&quot;&gt;
     ![images_3](../../../assets/blogs/deep_learning/einops/images_3.png)
 &lt;/figure&gt;
-</code></pre>
-<p>???+ danger &ldquo;composition using <code>rearrange()</code>: width&rdquo;
-<code>einops</code> allows seamlessly composing <code>batch</code> and <code>width</code> to a <code>new width</code> dimension.</p>
-<pre><code>Below we just rendered all images in the 4D tensor by collapsing it to a 3D tensor.
+</code></pre><p>???+ danger &ldquo;composition using <code>rearrange()</code>: width&rdquo;
+<code>einops</code> allows seamlessly composing <code>batch</code> and <code>width</code> to a <code>new width</code> dimension.</p><pre><code>Below we just rendered all images in the 4D tensor by collapsing it to a 3D tensor.
 ```python
 rearrange(images, &quot;b h w c -&gt; h (b w) c&quot;)
 ```
 &lt;figure markdown class=&quot;card&quot;&gt;
     ![images_4](../../../assets/blogs/deep_learning/einops/images_4.png)
 &lt;/figure&gt;
-</code></pre>
-<p>Resulting dimensions are computed very simply.
-<strong>Length of any newly computed axes/dimension is a product of its components</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## [6, 96, 96, 3] -&gt; [96, (6*96), 3]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">rearrange</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="s2">&#34;b h w c -&gt; h (b w) c&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">shape</span>
-</span></span></code></pre></div><pre tabindex="0"><code>(96, 576, 3)
+</code></pre><p>Resulting dimensions are computed very simply.
+<strong>Length of any newly computed axes/dimension is a product of its components</strong></p><pre><code class=language-python>## [6, 96, 96, 3] -&gt; [96, (6*96), 3]
+a = rearrange(images, &quot;b h w c -&gt; h (b w) c&quot;)
+a.shape
+</code></pre><pre><code>(96, 576, 3)
 </code></pre><p>We can compose more than 2 axes/dimensions.
 Let&rsquo;s <strong>flatten</strong> the whole 4D array into a 1D array.
-The resulting 1D array contains as many elements as the original 4D array.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## [6, 96, 96, 3] -&gt; [(6*96*96*3)]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">rearrange</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="s2">&#34;b h w c -&gt; (b h w c)&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">shape</span>
-</span></span></code></pre></div><pre tabindex="0"><code>(165888, )
-</code></pre><h3 id="decomposition-of-axes">Decomposition of axes <a href="#decomposition-of-axes" class="hash">#</a></h3>
-<p><strong>Decomposition</strong> is the inverse process of composition.</p>
-<p><strong>It represents an existing axis as a combination of new axes</strong>.</p>
-<p>Several decompositions are possible. Some examples are shown below:</p>
-<p>???+ danger &ldquo;Combining <em>composition</em> and <em>decomposition</em>&rdquo;
-Combining composition &amp; decomposition
-<code>python ## here b1=2, decomposes b=6 into &quot;b1=2&quot; and &quot;b2=3&quot; ## keeping b = b1*b2 a = rearrange(images, &quot;(b1 b2) w h c -&gt; b1 b2 w h c&quot;, b1=2) a.shape     ## (2, 3, 96, 96, 3) </code>
-<code>(2, 3, 96, 96, 3)</code></p>
-<p>???+ done &ldquo;An example&rdquo;
-Combining composition &amp; decomposition
+The resulting 1D array contains as many elements as the original 4D array.</p><pre><code class=language-python>## [6, 96, 96, 3] -&gt; [(6*96*96*3)]
+a = rearrange(images, &quot;b h w c -&gt; (b h w c)&quot;)
+a.shape
+</code></pre><pre><code>(165888, )
+</code></pre><h3 id=decomposition-of-axes>Decomposition of axes <a href=#decomposition-of-axes class=hash>#</a></h3><p><strong>Decomposition</strong> is the inverse process of composition.</p><p><strong>It represents an existing axis as a combination of new axes</strong>.</p><p>Several decompositions are possible. Some examples are shown below:</p><p>???+ danger &ldquo;Combining <em>composition</em> and <em>decomposition</em>&rdquo;
+Combining composition & decomposition
+<code>python ## here b1=2, decomposes b=6 into "b1=2" and "b2=3" ## keeping b = b1*b2 a = rearrange(images, "(b1 b2) w h c -> b1 b2 w h c", b1=2) a.shape ## (2, 3, 96, 96, 3) </code><code>(2, 3, 96, 96, 3)</code></p><p>???+ done &ldquo;An example&rdquo;
+Combining composition & decomposition
 ```python
 ## here b1=2, decomposes b=6 into &ldquo;b1=2&rdquo; and &ldquo;b2=3&rdquo;
 ## keeping b = b1*b2
-a = rearrange(images, &ldquo;(b1 b2) w h c -&gt; (b1 h) (b2 w) c&rdquo;, b1=2)</p>
-<pre><code>a.shape     ## (2*96, 3*96, 3)
+a = rearrange(images, &ldquo;(b1 b2) w h c -> (b1 h) (b2 w) c&rdquo;, b1=2)</p><pre><code>a.shape     ## (2*96, 3*96, 3)
 a
 ```
 &lt;figure markdown class=&quot;card&quot;&gt;
 ![](../../../assets/blogs/deep_learning/einops/images_5.png)
 &lt;/figure&gt;
-</code></pre>
-<p>???+ danger &ldquo;Another combination&rdquo;
-Combining composition &amp; decomposition
+</code></pre><p>???+ danger &ldquo;Another combination&rdquo;
+Combining composition & decomposition
 ```python
 ## here b1=2, decomposes b=6 into &ldquo;b1=2&rdquo; and &ldquo;b2=3&rdquo;
 ## keeping b = b1*b2
-a = rearrange(images, &ldquo;(b1 b2) w h c -&gt; (b2 h) (b1 w) c&rdquo;, b1=2)</p>
-<pre><code>a.shape     ## (3*96, 2*96, 3)
+a = rearrange(images, &ldquo;(b1 b2) w h c -> (b2 h) (b1 w) c&rdquo;, b1=2)</p><pre><code>a.shape     ## (3*96, 2*96, 3)
 a
 ```
 &lt;figure markdown class=&quot;card&quot;&gt;
 ![](../../../assets/blogs/deep_learning/einops/images_6.png)
 &lt;/figure&gt;
-</code></pre>
-<p>???+ done &ldquo;Another example: <code>width_to_height</code>&rdquo;
-Move part of the <code>width</code> dimension to <code>height</code></p>
-<pre><code>We should call this `width_to_height` as the image `width` shrunk by 2 and `height` incresed by 2.
+</code></pre><p>???+ done &ldquo;Another example: <code>width_to_height</code>&rdquo;
+Move part of the <code>width</code> dimension to <code>height</code></p><pre><code>We should call this `width_to_height` as the image `width` shrunk by 2 and `height` incresed by 2.
 
 **But all pixels are same!!!**
 
@@ -287,10 +89,8 @@ a
 &lt;figure markdown class=&quot;card&quot;&gt;
 ![](../../../assets/blogs/deep_learning/einops/images_7.png)
 &lt;/figure&gt;
-</code></pre>
-<p>???+ done &ldquo;Another example: <code>heigh_to_width</code>&rdquo;
-Move part of the <code>height</code> dimension to <code>width</code></p>
-<pre><code>We should call this `height_to_width` as the image `height` shrunk by 2 and `width` incresed by 2.
+</code></pre><p>???+ done &ldquo;Another example: <code>heigh_to_width</code>&rdquo;
+Move part of the <code>height</code> dimension to <code>width</code></p><pre><code>We should call this `height_to_width` as the image `height` shrunk by 2 and `width` incresed by 2.
 
 **But all pixels are same!!!**
 
@@ -299,17 +99,9 @@ a = rearrange(images, &quot;b (h h2) w c -&gt; (b h) (w h2) c&quot;, h2=2)
 
 a.shape     ## (6*48, 96*2, 3)
 ```
-</code></pre>
-<h3 id="order-of-axes-matter">Order of axes matter <a href="#order-of-axes-matter" class="hash">#</a></h3>
-<p>The order of axes in composition and decomposition is of prime importance.
-It affects the way data is being transposed. Below examples show the impacts.</p>
-<p>???+ danger &ldquo;An example&rdquo;
-<code>python a = rearrange(images, &quot;b h w c -&gt; h (b w) c&quot;)       ## notice the ordering of (b w) a.shape                                             ## (96, 6*96, 3) a </code>
-<figure markdown class="card">
-<img src="../../../assets/blogs/deep_learning/einops/images_8.png" alt="" loading="lazy" />
-
-</figure></p>
-<pre><code>v/s
+</code></pre><h3 id=order-of-axes-matter>Order of axes matter <a href=#order-of-axes-matter class=hash>#</a></h3><p>The order of axes in composition and decomposition is of prime importance.
+It affects the way data is being transposed. Below examples show the impacts.</p><p>???+ danger &ldquo;An example&rdquo;
+<code>python a = rearrange(images, "b h w c -> h (b w) c") ## notice the ordering of (b w) a.shape ## (96, 6*96, 3) a </code><img src=../../../assets/blogs/deep_learning/einops/images_8.png alt loading=lazy></p><pre><code>v/s
 
 ```python
 b = rearrange(images, &quot;b h w c -&gt; h (w b) c&quot;)       ## notice the ordeing of (w b)
@@ -337,23 +129,13 @@ rearrange(images, &quot;(b1 b2) h w c -&gt; h (b2 b1 w) c&quot;, b1=2)     ## pr
 &lt;figure markdown class=&quot;card&quot;&gt;
 ![](../../../assets/blogs/deep_learning/einops/images_10.png)
 &lt;/figure&gt;
-</code></pre>
-<h3 id="meet-reduce">Meet &ldquo;reduce&rdquo; <a href="#meet-reduce" class="hash">#</a></h3>
-<p>In <code>einops</code> we don&rsquo;t need to guess what happened (like below)</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></span></code></pre></div><p>Because we write clearly what happened (as shown below)</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">einops.reduce</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">reduce</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&#34;b h w c -&gt; b h w&#34;</span><span class="p">,</span> <span class="s2">&#34;mean&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><p>If an axis was not present in the output definition &ndash;you guessed it &ndash; it was <strong>reduced</strong></p>
-<p>???+ done &ldquo;Average over batch&rdquo;
-Average over batch
-<code>python u = reduce(images, &quot;b h w c -&gt; h w c&quot;, &quot;mean&quot;)      ## reduce using &quot;mean&quot; across the &quot;batch&quot; axis u.shape                                             ## (96, 96, 3) u </code>
-<figure markdown class="card">
-<img src="../../../assets/blogs/deep_learning/einops/images_11.png" alt="" loading="lazy" />
+</code></pre><h3 id=meet-reduce>Meet &ldquo;reduce&rdquo; <a href=#meet-reduce class=hash>#</a></h3><p>In <code>einops</code> we don&rsquo;t need to guess what happened (like below)</p><pre><code class=language-python>x.mean(-1)
+</code></pre><p>Because we write clearly what happened (as shown below)</p><pre><code class=language-python>import einops.reduce
 
-</figure></p>
-<pre><code>The above code is similar to the standard code (without `einops`) as shown below
+reduce(x, &quot;b h w c -&gt; b h w&quot;, &quot;mean&quot;)
+</code></pre><p>If an axis was not present in the output definition &ndash;you guessed it &ndash; it was <strong>reduced</strong></p><p>???+ done &ldquo;Average over batch&rdquo;
+Average over batch
+<code>python u = reduce(images, "b h w c -> h w c", "mean") ## reduce using "mean" across the "batch" axis u.shape ## (96, 96, 3) u </code><img src=../../../assets/blogs/deep_learning/einops/images_11.png alt loading=lazy></p><pre><code>The above code is similar to the standard code (without `einops`) as shown below
 ```python
 u = images.mean(axis=0)     ## find mean across the &quot;batch&quot; dimension 
 u.shape                     ## (96, 96, 3)
@@ -364,10 +146,8 @@ u
 &lt;/figure&gt;
 
 But, the code with `einops` is much more readable and states the operations clearly.
-</code></pre>
-<p>???+ danger &ldquo;Reducing over multiple axes&rdquo;
-Example of reducing over several dimensions.</p>
-<pre><code>Besides `&quot;mean&quot;`, there are also `&quot;min&quot;`, `&quot;max&quot;`, `&quot;sum&quot;`, `&quot;prod&quot;`
+</code></pre><p>???+ danger &ldquo;Reducing over multiple axes&rdquo;
+Example of reducing over several dimensions.</p><pre><code>Besides `&quot;mean&quot;`, there are also `&quot;min&quot;`, `&quot;max&quot;`, `&quot;sum&quot;`, `&quot;prod&quot;`
 ```python
 u = reduce(images, &quot;b h w c -&gt; h w&quot;, &quot;min&quot;)     ## redce across &quot;batch&quot; &amp; &quot;channel&quot; axes
 u.shape                                         ## (96, 96)
@@ -376,119 +156,68 @@ u
 &lt;figure markdown class=&quot;card&quot;&gt;
 ![](../../../assets/blogs/deep_learning/einops/images_13.png)
 &lt;/figure&gt;
-</code></pre>
-<h3 id="mean-pooling">Mean-pooling <a href="#mean-pooling" class="hash">#</a></h3>
-<p>???+ done &ldquo;Mean pooling with 2x2 kernel&rdquo;
+</code></pre><h3 id=mean-pooling>Mean-pooling <a href=#mean-pooling class=hash>#</a></h3><p>???+ done &ldquo;Mean pooling with 2x2 kernel&rdquo;
 Image is split into 2x2 patch and each path is avergaed
-<code>python u = reduce(images, &quot;b (h h2) (w w2) c -&gt; h (b w) c&quot;, &quot;mean&quot;, h2=2, w2=2) u.shape         ## (48, 6*48, 3) u </code>
-<figure markdown class="card">
-<img src="../../../assets/blogs/deep_learning/einops/images_14.png" alt="" loading="lazy" />
-
-</figure></p>
-<h3 id="max-pooling">Max-pooling <a href="#max-pooling" class="hash">#</a></h3>
-<p>???+ danger &ldquo;max-pooling with 2x2 kernel&rdquo;
+<code>python u = reduce(images, "b (h h2) (w w2) c -> h (b w) c", "mean", h2=2, w2=2) u.shape ## (48, 6*48, 3) u </code><img src=../../../assets/blogs/deep_learning/einops/images_14.png alt loading=lazy></p><h3 id=max-pooling>Max-pooling <a href=#max-pooling class=hash>#</a></h3><p>???+ danger &ldquo;max-pooling with 2x2 kernel&rdquo;
 Image is split into 2x2 patch and each patch is max-pooled
-<code>python u = reduce(images, &quot;b (h h2) (w w2) c -&gt; h (b w) c&quot;, &quot;max&quot;, h2=2, w2=2) u.shape         ## (49, 6*48, 3) u </code>
-<figure markdown class="card">
-<img src="../../../assets/blogs/deep_learning/einops/images_15.png" alt="" loading="lazy" />
+<code>python u = reduce(images, "b (h h2) (w w2) c -> h (b w) c", "max", h2=2, w2=2) u.shape ## (49, 6*48, 3) u </code><img src=../../../assets/blogs/deep_learning/einops/images_15.png alt loading=lazy></p><p>???+ danger &ldquo;yet another example&rdquo;
+<code>python u = reshape(images, "(b1 b2) h w c -> (b2 h) (b1 w)", "mean", b1=2) u.shape ## (3*96, 2*96) u </code><img src=../../../assets/blogs/deep_learning/einops/images_16.png alt loading=lazy></p><h3 id=stack--concatenate>Stack & Concatenate <a href=#stack--concatenate class=hash>#</a></h3><pre><code class=language-python>## rearrange can also take care of lists of arrays with the same shapes
 
-</figure></p>
-<p>???+ danger &ldquo;yet another example&rdquo;
-<code>python u = reshape(images, &quot;(b1 b2) h w c -&gt; (b2 h) (b1 w)&quot;, &quot;mean&quot;, b1=2) u.shape         ## (3*96, 2*96) u </code>
-<figure markdown class="card">
-<img src="../../../assets/blogs/deep_learning/einops/images_16.png" alt="" loading="lazy" />
+x = list(images)
 
-</figure></p>
-<h3 id="stack--concatenate">Stack &amp; Concatenate <a href="#stack--concatenate" class="hash">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## rearrange can also take care of lists of arrays with the same shapes</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">## Case-0: We can use the &#34;list-axis&#34; as 1st axis (&#34;b&#34;) and rest of the axes stays as usual</span>
-</span></span><span class="line"><span class="cl"><span class="n">x0</span> <span class="o">=</span> <span class="n">rearrange</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&#34;b h w c -&gt; b h w c&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">x0</span><span class="o">.</span><span class="n">shape</span>                                    <span class="c1">## (6, 96, 96, 3)</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">##----------------------------------------------------------------------------##</span>
-</span></span><span class="line"><span class="cl"><span class="c1">## case-1: But the new axis can appear in any place</span>
-</span></span><span class="line"><span class="cl"><span class="n">x1</span> <span class="o">=</span> <span class="n">rearrange</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&#34;b h w c -&gt; h w c b&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">x1</span><span class="o">.</span><span class="n">shape</span>                                    <span class="c1">## (96, 96, 3, 6)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">## This is equivalent to using `numpy.stack`</span>
-</span></span><span class="line"><span class="cl"><span class="n">x11</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">x11</span><span class="o">.</span><span class="n">shape</span>                                   <span class="c1">## (96, 96, 3, 6)</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">##----------------------------------------------------------------------------##</span>
-</span></span><span class="line"><span class="cl"><span class="c1">## Case-2: ....Or we can also concatenate along axes</span>
-</span></span><span class="line"><span class="cl"><span class="n">x2</span> <span class="o">=</span> <span class="n">rearrange</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&#34;b h w c -&gt; h (b w) c&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">x2</span><span class="o">.</span><span class="n">shape</span>                                    <span class="c1">## (96, 6*96, 3)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">## This is equivalent to using `numpy.concatenate`</span>
-</span></span><span class="line"><span class="cl"><span class="n">x22</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">x22</span><span class="o">.</span><span class="n">shape</span>                                   <span class="c1">## (96. 6*96, 3)</span>
-</span></span></code></pre></div><h3 id="addition-and-removal-of-axes">Addition and removal of axes <a href="#addition-and-removal-of-axes" class="hash">#</a></h3>
-<p>You can write <code>1</code> to create new axis of length 1.
-There is also a synonym <code>()</code> that does exactly the same</p>
-<p>It is exactly what <code>numpy.exapand_axis()</code> and <code>torch.unsqueeze()</code> does.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## both operations does the same as &#34;numpy.expand_dims()&#34; or &#34;torch.unsqueeze()&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">u</span> <span class="o">=</span> <span class="n">rearrange</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="s2">&#34;b h w c -&gt; b 1 h w 1 c&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">v</span> <span class="o">=</span> <span class="n">rearrange</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="s2">&#34;b h w c -&gt; b () h w () c&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">u</span><span class="o">.</span><span class="n">shape</span>         <span class="c1">## (6, 1, 96, 96, 1, 3)</span>
-</span></span><span class="line"><span class="cl"><span class="n">v</span><span class="o">.</span><span class="n">shape</span>         <span class="c1">## (6, 1, 96, 96, 1, 3)</span>
-</span></span></code></pre></div><p>The <code>numpy.squeeze()</code> operation is also facilitated by <code>rearrange()</code> as usual.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">u</span> <span class="o">=</span> <span class="n">rearrange</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="s2">&#34;b h w c -&gt; b 1 h w 1 c&#34;</span><span class="p">)</span>         <span class="c1">## torch.unsqueeze()</span>
-</span></span><span class="line"><span class="cl"><span class="n">v</span> <span class="o">=</span> <span class="n">rearrange</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="s2">&#34;b 1 h w 1 c -&gt; b h w c&#34;</span><span class="p">)</span>              <span class="c1">## torch.unsqueeze()</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">v</span><span class="o">.</span><span class="n">shape</span>                                                 <span class="c1">## (6, 96, 96, 3)</span>
-</span></span></code></pre></div><p>???+ danger &ldquo;An example usage&rdquo;
+## Case-0: We can use the &quot;list-axis&quot; as 1st axis (&quot;b&quot;) and rest of the axes stays as usual
+x0 = rearrange(x, &quot;b h w c -&gt; b h w c&quot;)
+x0.shape                                    ## (6, 96, 96, 3)
+</code></pre><pre><code class=language-python>##----------------------------------------------------------------------------##
+## case-1: But the new axis can appear in any place
+x1 = rearrange(x, &quot;b h w c -&gt; h w c b&quot;)
+x1.shape                                    ## (96, 96, 3, 6)
+
+## This is equivalent to using `numpy.stack`
+x11 = numpy.stack(x, axis=3)
+x11.shape                                   ## (96, 96, 3, 6)
+</code></pre><pre><code class=language-python>##----------------------------------------------------------------------------##
+## Case-2: ....Or we can also concatenate along axes
+x2 = rearrange(x, &quot;b h w c -&gt; h (b w) c&quot;)
+x2.shape                                    ## (96, 6*96, 3)
+
+## This is equivalent to using `numpy.concatenate`
+x22 = numpy.concatenate(x, axis=1)
+x22.shape                                   ## (96. 6*96, 3)
+</code></pre><h3 id=addition-and-removal-of-axes>Addition and removal of axes <a href=#addition-and-removal-of-axes class=hash>#</a></h3><p>You can write <code>1</code> to create new axis of length 1.
+There is also a synonym <code>()</code> that does exactly the same</p><p>It is exactly what <code>numpy.exapand_axis()</code> and <code>torch.unsqueeze()</code> does.</p><pre><code class=language-python>## both operations does the same as &quot;numpy.expand_dims()&quot; or &quot;torch.unsqueeze()&quot;
+u = rearrange(images, &quot;b h w c -&gt; b 1 h w 1 c&quot;)
+v = rearrange(images, &quot;b h w c -&gt; b () h w () c&quot;)
+
+u.shape         ## (6, 1, 96, 96, 1, 3)
+v.shape         ## (6, 1, 96, 96, 1, 3)
+</code></pre><p>The <code>numpy.squeeze()</code> operation is also facilitated by <code>rearrange()</code> as usual.</p><pre><code class=language-python>u = rearrange(images, &quot;b h w c -&gt; b 1 h w 1 c&quot;)         ## torch.unsqueeze()
+v = rearrange(u, &quot;b 1 h w 1 c -&gt; b h w c&quot;)              ## torch.unsqueeze()
+
+v.shape                                                 ## (6, 96, 96, 3)
+</code></pre><p>???+ danger &ldquo;An example usage&rdquo;
 Compute max in each image individually and then show a difference
-<code>python x = reduce(images, &quot;b h w c -&gt; b () () c&quot;, max) x -= images y = rearrange(x, &quot;b h w c -&gt; h (b w) c&quot;) y.shape                                             ## (96, 6*96, 3) </code>
-<figure markdown class="card">
-<img src="../../../assets/blogs/deep_learning/einops/images_17.png" alt="" loading="lazy" />
+<code>python x = reduce(images, "b h w c -> b () () c", max) x -= images y = rearrange(x, "b h w c -> h (b w) c") y.shape ## (96, 6*96, 3) </code><img src=../../../assets/blogs/deep_learning/einops/images_17.png alt loading=lazy></p><h3 id=meet-repeat-repeating-elements>Meet &ldquo;repeat&rdquo;: Repeating elements <a href=#meet-repeat-repeating-elements class=hash>#</a></h3><p>This is the third operation in <code>einops</code> library</p><p>:dart: Repeat <strong>along a new axis</strong>. The new axis can be placed anywhere.</p><pre><code class=language-python>u = repeat(images[0], &quot;h w c -&gt; h new_axis w c&quot;, new_axis=5)
+u.shape         ## (96, 5, 96, 3)
 
-</figure></p>
-<h3 id="meet-repeat-repeating-elements">Meet &ldquo;repeat&rdquo;: Repeating elements <a href="#meet-repeat-repeating-elements" class="hash">#</a></h3>
-<p>This is the third operation in <code>einops</code> library</p>
-<p>&#x1f3af; Repeat <strong>along a new axis</strong>. The new axis can be placed anywhere.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">u</span> <span class="o">=</span> <span class="n">repeat</span><span class="p">(</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&#34;h w c -&gt; h new_axis w c&#34;</span><span class="p">,</span> <span class="n">new_axis</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">u</span><span class="o">.</span><span class="n">shape</span>         <span class="c1">## (96, 5, 96, 3)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">## -- OR -- a shortcut</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">v</span> <span class="o">=</span> <span class="n">repeat</span><span class="p">(</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&#34;h w c -&gt; h 5 w c&#34;</span><span class="p">)</span>   <span class="c1">## repeats 5 times in the new axis.</span>
-</span></span><span class="line"><span class="cl"><span class="n">v</span><span class="o">.</span><span class="n">shape</span>         <span class="c1">## (96, 5, 96, 3)</span>
-</span></span></code></pre></div><p>&#x1f3af; Repat along <strong>an existing axis</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## repeats the width 3 times</span>
-</span></span><span class="line"><span class="cl"><span class="n">u</span> <span class="o">=</span> <span class="n">repeat</span><span class="p">(</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&#34;h w c -&gt; h (repeat w) c&#34;</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">u</span><span class="o">.</span><span class="n">shape</span>         <span class="c1">## (96, 3*96, 3)</span>
-</span></span></code></pre></div><figure markdown class="card">
-![](../../../assets/blogs/deep_learning/einops/images_18.png)
-</figure>
-<p>&#x1f3af; Repeat along <strong>multiple existing axes</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">u</span> <span class="o">=</span> <span class="n">repeat</span><span class="p">(</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&#34;h w c -&gt; (2 h) (2 w) c&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">u</span><span class="o">.</span><span class="n">shape</span>         <span class="c1">## (2*96, 2*96, 3)</span>
-</span></span></code></pre></div><figure markdown class="card">
-![](../../../assets/blogs/deep_learning/einops/images_19.png)
-</figure>
-<p>&#x1f3af; Order of axes matter as usual. You can repeat each pixel 3 times by changing the order of axes in repeat</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## repeat the pixels along the width dim. 3 times</span>
-</span></span><span class="line"><span class="cl"><span class="n">u</span> <span class="o">=</span> <span class="n">repeat</span><span class="p">(</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&#34;h w c -&gt; h (w repeat) c&#34;</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">u</span><span class="o">.</span><span class="n">shape</span>         <span class="c1">## (96, 96*3, 3)</span>
-</span></span></code></pre></div><figure markdown class="card">
-![](../../../assets/blogs/deep_learning/einops/images_20.png)
-</figure>
-<p>:man_raising_hand: NOTE: The <code>repeat</code> operation covers <code>numpy.tile</code>, <code>numpy.repeat</code> and much more.</p>
-<h3 id="reduce-vs-repeat">reduce v/s repeat <a href="#reduce-vs-repeat" class="hash">#</a></h3>
-<p><code>reduce</code> and <code>repeat</code> are opposite of each other.</p>
-<ol>
-<li><code>reduce</code>: reduces amount of elements</li>
-<li><code>repeat</code>: increases the number of elements.</li>
-</ol>
-<p>???+ danger &ldquo;An example of <code>reduce</code> v/s <code>repeat</code>&rdquo;
+## -- OR -- a shortcut
+
+v = repeat(images[0], &quot;h w c -&gt; h 5 w c&quot;)   ## repeats 5 times in the new axis.
+v.shape         ## (96, 5, 96, 3)
+</code></pre><p>:dart: Repat along <strong>an existing axis</strong></p><pre><code class=language-python>## repeats the width 3 times
+u = repeat(images[0], &quot;h w c -&gt; h (repeat w) c&quot;, repeat=3)
+u.shape         ## (96, 3*96, 3)
+</code></pre><p>:dart: Repeat along <strong>multiple existing axes</strong></p><pre><code class=language-python>u = repeat(images[0], &quot;h w c -&gt; (2 h) (2 w) c&quot;)
+u.shape         ## (2*96, 2*96, 3)
+</code></pre><p>:dart: Order of axes matter as usual. You can repeat each pixel 3 times by changing the order of axes in repeat</p><pre><code class=language-python>## repeat the pixels along the width dim. 3 times
+u = repeat(images[0], &quot;h w c -&gt; h (w repeat) c&quot;, repeat=3)
+u.shape         ## (96, 96*3, 3)
+</code></pre><p>:man_raising_hand: NOTE: The <code>repeat</code> operation covers <code>numpy.tile</code>, <code>numpy.repeat</code> and much more.</p><h3 id=reduce-vs-repeat>reduce v/s repeat <a href=#reduce-vs-repeat class=hash>#</a></h3><p><code>reduce</code> and <code>repeat</code> are opposite of each other.</p><ol><li><code>reduce</code>: reduces amount of elements</li><li><code>repeat</code>: increases the number of elements.</li></ol><p>???+ danger &ldquo;An example of <code>reduce</code> v/s <code>repeat</code>&rdquo;
 In this example each image is repeated first then reduced over the <code>new_axis</code>
 to get back the original tensor.
 ```python
-repeated = repeat(images, &ldquo;b h w c -&gt; b h new_axis w c&rdquo;, new_axis=2)
-reduced = reduce(repeated, &ldquo;b h new_axis w c -&gt; b h w c&rdquo;, &ldquo;min&rdquo;)</p>
-<pre><code>repeated.shape                                  ## (6, 96, 2, 96, 3)
+repeated = repeat(images, &ldquo;b h w c -> b h new_axis w c&rdquo;, new_axis=2)
+reduced = reduce(repeated, &ldquo;b h new_axis w c -> b h w c&rdquo;, &ldquo;min&rdquo;)</p><pre><code>repeated.shape                                  ## (6, 96, 2, 96, 3)
 reduced.shape                                   ## (6, 96, 96, 3)
 
 assert numpy.array_equal(images, reduced)       ## True
@@ -499,77 +228,24 @@ i.e.
 in `repeat` its `&quot;b h w c -&gt; b h new_axis w c&quot;` but
 
 in `reduce` its `&quot;b h new_axis w c -&gt; b h w c&quot;`
-</code></pre>
-<h3 id="some-more-examples">Some more examples <a href="#some-more-examples" class="hash">#</a></h3>
-<p>???+ quote &ldquo;Interwaving pixels of different pictures&rdquo;
+</code></pre><h3 id=some-more-examples>Some more examples <a href=#some-more-examples class=hash>#</a></h3><p>???+ quote &ldquo;Interwaving pixels of different pictures&rdquo;
 All letters can be observed in the final image
-<code>python u = rearrange(images, &quot;(b1 b2) h w c -&gt; (h b1) (w b2) c&quot;, b1=2) u.shape             ## (2*96, 3*96, 3) </code>
-<figure markdown class="card">
-<img src="../../../assets/blogs/deep_learning/einops/images_21.png" alt="" loading="lazy" />
-
-</figure></p>
-<p>???+ done &ldquo;Interweaving along vertical for couple of images&rdquo;
-<code>python u = rearrange(images, &quot;(b1 b2) h w c -&gt; (h b1) (b2 w) c&quot;, b1=2) u.shape             ## (96*2, 3*96, 3) </code>
-<figure markdown class="card">
-<img src="../../../assets/blogs/deep_learning/einops/images_22.png" alt="" loading="lazy" />
-
-</figure></p>
-<p>???+ quote &ldquo;Interweaving lines for couple of images&rdquo;
-<code>python u = reduce(images, &quot;(b1 b2) h w c -&gt; h (b2 w) c&quot;, &quot;max&quot;, b1=2) u.shape             ## (96, 3*96, 3) </code>
-<figure markdown class="card">
-<img src="../../../assets/blogs/deep_learning/einops/images_23.png" alt="" loading="lazy" />
-
-</figure></p>
-<p>???+ done &ldquo;Decomposing color into different axes&rdquo;
+<code>python u = rearrange(images, "(b1 b2) h w c -> (h b1) (w b2) c", b1=2) u.shape ## (2*96, 3*96, 3) </code><img src=../../../assets/blogs/deep_learning/einops/images_21.png alt loading=lazy></p><p>???+ done &ldquo;Interweaving along vertical for couple of images&rdquo;
+<code>python u = rearrange(images, "(b1 b2) h w c -> (h b1) (b2 w) c", b1=2) u.shape ## (96*2, 3*96, 3) </code><img src=../../../assets/blogs/deep_learning/einops/images_22.png alt loading=lazy></p><p>???+ quote &ldquo;Interweaving lines for couple of images&rdquo;
+<code>python u = reduce(images, "(b1 b2) h w c -> h (b2 w) c", "max", b1=2) u.shape ## (96, 3*96, 3) </code><img src=../../../assets/blogs/deep_learning/einops/images_23.png alt loading=lazy></p><p>???+ done &ldquo;Decomposing color into different axes&rdquo;
 Here we decompose color dimension into different axes. We also downsample the image.
-<code>python u = reduce(images, &quot;b (h 2) (w 2) c -&gt; (c h) (b w)&quot;, &quot;mean&quot;) u.shape             ## (3*48, 6*48) </code>
-<figure markdown class="card">
-<img src="../../../assets/blogs/deep_learning/einops/images_24.png" alt="" loading="lazy" />
-
-</figure></p>
-<p>???+ quote &ldquo;Disproportionate resize&rdquo;
-<code>python u = reduce(images, &quot;b (h 3) (w 4) c -&gt; (h) (b w)&quot;, &quot;mean&quot;) u.shape             ## (96/3, 6*96/4) </code>
-<figure markdown class="card">
-<img src="../../../assets/blogs/deep_learning/einops/images_25.png" alt="" loading="lazy" />
-
-</figure></p>
-<p>???+ done &ldquo;Split &amp; Reduce&rdquo;
+<code>python u = reduce(images, "b (h 2) (w 2) c -> (c h) (b w)", "mean") u.shape ## (3*48, 6*48) </code><img src=../../../assets/blogs/deep_learning/einops/images_24.png alt loading=lazy></p><p>???+ quote &ldquo;Disproportionate resize&rdquo;
+<code>python u = reduce(images, "b (h 3) (w 4) c -> (h) (b w)", "mean") u.shape ## (96/3, 6*96/4) </code><img src=../../../assets/blogs/deep_learning/einops/images_25.png alt loading=lazy></p><p>???+ done &ldquo;Split & Reduce&rdquo;
 Split each image into two halves and compute the mean of the two halves.
-<code>python u = reduce(images, &quot;b (h1 h2) w c -&gt; h2 (b w)&quot;, &quot;mean&quot;, h1=2) u.shape             ## (96/2, 6*96) </code>
-<figure markdown class="card">
-<img src="../../../assets/blogs/deep_learning/einops/images_26.png" alt="" loading="lazy" />
-
-</figure></p>
-<p>???+ quote &ldquo;Split and Transpose&rdquo;
+<code>python u = reduce(images, "b (h1 h2) w c -> h2 (b w)", "mean", h1=2) u.shape ## (96/2, 6*96) </code><img src=../../../assets/blogs/deep_learning/einops/images_26.png alt loading=lazy></p><p>???+ quote &ldquo;Split and Transpose&rdquo;
 Split into small patches and transpose each patch.
-<code>python ## splitting each image into 96/8 * 96/8 = 12*12 = 144 patches ## each patch is of shape (8, 8) u = rearrange(images, &quot;b (h1 h2) (w1 w2) c -&gt; (h1 w2) (b w1 h2) c&quot;, h2=8, w2=8) u.shape             ## (12*8, 6*12*8, 3) </code>
-<figure markdown class="card">
-<img src="../../../assets/blogs/deep_learning/einops/images_27.png" alt="" loading="lazy" />
-
-</figure></p>
-<p>???+ done &ldquo;Another Split &amp; Transpose&rdquo;
+<code>python ## splitting each image into 96/8 * 96/8 = 12*12 = 144 patches ## each patch is of shape (8, 8) u = rearrange(images, "b (h1 h2) (w1 w2) c -> (h1 w2) (b w1 h2) c", h2=8, w2=8) u.shape ## (12*8, 6*12*8, 3) </code><img src=../../../assets/blogs/deep_learning/einops/images_27.png alt loading=lazy></p><p>???+ done &ldquo;Another Split & Transpose&rdquo;
 This is crazy
-<code>python u = rearrange(images, &quot;b (h1 h2 h3) (w1 w2 w3) c -&gt; (h1 w2 h3) (b w1 h2 w3) c&quot;, h2=2, h3=2, w2=2, w3=2) u.shape             ## (96/(2*2)*2*2, 6*96/(2*2)*2*2, c) = (96, 6*96, 3) </code>
-<figure markdown class="card">
-<img src="../../../assets/blogs/deep_learning/einops/images_28.png" alt="" loading="lazy" />
-
-</figure></p>
-<p>???+ quote &ldquo;Yet another Split &amp; Transpose&rdquo;
-This is crazy crazy&hellip;.
-<code>python u = rearrange(images, &quot;(b1 b2) (h1 h2) (w1 w2) c -&gt; (h1 b1 h2) (w1 b2 w2) c&quot;, h1=3, w1=3, b2=3) u.shape             ## (3*(6/3)*(96/3), 3*3*(96/3), 3) = (192, 288, 3) </code>
-<figure markdown class="card">
-<img src="../../../assets/blogs/deep_learning/einops/images_29.png" alt="" loading="lazy" />
-
-</figure></p>
-<p>???+ danger &ldquo;Arbitrarily Complicated Pattern&rdquo;
-<code>python u = reduce(images, &quot;(b1 b2) (h1 h2 h3) (w1 w2 w3) c -&gt; (h1 w1 h3) (b1 w2 h2 w3 b2) c&quot;,  &quot;mean&quot;, w1=2, w3=2, h2=2, h3=2, b2=2) </code>
-<figure markdown class="card">
-<img src="../../../assets/blogs/deep_learning/einops/images_30.png" alt="" loading="lazy" />
-
-</figure></p>
-<p>???+ quote &ldquo;Subtract background &amp; Normalize&rdquo;
-Subtract background in each image individually and normalize.</p>
-<pre><code>** :dart: NOTE: Pay attention to `()` -- this is a composition of `0` axis
+<code>python u = rearrange(images, "b (h1 h2 h3) (w1 w2 w3) c -> (h1 w2 h3) (b w1 h2 w3) c", h2=2, h3=2, w2=2, w3=2) u.shape ## (96/(2*2)*2*2, 6*96/(2*2)*2*2, c) = (96, 6*96, 3) </code><img src=../../../assets/blogs/deep_learning/einops/images_28.png alt loading=lazy></p><p>???+ quote &ldquo;Yet another Split & Transpose&rdquo;
+This is crazy crazy&mldr;.
+<code>python u = rearrange(images, "(b1 b2) (h1 h2) (w1 w2) c -> (h1 b1 h2) (w1 b2 w2) c", h1=3, w1=3, b2=3) u.shape ## (3*(6/3)*(96/3), 3*3*(96/3), 3) = (192, 288, 3) </code><img src=../../../assets/blogs/deep_learning/einops/images_29.png alt loading=lazy></p><p>???+ danger &ldquo;Arbitrarily Complicated Pattern&rdquo;
+<code>python u = reduce(images, "(b1 b2) (h1 h2 h3) (w1 w2 w3) c -> (h1 w1 h3) (b1 w2 h2 w3 b2) c", "mean", w1=2, w3=2, h2=2, h3=2, b2=2) </code><img src=../../../assets/blogs/deep_learning/einops/images_30.png alt loading=lazy></p><p>???+ quote &ldquo;Subtract background & Normalize&rdquo;
+Subtract background in each image individually and normalize.</p><pre><code>** :dart: NOTE: Pay attention to `()` -- this is a composition of `0` axis
 (a dummy axis with 1 element)**
 
 ```python
@@ -583,31 +259,22 @@ u.shape                                             ## (96, 6*96, 3)
 &lt;figure markdown class=&quot;card&quot;&gt;
 ![](../../../assets/blogs/deep_learning/einops/images_31.png)
 &lt;/figure&gt;
-</code></pre>
-<p>???+ danger &ldquo;PIXELATE&rdquo;
+</code></pre><p>???+ danger &ldquo;PIXELATE&rdquo;
 First <strong>downscale</strong> by averaging then <strong>upscale</strong> by using the same pattern.
 ```python
 ## downscale using &ldquo;mean&rdquo; kernel of size (6, 8)
-downscaled = reduce(images, &ldquo;b (h h2) (w w2) c -&gt; b h w c&rdquo;, &ldquo;mean&rdquo;, h2=6, w2=8)
-upscaled = repeat(downscaled, &ldquo;b h w c -&gt; b (h h2) (w w2) c&rdquo;, h2=6, w2=8)
-v = rearrange(upscaled, &ldquo;b h w c -&gt; h (b w) c&rdquo;)</p>
-<pre><code>downscaled.shape            ## (6, 96/6, 96/8, 3)
+downscaled = reduce(images, &ldquo;b (h h2) (w w2) c -> b h w c&rdquo;, &ldquo;mean&rdquo;, h2=6, w2=8)
+upscaled = repeat(downscaled, &ldquo;b h w c -> b (h h2) (w w2) c&rdquo;, h2=6, w2=8)
+v = rearrange(upscaled, &ldquo;b h w c -> h (b w) c&rdquo;)</p><pre><code>downscaled.shape            ## (6, 96/6, 96/8, 3)
 upscaled.shape              ## (6, (96/6)*6, (96/8)*8, 3) = (6, 96, 96, 3)
 v.shape                     ## (96, 6*96, 3)
 ```
 &lt;figure markdown class=&quot;card&quot;&gt;
 ![](../../../assets/blogs/deep_learning/einops/images_32.png)
 &lt;/figure&gt;
-</code></pre>
-<p>???+ quote &ldquo;ROTATE&rdquo;
-<code>python u = rearrange(images, &quot;b h w c -&gt; w (b h) c&quot;)       ## rotation of (width &lt;-&gt; height)  u.shape             ## (96, 6*96, 3) </code>
-<figure markdown class="card">
-<img src="../../../assets/blogs/deep_learning/einops/images_33.png" alt="" loading="lazy" />
-
-</figure></p>
-<p>???+ quote &ldquo;Another Example&rdquo;
-Let&rsquo;s bring the <code>channel</code> dimension as part of the <code>width</code> axis.</p>
-<pre><code>Also, at the same time **downsample** the `width` axis by 2x
+</code></pre><p>???+ quote &ldquo;ROTATE&rdquo;
+<code>python u = rearrange(images, "b h w c -> w (b h) c") ## rotation of (width &lt;-> height) u.shape ## (96, 6*96, 3) </code><img src=../../../assets/blogs/deep_learning/einops/images_33.png alt loading=lazy></p><p>???+ quote &ldquo;Another Example&rdquo;
+Let&rsquo;s bring the <code>channel</code> dimension as part of the <code>width</code> axis.</p><pre><code>Also, at the same time **downsample** the `width` axis by 2x
 ```python
 u = reduce(images, 
            &quot;b (h h2) (w w2) c -&gt; (h w2) (b w c)&quot;, 
@@ -617,25 +284,4 @@ u = reduce(images,
 &lt;figure markdown class=&quot;card&quot;&gt;
 ![](../../../assets/blogs/deep_learning/einops/images_34.png)
 &lt;/figure&gt;
-</code></pre>
-
-      </span>
-       
-
-    </section>
-    <hr>
-<footer>
-	  <nav>
-      
-  <ul>
-    <li>
-      © 2025
-    </li>
-  
-  </ul>
-    </nav>
-</footer>
-
-  </main>
-</body>
-</html>
+</code></pre></span></section><hr><footer><nav><ul><li>© 2025</li></ul></nav></footer></main></body></html>

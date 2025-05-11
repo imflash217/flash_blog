@@ -1,178 +1,25 @@
-<!doctype html>
-<html lang="en">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Ronalds Vilcins - http://localhost:1313/">
-  <title> | Vinay Kumar</title>
-  <meta name="description" content="Blogs &amp; Articles on Machine Learning by @imflash217">
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Popular Deep Learning Architectures using EINOPS # In this section we will be rewriting the building blocks of deep learning in both the traditional PyTorch way as well as using einops library.
+<!doctype html><html lang=en><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Ronalds Vilcins - http://localhost:1313/"><title>| Vinay Kumar</title>
+<meta name=description content><meta name=twitter:card content="summary"><meta name=twitter:title content><meta name=twitter:description content="Popular Deep Learning Architectures using EINOPS # In this section we will be rewriting the building blocks of deep learning in both the traditional PyTorch way as well as using einops library.
 Imports # Firstly, we will import the necessary libraries to be used.
-## importing necessary libraries import math import numpy as np import torch import torch.nn as nn import torch.nn.functional as F from einops import rearrange, reduce, repeat, asnumpy, parse_shape from einops."/>
-
-<meta property="og:title" content="" />
-<meta property="og:description" content="Popular Deep Learning Architectures using EINOPS # In this section we will be rewriting the building blocks of deep learning in both the traditional PyTorch way as well as using einops library.
+## importing necessary libraries import math import numpy as np import torch import torch.nn as nn import torch.nn.functional as F from einops import rearrange, reduce, repeat, asnumpy, parse_shape from einops."><meta property="og:title" content><meta property="og:description" content="Popular Deep Learning Architectures using EINOPS # In this section we will be rewriting the building blocks of deep learning in both the traditional PyTorch way as well as using einops library.
 Imports # Firstly, we will import the necessary libraries to be used.
-## importing necessary libraries import math import numpy as np import torch import torch.nn as nn import torch.nn.functional as F from einops import rearrange, reduce, repeat, asnumpy, parse_shape from einops." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/blogs/deep_learning/einops2/" /><meta property="article:section" content="post" />
-
-
-
-
-<meta itemprop="name" content="">
-<meta itemprop="description" content="Popular Deep Learning Architectures using EINOPS # In this section we will be rewriting the building blocks of deep learning in both the traditional PyTorch way as well as using einops library.
+## importing necessary libraries import math import numpy as np import torch import torch.nn as nn import torch.nn.functional as F from einops import rearrange, reduce, repeat, asnumpy, parse_shape from einops."><meta property="og:type" content="article"><meta property="og:url" content="http://localhost:1313/post/blogs/deep_learning/einops2/"><meta property="article:section" content="post"><meta itemprop=name content><meta itemprop=description content="Popular Deep Learning Architectures using EINOPS # In this section we will be rewriting the building blocks of deep learning in both the traditional PyTorch way as well as using einops library.
 Imports # Firstly, we will import the necessary libraries to be used.
-## importing necessary libraries import math import numpy as np import torch import torch.nn as nn import torch.nn.functional as F from einops import rearrange, reduce, repeat, asnumpy, parse_shape from einops.">
+## importing necessary libraries import math import numpy as np import torch import torch.nn as nn import torch.nn.functional as F from einops import rearrange, reduce, repeat, asnumpy, parse_shape from einops."><meta itemprop=wordCount content="3015"><meta itemprop=keywords content><link rel=canonical href=http://localhost:1313/post/blogs/deep_learning/einops2/><link rel=dns-prefetch href=https://www.google-analytics.com><link href=https://www.google-analytics.com rel=preconnect crossorigin><link rel=alternate type=application/atom+xml title="Vinay Kumar" href=http://localhost:1313/atom.xml><link rel=alternate type=application/json title="Vinay Kumar" href=http://localhost:1313/feed.json><link rel="shortcut icon" type=image/png href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="><style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","articleSection":"post","name":"","headline":"","alternativeHeadline":"","description":"Popular Deep Learning Architectures using EINOPS # In this section we will be rewriting the building blocks of deep learning in both the traditional PyTorch way as well as using einops library.\nImports # Firstly, we will import the necessary libraries to be used.\n## importing necessary libraries import math import numpy as np import torch import torch.nn as nn import torch.nn.functional as F from einops import rearrange, reduce, repeat, asnumpy, parse_shape from einops.","inLanguage":"en-us","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/localhost:1313\/post\/blogs\/deep_learning\/einops2\/"},"author":{"@type":"Person","name":""},"creator":{"@type":"Person","name":""},"accountablePerson":{"@type":"Person","name":""},"copyrightHolder":"Vinay Kumar","copyrightYear":"0001","dateCreated":"0001-01-01T00:00:00.00Z","datePublished":"0001-01-01T00:00:00.00Z","dateModified":"0001-01-01T00:00:00.00Z","publisher":{"@type":"Organization","name":"Vinay Kumar","url":"http://localhost:1313/","logo":{"@type":"ImageObject","url":"http:\/\/localhost:1313\/","width":"32","height":"32"}},"image":"http://localhost:1313/","url":"http:\/\/localhost:1313\/post\/blogs\/deep_learning\/einops2\/","wordCount":"3015","genre":[],"keywords":[]}</script></head><body><main><header><nav><ul><li><a href=/>Index</a></li><li><a href=/about/>About</a></li><li><a href=/atom.xml>RSS</a></li></ul></nav></header><hr><section><span itemprop=articleBody><h1 id=popular-deep-learning-architectures-using-einops>Popular Deep Learning Architectures using EINOPS <a href=#popular-deep-learning-architectures-using-einops class=hash>#</a></h1><p>In this section we will be rewriting the building blocks of deep learning
+in both the traditional <code>PyTorch</code> way as well as using <code>einops</code> library.</p><h2 id=imports>Imports <a href=#imports class=hash>#</a></h2><p>Firstly, we will import the necessary libraries to be used.</p><pre><code class=language-python>## importing necessary libraries
 
-<meta itemprop="wordCount" content="3015">
-<meta itemprop="keywords" content="" />
-  <link rel="canonical" href="http://localhost:1313/post/blogs/deep_learning/einops2/">
-  <link rel="dns-prefetch" href="https://www.google-analytics.com">
-  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
-  <link rel="alternate" type="application/atom+xml" title="Vinay Kumar" href="http://localhost:1313/atom.xml" />
-  <link rel="alternate" type="application/json" title="Vinay Kumar" href="http://localhost:1313/feed.json" />
-  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
-  
-  <style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style>
+import math
+import numpy as np
 
-  
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
 
-
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "BlogPosting",
-    "articleSection": "post",
-    "name": "",
-    "headline": "",
-    "alternativeHeadline": "",
-    "description": "Popular Deep Learning Architectures using EINOPS # In this section we will be rewriting the building blocks of deep learning in both the traditional PyTorch way as well as using einops library.\nImports # Firstly, we will import the necessary libraries to be used.\n## importing necessary libraries import math import numpy as np import torch import torch.nn as nn import torch.nn.functional as F from einops import rearrange, reduce, repeat, asnumpy, parse_shape from einops.",
-    "inLanguage": "en",
-    "isFamilyFriendly": "true",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "http:\/\/localhost:1313\/post\/blogs\/deep_learning\/einops2\/"
-    },
-    "author" : {
-        "@type": "Person",
-        "name": ""
-    },
-    "creator" : {
-        "@type": "Person",
-        "name": ""
-    },
-    "accountablePerson" : {
-        "@type": "Person",
-        "name": ""
-    },
-    "copyrightHolder" : "Vinay Kumar",
-    "copyrightYear" : "0001",
-    "dateCreated": "0001-01-01T00:00:00.00Z",
-    "datePublished": "0001-01-01T00:00:00.00Z",
-    "dateModified": "0001-01-01T00:00:00.00Z",
-    "publisher":{
-        "@type":"Organization",
-        "name": "Vinay Kumar",
-        "url": "http://localhost:1313/",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "http:\/\/localhost:1313\/",
-            "width":"32",
-            "height":"32"
-        }
-    },
-    "image": "http://localhost:1313/",
-    "url" : "http:\/\/localhost:1313\/post\/blogs\/deep_learning\/einops2\/",
-    "wordCount" : "3015",
-    "genre" : [ ],
-    "keywords" : [ ]
-}
-</script>
-
-
-</head>
-<body>
-<main>
-      <header>
-    <nav>
-      
-  <ul>
-    <li>
-      
-      
-      
-      
-      <a href="archives" >Archive</a>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <a href="search/" >Search</a>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <a href="tags/" >Tags</a>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <a href="https://www.github.com/imflash217/" >Github</a>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <a href="https://www.linkedin.com/in/imflash217" >LinkedIn</a>
-    </li>
-  
-  </ul>
-    </nav>
-  </header>
-  <hr>
-
-
-
-  <section>
-
-      
-
-      <span itemprop="articleBody">
-      <h1 id="popular-deep-learning-architectures-using-einops">Popular Deep Learning Architectures using EINOPS <a href="#popular-deep-learning-architectures-using-einops" class="hash">#</a></h1>
-<p>In this section we will be rewriting the building blocks of deep learning
-in both the traditional <code>PyTorch</code> way as well as using <code>einops</code> library.</p>
-<h2 id="imports">Imports <a href="#imports" class="hash">#</a></h2>
-<p>Firstly, we will import the necessary libraries to be used.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## importing necessary libraries</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">math</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">einops</span> <span class="kn">import</span> <span class="n">rearrange</span><span class="p">,</span> <span class="n">reduce</span><span class="p">,</span> <span class="n">repeat</span><span class="p">,</span> <span class="n">asnumpy</span><span class="p">,</span> <span class="n">parse_shape</span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">einops.layers.torch</span> <span class="kn">import</span> <span class="n">Rearrange</span><span class="p">,</span> <span class="n">Reduce</span>
-</span></span></code></pre></div><h2 id="simple-convnet">Simple ConvNet <a href="#simple-convnet" class="hash">#</a></h2>
-<p>???+ danger &ldquo;Using only PyTorch&rdquo;
+from einops import rearrange, reduce, repeat, asnumpy, parse_shape
+from einops.layers.torch import Rearrange, Reduce
+</code></pre><h2 id=simple-convnet>Simple ConvNet <a href=#simple-convnet class=hash>#</a></h2><p>???+ danger &ldquo;Using only PyTorch&rdquo;
 Here is an implementation of a simple <strong>ConvNet</strong> using only <strong><code>PyTorch</code></strong>
-without <code>einops</code>.</p>
-<pre><code>```python hl_lines=&quot;29&quot;
+without <code>einops</code>.</p><pre><code>```python hl_lines=&quot;29&quot;
 class ConvNet(nn.Module):
     def __init__(self):
         super(ConvNet, self).__init__()
@@ -203,10 +50,8 @@ class ConvNet(nn.Module):
    
 conv_net_old = ConvNet()
 ```
-</code></pre>
-<p>???+ done &ldquo;Using EINOPS + PyTorch&rdquo;
-Implementing the same above ConvNet using <strong><code>einops</code></strong> &amp; <code>PyTorch</code></p>
-<pre><code>```python hl_lines=&quot;9&quot;
+</code></pre><p>???+ done &ldquo;Using EINOPS + PyTorch&rdquo;
+Implementing the same above ConvNet using <strong><code>einops</code></strong> & <code>PyTorch</code></p><pre><code>```python hl_lines=&quot;9&quot;
 conv_net_new = nn.Sequential(
     nn.Conv2d(1, 10, kernel_size=5),
     nn.MaxPool2d(kernel_size=2),
@@ -223,10 +68,8 @@ conv_net_new = nn.Sequential(
     nn.LogSoftmax(dim=1)
 )
 ```
-</code></pre>
-<p>???+ quote &ldquo;Why prefer EINOPS implementation?&rdquo;
-Following are the reasons to prefer the new implementation:</p>
-<pre><code>- [x] In the original code, if the input is changed and the **`batch_size`** 
+</code></pre><p>???+ quote &ldquo;Why prefer EINOPS implementation?&rdquo;
+Following are the reasons to prefer the new implementation:</p><pre><code>- [x] In the original code, if the input is changed and the **`batch_size`** 
         is divisible by 16 (which usually is), we will get something senseless after reshaping.
     - [ ] :rotating_light: The new code using **`einops`** explicitly raise ERROR in the above scenario. Hence better!!
 - [x] We won't forget to use the flag **`self.training`** with the new implementation.
@@ -236,14 +79,11 @@ Following are the reasons to prefer the new implementation:</p>
 - [x] Don't need **`logsoftmax`**? Now, you can use **`conv_net_new[-1]`**. 
         Another reason to prefer **`nn.Sequential`**
 - [x] ... And we culd also add **inplace `ReLU`**
-</code></pre>
-<h2 id="super-resolution">Super-resolution <a href="#super-resolution" class="hash">#</a></h2>
-<p>???+ danger &ldquo;Only PyTorch&rdquo;
+</code></pre><h2 id=super-resolution>Super-resolution <a href=#super-resolution class=hash>#</a></h2><p>???+ danger &ldquo;Only PyTorch&rdquo;
 ```python hl_lines=&ldquo;9-10 16&rdquo;
 class SuperResolutionNetOLD(nn.Module):
 def <strong>init</strong>(self, upscale_factor):
-super(SuperResolutionNetOLD, self).<strong>init</strong>()</p>
-<pre><code>        self.relu = nn.ReLU()
+super(SuperResolutionNetOLD, self).<strong>init</strong>()</p><pre><code>        self.relu = nn.ReLU()
         self.conv1 = nn.Conv2d(1, 64, (5, 5), (1, 1), (2, 2))
         self.conv2 = nn.Conv2d(64, 64, (3, 3), (1, 1), (1, 1))
         self.conv3 = nn.Conv2d(64, 32, (3, 3), (1, 1), (1, 1))
@@ -257,20 +97,14 @@ super(SuperResolutionNetOLD, self).<strong>init</strong>()</p>
         x = self.pixel_shuffle(self.conv4(x))
         return x
 ```
-</code></pre>
-<p>???+ done &ldquo;Using EINOPS&rdquo;
-<code>python hl_lines=&quot;10&quot; def SuperResolutionNetNEW(upscale_factor): return nn.Sequential( nn.Conv2d(1, 64, kernel_size=5, padding=2), nn.ReLU(inplace=True), nn.Conv2d(64, 64, kernel_size=3, padding=1), nn.ReLU(inplace=True), nn.Conv2d(64, 32, kernel_size=3, padding=1), nn.ReLU(inplace=True), nn.Conv2d(32, upscale_factor ** 2, kernel_size=3, padding=1), Rearrange(&quot;b (h2 w2) h w -&gt; b (h h2) (w w2)&quot;, h2=upscale_factor, w2=upscale_factor) ) </code></p>
-<p>???+ quote &ldquo;Improvements over the old implementation&rdquo;
-- [x] No need in special instruction <strong><code>pixel_shuffle</code></strong> (&amp; the result is transferrable b/w the frameworks)
-- [x] Output does not contain a fake axis (&amp; we could do the same for the input)
+</code></pre><p>???+ done &ldquo;Using EINOPS&rdquo;
+<code>python hl_lines="10" def SuperResolutionNetNEW(upscale_factor): return nn.Sequential( nn.Conv2d(1, 64, kernel_size=5, padding=2), nn.ReLU(inplace=True), nn.Conv2d(64, 64, kernel_size=3, padding=1), nn.ReLU(inplace=True), nn.Conv2d(64, 32, kernel_size=3, padding=1), nn.ReLU(inplace=True), nn.Conv2d(32, upscale_factor ** 2, kernel_size=3, padding=1), Rearrange("b (h2 w2) h w -> b (h h2) (w w2)", h2=upscale_factor, w2=upscale_factor) )</code></p><p>???+ quote &ldquo;Improvements over the old implementation&rdquo;
+- [x] No need in special instruction <strong><code>pixel_shuffle</code></strong> (& the result is transferrable b/w the frameworks)
+- [x] Output does not contain a fake axis (& we could do the same for the input)
 - [x] inplace <strong><code>ReLU</code></strong> used now. For high resolution images this becomes critical
 and saves a lot of memory.
-- [x] and all the benefits of <strong><code>nn.Sequential</code></strong></p>
-<h2 id="gram-matrix--style-transfer">Gram Matrix / Style Transfer <a href="#gram-matrix--style-transfer" class="hash">#</a></h2>
-<p>Restyling Graam Matrix for style transfer.</p>
-<p>???+ danger &ldquo;Original Code using ONLY PyTorch&rdquo;
-The original code is already very good. First line shows what kind of input is expected.</p>
-<pre><code>```python
+- [x] and all the benefits of <strong><code>nn.Sequential</code></strong></p><h2 id=gram-matrix--style-transfer>Gram Matrix / Style Transfer <a href=#gram-matrix--style-transfer class=hash>#</a></h2><p>Restyling Graam Matrix for style transfer.</p><p>???+ danger &ldquo;Original Code using ONLY PyTorch&rdquo;
+The original code is already very good. First line shows what kind of input is expected.</p><pre><code>```python
 def gram_matrix_old(y):
     (b, c, h, w) = y.size()
     features = y.view(b, c, h * w)
@@ -278,27 +112,21 @@ def gram_matrix_old(y):
     gram = features.bmm(features_t) / (c * h * w)
     return gram
 ```
-</code></pre>
-<p>???+ done &ldquo;Using EINSUM&rdquo;
-<code>python hl_lines=&quot;3&quot; def gram_matrix_new(y): b, c, h, w = y.shape return torch.einsum(&quot;bchw, bdhw -&gt; bcd&quot;, [y, y]) / (h * w) </code></p>
-<p>???+ quote &ldquo;Improvements&rdquo;
-<strong><code>einsum</code></strong> operations should be read like:</p>
-<pre><code>- [x] For each batch &amp; each pair of channels we sum over **`h`** and **`w`**.
+</code></pre><p>???+ done &ldquo;Using EINSUM&rdquo;
+<code>python hl_lines="3" def gram_matrix_new(y): b, c, h, w = y.shape return torch.einsum("bchw, bdhw -> bcd", [y, y]) / (h * w)</code></p><p>???+ quote &ldquo;Improvements&rdquo;
+<strong><code>einsum</code></strong> operations should be read like:</p><pre><code>- [x] For each batch &amp; each pair of channels we sum over **`h`** and **`w`**.
 - [x] The normalization is also changed, because that's how **Gram Matrix** is defined.
         Else we should call it **Normalized Gram Matrix** or alike.
-</code></pre>
-<h2 id="recurrent-models-rnns">Recurrent Models (RNNs) <a href="#recurrent-models-rnns" class="hash">#</a></h2>
-<p>???+ danger &ldquo;ONLY PyTorch&rdquo;
+</code></pre><h2 id=recurrent-models-rnns>Recurrent Models (RNNs) <a href=#recurrent-models-rnns class=hash>#</a></h2><p>???+ danger &ldquo;ONLY PyTorch&rdquo;
 ```python hl_lines=&ldquo;14-15&rdquo;
 class RNNModelOLD(nn.Module):
-&ldquo;&ldquo;&ldquo;Container module with an ENCODER, a RECURRENT module &amp; a DECODER module&rdquo;&rdquo;&rdquo;
+&ldquo;&ldquo;&ldquo;Container module with an ENCODER, a RECURRENT module & a DECODER module&rdquo;&rdquo;&rdquo;
 def <strong>init</strong>(self, ntoken, ninp, nhid, nlayers, dropout=0.5):
 super(RNNModelOLD, self).<strong>init</strong>()
 self.drop = nn.Dropout(dropout)
 self.encoder = nn.Embedding(ntoken, ninp)
 self.rnn = nn.LSTM(ninp, nhid, nlayers, dropout=dropout)
-self.decoder = nn.Linear(nhid, ntoken)</p>
-<pre><code>    def forward(self, input, hidden):
+self.decoder = nn.Linear(nhid, ntoken)</p><pre><code>    def forward(self, input, hidden):
         emb = self.drop(self.encoder(input))
         output, hidden = self.rnn(emb, hidden)
         output = self.drop(output)
@@ -306,18 +134,16 @@ self.decoder = nn.Linear(nhid, ntoken)</p>
         return decoded.view(output.size(0), output.size(1), decoded.size(1)), hidden
 
 ```
-</code></pre>
-<p>???+ done &ldquo;Using EINOPS&rdquo;
+</code></pre><p>???+ done &ldquo;Using EINOPS&rdquo;
 ```python hl_lines=&ldquo;11 14-15&rdquo;
 def RNNModelNEW(nn.Module):
-&ldquo;&ldquo;&ldquo;Container module with an ENCODER, RNN &amp; a DECODER modules.&rdquo;&rdquo;&rdquo;
+&ldquo;&ldquo;&ldquo;Container module with an ENCODER, RNN & a DECODER modules.&rdquo;&rdquo;&rdquo;
 def <strong>init</strong>(self, ntoken, ninp, nhid, nlayers, dropout=0.5):
 super(RNNModelNEW, self).<strong>init</strong>()
 self.drop = nn.Dropout(dropout)
 self.encoder = nn.Embedding(ntoken, ninp)
 self.rnn = nn.LSTM(ninp, nhid, nlayers, dropout=dropout)
-self.decoder = nn.Linear(nhid, ntoken)</p>
-<pre><code>    def forward(self, input, hidden):
+self.decoder = nn.Linear(nhid, ntoken)</p><pre><code>    def forward(self, input, hidden):
         t, b = input.shape[:2]
         emb = self.drop(self.encoder(input))
         output, hidden = self.rnn(emb, hidden)
@@ -325,9 +151,7 @@ self.decoder = nn.Linear(nhid, ntoken)</p>
         decoded = rearrange(self.decoder(output), &quot;(t b) token -&gt; t b token&quot;, t=t, b=b)
         return decoded, hidden
 ```
-</code></pre>
-<h2 id="improving-rnn">Improving RNN <a href="#improving-rnn" class="hash">#</a></h2>
-<p>???+ danger &ldquo;Only PyTorch&rdquo;
+</code></pre><h2 id=improving-rnn>Improving RNN <a href=#improving-rnn class=hash>#</a></h2><p>???+ danger &ldquo;Only PyTorch&rdquo;
 ```python
 class RNNold(nn.Module):
 def <strong>init</strong>(
@@ -348,8 +172,7 @@ num_layers=n_layers,
 bidirectional=bidirectional,
 dropout=dropout)
 self.fc = nn.Linear(hidden_dim * 2, output_dim)
-self.dropout = nn.Dropout(dropout)</p>
-<pre><code>    def forward(self, x):
+self.dropout = nn.Dropout(dropout)</p><pre><code>    def forward(self, x):
         ## x = [sent_len, batch_size]
         embedded = self.dropout(self.embedding(x))      ## size = [sent_len, batch_size, emb_dim]
         output, (hidden, cell) = self.rnn(embedded)
@@ -365,8 +188,7 @@ self.dropout = nn.Dropout(dropout)</p>
 
         return self.fc(hidden.squeeze(0))
 ```
-</code></pre>
-<p>???+ done &ldquo;Using EINOPS&rdquo;
+</code></pre><p>???+ done &ldquo;Using EINOPS&rdquo;
 ```python
 class RNNnew(nn.Module):
 def <strong>init</strong>(
@@ -388,8 +210,7 @@ bidirectional=bidirectional,
 dropout=dropout)
 self.dropout = nn.Dropout(dropout)
 self.directions = 2 if bidirectional else 1
-self.fc = nn.Linear(hidden_dim * self.directions, output_dim)</p>
-<pre><code>    def forward(self, x):
+self.fc = nn.Linear(hidden_dim * self.directions, output_dim)</p><pre><code>    def forward(self, x):
         embedded = self.dropout(self.embedding(x))
         output, (hidden, cell) = self.rnn(embedded)
         hidden = rearrange(hidden, &quot;(layer dir) b c -&gt; layer b (dir c)&quot;, dir=self.directions)
@@ -397,14 +218,11 @@ self.fc = nn.Linear(hidden_dim * self.directions, output_dim)</p>
         ## take the fina layer's hidden
         return self.fc(self.dropout(hidden[-1]))
 ```
-</code></pre>
-<h2 id="channel-shuffle-from-shufflenet">Channel Shuffle (from ShuffleNet) <a href="#channel-shuffle-from-shufflenet" class="hash">#</a></h2>
-<p>???+ danger &ldquo;ONLY PyTorch&rdquo;
+</code></pre><h2 id=channel-shuffle-from-shufflenet>Channel Shuffle (from ShuffleNet) <a href=#channel-shuffle-from-shufflenet class=hash>#</a></h2><p>???+ danger &ldquo;ONLY PyTorch&rdquo;
 ```python
 def channel_shuffle_old(x, groups):
 b, c, h, w = x.data.size()
-channels_per_group = c // groups</p>
-<pre><code>    ## reshape
+channels_per_group = c // groups</p><pre><code>    ## reshape
     x = x.view(b, groups, channels_per_group, h, w)
     
     ## transpose
@@ -416,14 +234,10 @@ channels_per_group = c // groups</p>
     x = x.view(b, -1, h, w)
     return x
 ```
-</code></pre>
-<p>???+ done &ldquo;Using EINOPS&rdquo;
-<code>python def channel_shuffle_new(x, groups): return rearrange(x, &quot;b (c1 c2) h w -&gt; b (c2 c1) h w&quot;, c1=groups) </code></p>
-<h2 id="shufflenet">ShuffleNet <a href="#shufflenet" class="hash">#</a></h2>
-<p>???+ danger &ldquo;ONLY PyTorch&rdquo;
+</code></pre><p>???+ done &ldquo;Using EINOPS&rdquo;
+<code>python def channel_shuffle_new(x, groups): return rearrange(x, "b (c1 c2) h w -> b (c2 c1) h w", c1=groups)</code></p><h2 id=shufflenet>ShuffleNet <a href=#shufflenet class=hash>#</a></h2><p>???+ danger &ldquo;ONLY PyTorch&rdquo;
 ```python
-from collections import OrderedDict</p>
-<pre><code>def channel_shuffle(x, groups):
+from collections import OrderedDict</p><pre><code>def channel_shuffle(x, groups):
     b, c, h, w = x.data.size()
     channels_per_group = c // groups
     
@@ -550,8 +364,7 @@ class ShuffleUnitOLD(nn.Module):
         return F.relu(out)
         
 ```
-</code></pre>
-<p>???+ done &ldquo;Using EINOPS&rdquo;
+</code></pre><p>???+ done &ldquo;Using EINOPS&rdquo;
 ```python
 class ShuffleUnitNEW(nn.Module):
 def <strong>init</strong>(
@@ -568,7 +381,7 @@ bottleneck_channels = out_channels // 4
 self.combine = combine
 if combine == &ldquo;add&rdquo;:
 ## ShuffleUnit fig-2b
-self.left = Rearrange(&quot;&hellip;-&gt;&hellip;&quot;)   ## identity
+self.left = Rearrange("&mldr;->&mldr;") ## identity
 depthwise_stride = 1
 else:
 ## ShuffleUnit fig-2c
@@ -576,8 +389,7 @@ self.left = nn.AvgPool2d(kernel_size=3, stride=2, padding=1)
 depthwise_stride = 2
 ## ensure output of concat has the same channels as the original output channels
 out_channels -= in_channels
-assert out_channels &gt; 0</p>
-<pre><code>        self.right = nn.Sequential(
+assert out_channels > 0</p><pre><code>        self.right = nn.Sequential(
             ## use a 1x1grouped or non-grouped convolution to reduce
             ## input channels to bottleneck channels as in ResNet bottleneck module.
             conv1x1(in_channels, bottleneck_channels, groups=first_1x1_groups),
@@ -604,10 +416,8 @@ assert out_channels &gt; 0</p>
         return F.relu(combined, inplace=True)
         
 ```
-</code></pre>
-<p>???+ quote &ldquo;Improvements&rdquo;
-Rewriting the code helped to identify the following:</p>
-<pre><code>- [x] There is no sense in doing reshuffling and not using groups in the first convolution
+</code></pre><p>???+ quote &ldquo;Improvements&rdquo;
+Rewriting the code helped to identify the following:</p><pre><code>- [x] There is no sense in doing reshuffling and not using groups in the first convolution
         (indeed in the paper it is not so). **However , the result is an equivalent model**.
 - [x] It is strage that the first convolution may not be grouped,
         while the last convolution is always grouped. (**and th's different from the paper**)
@@ -617,9 +427,7 @@ Also,
 - [x] There is an identity layer for pyTorch introduced here.
 - [x] The last thing to do is to get rid of **`conv1x1`** and **`conv3x3`** 
         (those are not better than the standard implementation)
-</code></pre>
-<h2 id="resnet">ResNet <a href="#resnet" class="hash">#</a></h2>
-<p>???+ danger &ldquo;ONLY PyTorch&rdquo;
+</code></pre><h2 id=resnet>ResNet <a href=#resnet class=hash>#</a></h2><p>???+ danger &ldquo;ONLY PyTorch&rdquo;
 ```python
 class ResNetOLD(nn.Module):
 def <strong>init</strong>(self, block, layers, num_classes=1000):
@@ -634,8 +442,7 @@ self.layer2 = self._make_layer(block, 128, layers[1], stride=2)
 self.layer3 = self._make_layer(block, 256, layers[2], stride=2)
 self.layer4 = self._make_layer(block, 512, layers[3], stride=2)
 self.avgpool = nn.AvgPool2d(7, stride=1)
-self.fc = nn.Linear(512 * block.expansion, num_classes)</p>
-<pre><code>        for m in self.modules:
+self.fc = nn.Linear(512 * block.expansion, num_classes)</p><pre><code>        for m in self.modules:
             if isinstance(m, nn.Conv2d):
                 n = m.kernel_size[0] * m.kernel_size[1] * m.out_channels
                 m.weight.data.normal_(0, math.sqrt(2./n))
@@ -676,8 +483,7 @@ self.fc = nn.Linear(512 * block.expansion, num_classes)</p>
         return x
 
 ```
-</code></pre>
-<p>???+ done &ldquo;Using EINOPS&rdquo;
+</code></pre><p>???+ done &ldquo;Using EINOPS&rdquo;
 ```python
 def make_layer(inplanes, planes, block, n_blocks, stride=1):
 downsample = None
@@ -686,8 +492,7 @@ if stride != 1 or inplanes != planes * block.expansion:
 downsample = nn.Sequential(
 nn.Conv2d(inplanes, planes * block.expansion, kernel_size=1, stride=stride, bias=False),
 nn.BatchNorm2d(planes * block.expansion),
-)</p>
-<pre><code>    return nn.Sequential(
+)</p><pre><code>    return nn.Sequential(
         block(inplanes, planes, stride, downsample),
         *[block(planes * block.expansion, planes) for _ in range(1, n_blocks)]
     )
@@ -722,32 +527,25 @@ def ResNetNEW(block, layers, num_classes=1000):
     return resnet
 
 ```
-</code></pre>
-<h2 id="fasttext">FastText <a href="#fasttext" class="hash">#</a></h2>
-<p>???+ danger &ldquo;ONLY PyTorch&rdquo;
+</code></pre><h2 id=fasttext>FastText <a href=#fasttext class=hash>#</a></h2><p>???+ danger &ldquo;ONLY PyTorch&rdquo;
 ```python
 class FastTextOLD(nn.Module):
 def <strong>init</strong>(self, vocab_size, embedding_dim, output_dim):
 super().<strong>init</strong>()
 self.embedding = nn.Embedding(vocab_size, embedding_dim)
-self.fc = nn.Linear(embedding_dim, output_dim)</p>
-<pre><code>    def forward(self, x):
+self.fc = nn.Linear(embedding_dim, output_dim)</p><pre><code>    def forward(self, x):
         embedded = self.embedding(x)
         embedded = embedded.permute(1, 0, 2)
         pooled = F.avg_pool2d(embedded, (embedded.shape[1], 1)).squeeze(1)
         return self.fc(pooled)
 ```
-</code></pre>
-<p>???+ done &ldquo;Using EINOPS&rdquo;
-<code>python hl_lines=&quot;3 7&quot; def FastTextNEW(vocab_size, embedding_dim, output_dim): return nn.Sequential( Rearrange(&quot;t b -&gt; t b&quot;), nn.Embedding(vocab_size, embedding_dim), Reduce(&quot;t b c -&gt; b c&quot;, &quot;mean&quot;), nn.Linear(embedding_dim, output_dim), Rearrange(&quot;b c -&gt; b c&quot;), ) </code></p>
-<pre><code>- [x] Here, the first and last operations (highlighted) do nothing and can be removed.
+</code></pre><p>???+ done &ldquo;Using EINOPS&rdquo;
+<code>python hl_lines="3 7" def FastTextNEW(vocab_size, embedding_dim, output_dim): return nn.Sequential( Rearrange("t b -> t b"), nn.Embedding(vocab_size, embedding_dim), Reduce("t b c -> b c", "mean"), nn.Linear(embedding_dim, output_dim), Rearrange("b c -> b c"), )</code></p><pre><code>- [x] Here, the first and last operations (highlighted) do nothing and can be removed.
         But, were added to explicitly added to show expected input and output shape
 - [x] This also gives us the flexibility of changing interface by editing a single line.
         Should you need to accept inputs of shape **`(b, t)`** we just need to change 
         the line to **`Rearrange(&quot;b t -&gt; t b&quot;)`**
-</code></pre>
-<h2 id="cnns-for-text-classification">CNNs for text classification <a href="#cnns-for-text-classification" class="hash">#</a></h2>
-<p>???+ danger &ldquo;ONLY PyTorch&rdquo;
+</code></pre><h2 id=cnns-for-text-classification>CNNs for text classification <a href=#cnns-for-text-classification class=hash>#</a></h2><p>???+ danger &ldquo;ONLY PyTorch&rdquo;
 ```python
 class CNNold(nn.Module):
 def <strong>init</strong>(self, vocab_size, embedding_dim, n_filters, filter_sizes, output_dim, dropout):
@@ -757,8 +555,7 @@ self.conv_0 = nn.Conv2d(in_channels=1, out_channels=n_filters, kernel_size=(filt
 self.conv_1 = nn.Conv2d(in_channels=1, out_channels=n_filters, kernel_size=(filter_sizes[1], embedding_dim))
 self.conv_2 = nn.Conv2d(in_channels=1, out_channels=n_filters, kernel_size=(filter_sizes[2], embedding_dim))
 self.fc = nn.Linear(len(filter_sizes)*n_filters, output_dim)
-self.dropout = nn.Dropout(dropout)</p>
-<pre><code>    def forward(self, x):
+self.dropout = nn.Dropout(dropout)</p><pre><code>    def forward(self, x):
         x = x.permute(1, 0)
         embedded = self.embedding(x)
         embedded = embedded.unsqueeze(dim=1)
@@ -775,8 +572,7 @@ self.dropout = nn.Dropout(dropout)</p>
         return self.fc(cat)
 
 ```
-</code></pre>
-<p>???+ done &ldquo;Using EINOPS&rdquo;
+</code></pre><p>???+ done &ldquo;Using EINOPS&rdquo;
 ```python hl_lines=&ldquo;5-6 11&rdquo;
 class CNNnew(nn.Module):
 def <strong>init</strong>(self, vocab_size, embedding_dim, n_filters, filter_sizes, output_dim, dropout):
@@ -785,42 +581,30 @@ self.embedding = nn.Embedding(vocab_size, embedding_dim)
 self.convs = nn.ModuleList([nn.Conv1d(embedding_dim, n_filters, kernel_size=size)
 for size in filter_sizes])
 self.fc = nn.Linear(len(filter_sizes)*n_filters, output_dim)
-self.dropout = nn.Dropout(dropout)</p>
-<pre><code>    def forward(self, x):
+self.dropout = nn.Dropout(dropout)</p><pre><code>    def forward(self, x):
         x = rearrange(x, &quot;t b -&gt; t b&quot;)
         emb = rearrange(self.embedding(x), &quot;t b c -&gt; b c t&quot;)
         pooled = [reduce(conv(emb), &quot;b c t -&gt; b c&quot;) for conv in self.convs]
         concatenated = rearrange(pooled, &quot;filter b c -&gt; b (filter c)&quot;)
         return self.fc(self.dropout(F.relu(concatenated)))
 ```
-</code></pre>
-<p>???+ quote &ldquo;Discussion&rdquo;</p>
-<pre><code>- [x] Original code misuses **`nn.Conv2d`** while **`nn.Conv1d`** is the right choice.
+</code></pre><p>???+ quote &ldquo;Discussion&rdquo;</p><pre><code>- [x] Original code misuses **`nn.Conv2d`** while **`nn.Conv1d`** is the right choice.
 - [x] New code can work with any number of **`filter_sizes`** and won't fail.
 - [x] First line in the new code does nothing, but was just added for simplicity &amp; clarity of shapes.
-</code></pre>
-<h2 id="highway-convolutions">Highway Convolutions <a href="#highway-convolutions" class="hash">#</a></h2>
-<p>???+ danger &ldquo;ONLY PyTorch&rdquo;
-<code>python hl_lines=&quot;4&quot; class HighwayConv1dOLD(nn.Conv1d): def forward(self, inputs): L = super(HIghwayCon1dOLD, self).forward(inputs) H1, H2 = torch.chunk(L, 2, dim=1)   ## chunk at the feature dimension torch.sigmoid_(H1) return H1 * H2 + (1.0 - H1) * inputs </code></p>
-<p>???+ done &ldquo;Using EINOPS&rdquo;
-<code>python hl_lines=&quot;4&quot; class HighwayConv1dNEW(nn.Conv1d): def forward(self, inputs): L = super().forward(inputs) H1, H2 = rearrange(L, &quot;b (split c) t -&gt; split b c t&quot;, split=2) torch.sigmoid_(H1) return H1 * H2 + (1.0 - H1) * inputs </code></p>
-<h2 id="simple-attention">Simple Attention <a href="#simple-attention" class="hash">#</a></h2>
-<p>???+ danger &ldquo;ONLY PyTorch&rdquo;
+</code></pre><h2 id=highway-convolutions>Highway Convolutions <a href=#highway-convolutions class=hash>#</a></h2><p>???+ danger &ldquo;ONLY PyTorch&rdquo;
+<code>python hl_lines="4" class HighwayConv1dOLD(nn.Conv1d): def forward(self, inputs): L = super(HIghwayCon1dOLD, self).forward(inputs) H1, H2 = torch.chunk(L, 2, dim=1) ## chunk at the feature dimension torch.sigmoid_(H1) return H1 * H2 + (1.0 - H1) * inputs</code></p><p>???+ done &ldquo;Using EINOPS&rdquo;
+<code>python hl_lines="4" class HighwayConv1dNEW(nn.Conv1d): def forward(self, inputs): L = super().forward(inputs) H1, H2 = rearrange(L, "b (split c) t -> split b c t", split=2) torch.sigmoid_(H1) return H1 * H2 + (1.0 - H1) * inputs</code></p><h2 id=simple-attention>Simple Attention <a href=#simple-attention class=hash>#</a></h2><p>???+ danger &ldquo;ONLY PyTorch&rdquo;
 ```python hl_lines=&ldquo;6 8&rdquo;
 class Attention(nn.Module):
 def <strong>init</strong>(self):
-super(Attention, self).<strong>init</strong>()</p>
-<pre><code>    def forward(self, K, Q, V):
+super(Attention, self).<strong>init</strong>()</p><pre><code>    def forward(self, K, Q, V):
         A = torch.bmm(K.transpose((1, 2), Q) / np.sqrt(Q.shape[1])
         A = F.softmax(A, dim=1)
         R = torch.bmm(V, A)
         return torch.cat((R, Q), dim=1)
 ```
-</code></pre>
-<p>???+ done &ldquo;Using EINOPS&rdquo;
-<code>python hl_lines=&quot;3 5&quot; def attention(K, Q, V): _, n_channels, _ = K.shape A = torch.einsum(&quot;bct,bcl-&gt;btl&quot;, [K, Q]) A = F.softmax(A * n_channels ** (-0.5), dim=1) R = torch.einsum(&quot;bct,btl-&gt;bcl&quot;, [V, A]) return torch.cat((R, Q), dim=1) </code></p>
-<h2 id="multi-head-attention">Multi-head Attention <a href="#multi-head-attention" class="hash">#</a></h2>
-<p>???+ danger &ldquo;ONLY PyTorch&rdquo;
+</code></pre><p>???+ done &ldquo;Using EINOPS&rdquo;
+<code>python hl_lines="3 5" def attention(K, Q, V): _, n_channels, _ = K.shape A = torch.einsum("bct,bcl->btl", [K, Q]) A = F.softmax(A * n_channels ** (-0.5), dim=1) R = torch.einsum("bct,btl->bcl", [V, A]) return torch.cat((R, Q), dim=1)</code></p><h2 id=multi-head-attention>Multi-head Attention <a href=#multi-head-attention class=hash>#</a></h2><p>???+ danger &ldquo;ONLY PyTorch&rdquo;
 ```python
 class ScaledDotProductAttention(nn.Module):
 &ldquo;&ldquo;&ldquo;Scaled Dot Product Attention&rdquo;&rdquo;&rdquo;
@@ -828,8 +612,7 @@ def <strong>init</strong>(self, temperature, attn_dropout=0.1):
 super().<strong>init</strong>()
 self.temperature = temperature
 self.dropout = nn.Dropout(attn_dropout)
-self.softmax = nn.Softmax(dim=2)</p>
-<pre><code>    def forward(self, q, k, v, mask=None):
+self.softmax = nn.Softmax(dim=2)</p><pre><code>    def forward(self, q, k, v, mask=None):
         attn = torch.bmm(q, k.transpose(1, 2))
         attn /= self.temperature
         if mask is not None:
@@ -888,14 +671,12 @@ class MultiHeadAttentionOLD(nn.Module):
         return output, attn
         
 ```
-</code></pre>
-<p>???+ done &ldquo;Using EINOPS&rdquo;
+</code></pre><p>???+ done &ldquo;Using EINOPS&rdquo;
 ```python
 class MultiHeadAttentionNEW(nn.Module):
 def <strong>init</strong>(self, n_heads, d_model, d_k, d_v, dropout=0.1):
 super().<strong>init</strong>()
-self.n_heads = n_heads</p>
-<pre><code>        self.w_qs = nn.Linear(d_model, n_heads * d_k)
+self.n_heads = n_heads</p><pre><code>        self.w_qs = nn.Linear(d_model, n_heads * d_k)
         self.w_ks = nn.Linear(d_model, n_heads * d_k)
         self.w_vs = nn.Linear(d_model, n_heads * d_v)
         
@@ -912,26 +693,4 @@ self.n_heads = n_heads</p>
         residual = q
         
 ```
-</code></pre>
-<h2 id="references">References <a href="#references" class="hash">#</a></h2>
-
-      </span>
-       
-
-    </section>
-    <hr>
-<footer>
-	  <nav>
-      
-  <ul>
-    <li>
-      © 2025
-    </li>
-  
-  </ul>
-    </nav>
-</footer>
-
-  </main>
-</body>
-</html>
+</code></pre><h2 id=references>References <a href=#references class=hash>#</a></h2></span></section><hr><footer><nav><ul><li>© 2025</li></ul></nav></footer></main></body></html>

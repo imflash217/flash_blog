@@ -1,182 +1,20 @@
-<!doctype html>
-<html lang="en">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Ronalds Vilcins - http://localhost:1313/">
-  <title> | Vinay Kumar</title>
-  <meta name="description" content="Blogs &amp; Articles on Machine Learning by @imflash217">
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Introduction # A tree is a frequently used data structure to simulate a hierarchical tree-like structure. Each node of the tree will a value and list of references to otehr nodes which are called child nodes.
+<!doctype html><html lang=en><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Ronalds Vilcins - http://localhost:1313/"><title>| Vinay Kumar</title>
+<meta name=description content><meta name=twitter:card content="summary"><meta name=twitter:title content><meta name=twitter:description content="Introduction # A tree is a frequently used data structure to simulate a hierarchical tree-like structure. Each node of the tree will a value and list of references to otehr nodes which are called child nodes.
 From a graph view, a tree can also be described as a DAG (directed acyclic graph) which has N nodes and (N-1) edges.
-A binary tree is a tree data structure where each node can have maximum 2 children only."/>
-
-<meta property="og:title" content="" />
-<meta property="og:description" content="Introduction # A tree is a frequently used data structure to simulate a hierarchical tree-like structure. Each node of the tree will a value and list of references to otehr nodes which are called child nodes.
+A binary tree is a tree data structure where each node can have maximum 2 children only."><meta property="og:title" content><meta property="og:description" content="Introduction # A tree is a frequently used data structure to simulate a hierarchical tree-like structure. Each node of the tree will a value and list of references to otehr nodes which are called child nodes.
 From a graph view, a tree can also be described as a DAG (directed acyclic graph) which has N nodes and (N-1) edges.
-A binary tree is a tree data structure where each node can have maximum 2 children only." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/algorithms/binary_tree/" /><meta property="article:section" content="post" />
-
-
-
-
-<meta itemprop="name" content="">
-<meta itemprop="description" content="Introduction # A tree is a frequently used data structure to simulate a hierarchical tree-like structure. Each node of the tree will a value and list of references to otehr nodes which are called child nodes.
+A binary tree is a tree data structure where each node can have maximum 2 children only."><meta property="og:type" content="article"><meta property="og:url" content="http://localhost:1313/post/algorithms/binary_tree/"><meta property="article:section" content="post"><meta itemprop=name content><meta itemprop=description content="Introduction # A tree is a frequently used data structure to simulate a hierarchical tree-like structure. Each node of the tree will a value and list of references to otehr nodes which are called child nodes.
 From a graph view, a tree can also be described as a DAG (directed acyclic graph) which has N nodes and (N-1) edges.
-A binary tree is a tree data structure where each node can have maximum 2 children only.">
-
-<meta itemprop="wordCount" content="2426">
-<meta itemprop="keywords" content="" />
-  <link rel="canonical" href="http://localhost:1313/post/algorithms/binary_tree/">
-  <link rel="dns-prefetch" href="https://www.google-analytics.com">
-  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
-  <link rel="alternate" type="application/atom+xml" title="Vinay Kumar" href="http://localhost:1313/atom.xml" />
-  <link rel="alternate" type="application/json" title="Vinay Kumar" href="http://localhost:1313/feed.json" />
-  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
-  
-  <style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style>
-
-  
-
-
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "BlogPosting",
-    "articleSection": "post",
-    "name": "",
-    "headline": "",
-    "alternativeHeadline": "",
-    "description": "Introduction # A tree is a frequently used data structure to simulate a hierarchical tree-like structure. Each node of the tree will a value and list of references to otehr nodes which are called child nodes.\nFrom a graph view, a tree can also be described as a DAG (directed acyclic graph) which has N nodes and (N-1) edges.\nA binary tree is a tree data structure where each node can have maximum 2 children only.",
-    "inLanguage": "en",
-    "isFamilyFriendly": "true",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "http:\/\/localhost:1313\/post\/algorithms\/binary_tree\/"
-    },
-    "author" : {
-        "@type": "Person",
-        "name": ""
-    },
-    "creator" : {
-        "@type": "Person",
-        "name": ""
-    },
-    "accountablePerson" : {
-        "@type": "Person",
-        "name": ""
-    },
-    "copyrightHolder" : "Vinay Kumar",
-    "copyrightYear" : "0001",
-    "dateCreated": "0001-01-01T00:00:00.00Z",
-    "datePublished": "0001-01-01T00:00:00.00Z",
-    "dateModified": "0001-01-01T00:00:00.00Z",
-    "publisher":{
-        "@type":"Organization",
-        "name": "Vinay Kumar",
-        "url": "http://localhost:1313/",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "http:\/\/localhost:1313\/",
-            "width":"32",
-            "height":"32"
-        }
-    },
-    "image": "http://localhost:1313/",
-    "url" : "http:\/\/localhost:1313\/post\/algorithms\/binary_tree\/",
-    "wordCount" : "2426",
-    "genre" : [ ],
-    "keywords" : [ ]
-}
-</script>
-
-
-</head>
-<body>
-<main>
-      <header>
-    <nav>
-      
-  <ul>
-    <li>
-      
-      
-      
-      
-      <a href="archives" >Archive</a>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <a href="search/" >Search</a>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <a href="tags/" >Tags</a>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <a href="https://www.github.com/imflash217/" >Github</a>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <a href="https://www.linkedin.com/in/imflash217" >LinkedIn</a>
-    </li>
-  
-  </ul>
-    </nav>
-  </header>
-  <hr>
-
-
-
-  <section>
-
-      
-
-      <span itemprop="articleBody">
-      <h2 id="introduction">Introduction <a href="#introduction" class="hash">#</a></h2>
-<p>A <code>tree</code> is a frequently used data structure to simulate a hierarchical tree-like structure.
-Each node of the tree will a <code>value</code> and list of references to otehr nodes which are called <code>child nodes</code>.</p>
-<blockquote>
-<p>From a <code>graph</code> view, a <code>tree</code> can also be described as a DAG (directed acyclic graph)
-which has <code>N</code> nodes and <code>(N-1)</code> edges.</p>
-</blockquote>
-<p>A <code>binary tree</code> is a tree data structure where each node can have maximum 2 children only.
-A binary tree where all internal nodes (i.e. except the leaf nodes) have exactly 2 children are called <code>Complete Binary Tree</code>.</p>
-<h2 id="traversals">Traversals <a href="#traversals" class="hash">#</a></h2>
-<p>{==</p>
-<p>Pre-Order:
-- Traverse the <strong>root first</strong> then traverse the <strong>left subtree</strong>. Finally traverse the <strong>right subtree</strong></p>
-<p>In-Order:
+A binary tree is a tree data structure where each node can have maximum 2 children only."><meta itemprop=wordCount content="2426"><meta itemprop=keywords content><link rel=canonical href=http://localhost:1313/post/algorithms/binary_tree/><link rel=dns-prefetch href=https://www.google-analytics.com><link href=https://www.google-analytics.com rel=preconnect crossorigin><link rel=alternate type=application/atom+xml title="Vinay Kumar" href=http://localhost:1313/atom.xml><link rel=alternate type=application/json title="Vinay Kumar" href=http://localhost:1313/feed.json><link rel="shortcut icon" type=image/png href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="><style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","articleSection":"post","name":"","headline":"","alternativeHeadline":"","description":"Introduction # A tree is a frequently used data structure to simulate a hierarchical tree-like structure. Each node of the tree will a value and list of references to otehr nodes which are called child nodes.\nFrom a graph view, a tree can also be described as a DAG (directed acyclic graph) which has N nodes and (N-1) edges.\nA binary tree is a tree data structure where each node can have maximum 2 children only.","inLanguage":"en-us","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/localhost:1313\/post\/algorithms\/binary_tree\/"},"author":{"@type":"Person","name":""},"creator":{"@type":"Person","name":""},"accountablePerson":{"@type":"Person","name":""},"copyrightHolder":"Vinay Kumar","copyrightYear":"0001","dateCreated":"0001-01-01T00:00:00.00Z","datePublished":"0001-01-01T00:00:00.00Z","dateModified":"0001-01-01T00:00:00.00Z","publisher":{"@type":"Organization","name":"Vinay Kumar","url":"http://localhost:1313/","logo":{"@type":"ImageObject","url":"http:\/\/localhost:1313\/","width":"32","height":"32"}},"image":"http://localhost:1313/","url":"http:\/\/localhost:1313\/post\/algorithms\/binary_tree\/","wordCount":"2426","genre":[],"keywords":[]}</script></head><body><main><header><nav><ul><li><a href=/>Index</a></li><li><a href=/about/>About</a></li><li><a href=/atom.xml>RSS</a></li></ul></nav></header><hr><section><span itemprop=articleBody><h2 id=introduction>Introduction <a href=#introduction class=hash>#</a></h2><p>A <code>tree</code> is a frequently used data structure to simulate a hierarchical tree-like structure.
+Each node of the tree will a <code>value</code> and list of references to otehr nodes which are called <code>child nodes</code>.</p><blockquote><p>From a <code>graph</code> view, a <code>tree</code> can also be described as a DAG (directed acyclic graph)
+which has <code>N</code> nodes and <code>(N-1)</code> edges.</p></blockquote><p>A <code>binary tree</code> is a tree data structure where each node can have maximum 2 children only.
+A binary tree where all internal nodes (i.e. except the leaf nodes) have exactly 2 children are called <code>Complete Binary Tree</code>.</p><h2 id=traversals>Traversals <a href=#traversals class=hash>#</a></h2><p>{==</p><p>Pre-Order:
+- Traverse the <strong>root first</strong> then traverse the <strong>left subtree</strong>. Finally traverse the <strong>right subtree</strong></p><p>In-Order:
 - Traverse the <strong>left subtree first</strong>. Then visit the <strong>root node</strong>. Finally traverse the <strong>right subtree</strong>.
-- In <strong>binary search tree</strong>; in-order traversal gives the whole tree nodes in a <strong>sorted order</strong>.</p>
-<p>Post-Order:
-- Traverse the <strong>left subtree first</strong>, then traverse the *<em>right subtree</em>. Finally visit the <strong>root node</strong></p>
-<p>==}</p>
-<h2 id="examples">Examples <a href="#examples" class="hash">#</a></h2>
-<h3 id="25-depth-first-values">25: Depth First values <a href="#25-depth-first-values" class="hash">#</a></h3>
-<p>???+ danger &ldquo;Depth First Values&rdquo;
+- In <strong>binary search tree</strong>; in-order traversal gives the whole tree nodes in a <strong>sorted order</strong>.</p><p>Post-Order:
+- Traverse the <strong>left subtree first</strong>, then traverse the *<em>right subtree</em>. Finally visit the <strong>root node</strong></p><p>==}</p><h2 id=examples>Examples <a href=#examples class=hash>#</a></h2><h3 id=25-depth-first-values>25: Depth First values <a href=#25-depth-first-values class=hash>#</a></h3><p>???+ danger &ldquo;Depth First Values&rdquo;
 Write a function, <code>depth_first_values</code>, that takes in the root of a binary tree.
-The function should return a list containing all values of the tree in <strong>depth-first order</strong>.</p>
-<pre><code>```python
+The function should return a list containing all values of the tree in <strong>depth-first order</strong>.</p><pre><code>```python
 a = Node('a')
 b = Node('b')
 c = Node('c')
@@ -203,15 +41,13 @@ depth_first_values(a)
 #   -&gt; ['a', 'b', 'd', 'e', 'g', 'c', 'f']
 
 ```
-</code></pre>
-<p>???+ done &ldquo;Solution&rdquo;
+</code></pre><p>???+ done &ldquo;Solution&rdquo;
 ```python
 # class Node:
-#   def <strong>init</strong>(self, val):
-#     self.val = val
-#     self.left = None
-#     self.right = None</p>
-<pre><code>def depth_first_values(root):
+# def <strong>init</strong>(self, val):
+# self.val = val
+# self.left = None
+# self.right = None</p><pre><code>def depth_first_values(root):
   &quot;&quot;&quot;recursive solution Depth First Traversal&quot;&quot;&quot;
   
   ## base case
@@ -226,12 +62,9 @@ depth_first_values(a)
   return [root.val, *left_values, *right_values]
 
 ```
-</code></pre>
-<h3 id="26-breadth-first-values">26: Breadth First Values <a href="#26-breadth-first-values" class="hash">#</a></h3>
-<p>???+ danger &ldquo;Breadth First Values&rdquo;
+</code></pre><h3 id=26-breadth-first-values>26: Breadth First Values <a href=#26-breadth-first-values class=hash>#</a></h3><p>???+ danger &ldquo;Breadth First Values&rdquo;
 Write a function, <code>breadth_first_values</code>, that takes in the root of a binary tree.
-The function should return a list containing all values of the tree in <strong>breadth-first order</strong>.</p>
-<pre><code>```python
+The function should return a list containing all values of the tree in <strong>breadth-first order</strong>.</p><pre><code>```python
     a = Node('a')
 b = Node('b')
 c = Node('c')
@@ -258,15 +91,13 @@ d.right = e
 breadth_first_values(a) 
 #    -&gt; ['a', 'b', 'c', 'x', 'd', 'e']
 ```
-</code></pre>
-<p>???+ done &ldquo;Solution&rdquo;
+</code></pre><p>???+ done &ldquo;Solution&rdquo;
 ```python
 # class Node:
-#   def <strong>init</strong>(self, val):
-#     self.val = val
-#     self.left = None
-#     self.right = None</p>
-<pre><code>def breadth_first_values(root):
+# def <strong>init</strong>(self, val):
+# self.val = val
+# self.left = None
+# self.right = None</p><pre><code>def breadth_first_values(root):
   ## base case for empty tree
   if root is None:
     return []
@@ -293,10 +124,7 @@ breadth_first_values(a)
     
   return visited
 ```
-</code></pre>
-<h3 id="27-tree-includes">27: Tree Includes <a href="#27-tree-includes" class="hash">#</a></h3>
-<p>???+ danger &ldquo;Problem&rdquo;</p>
-<pre><code>Write a function, tree_includes, that takes in the root of a binary tree and a target value. 
+</code></pre><h3 id=27-tree-includes>27: Tree Includes <a href=#27-tree-includes class=hash>#</a></h3><p>???+ danger &ldquo;Problem&rdquo;</p><pre><code>Write a function, tree_includes, that takes in the root of a binary tree and a target value. 
 The function should return a boolean indicating whether or not the value is contained in the tree.
 
 ```python
@@ -321,9 +149,7 @@ c.right = f
 
 tree_includes(a, &quot;e&quot;) # -&gt; True
 ```
-</code></pre>
-<p>???+ done &ldquo;Solution&rdquo;</p>
-<pre><code>```python
+</code></pre><p>???+ done &ldquo;Solution&rdquo;</p><pre><code>```python
 # class Node:
 #   def __init__(self, val):
 #     self.val = val
@@ -342,9 +168,7 @@ def tree_includes(root, target):
   return tree_includes(root.left, target) or tree_includes(root.right, target)
 
 ```
-</code></pre>
-<h3 id="28-tree-sum">28: Tree Sum <a href="#28-tree-sum" class="hash">#</a></h3>
-<p>???+ danger &ldquo;Problem&rdquo;
+</code></pre><h3 id=28-tree-sum>28: Tree Sum <a href=#28-tree-sum class=hash>#</a></h3><p>???+ danger &ldquo;Problem&rdquo;
 Write a function, <code>tree_sum</code>, that takes in the root of a <strong>binary tree</strong> that contains number values.
 The function should <strong>return the total sum of all values</strong> in the tree.
 ```python
@@ -353,8 +177,7 @@ b = Node(11)
 c = Node(4)
 d = Node(4)
 e = Node(-2)
-f = Node(1)</p>
-<pre><code>a.left = b
+f = Node(1)</p><pre><code>a.left = b
 a.right = c
 b.left = d
 b.right = e
@@ -368,9 +191,7 @@ c.right = f
 
 tree_sum(a) # -&gt; 21
 ```
-</code></pre>
-<p>???+ done &ldquo;Solution&rdquo;</p>
-<pre><code>```python
+</code></pre><p>???+ done &ldquo;Solution&rdquo;</p><pre><code>```python
 # class Node:
 #   def __init__(self, val):
 #     self.val = val
@@ -383,12 +204,9 @@ def tree_sum(root):
   right_sum = tree_sum(root.right)          ## sum of right subtree
   return root.val + left_sum + right_sum
 ```
-</code></pre>
-<h3 id="29-binary-tree-min-value">29: Binary Tree Min Value <a href="#29-binary-tree-min-value" class="hash">#</a></h3>
-<p>???+ danger &ldquo;Minimum value in a binary tree&rdquo;
+</code></pre><h3 id=29-binary-tree-min-value>29: Binary Tree Min Value <a href=#29-binary-tree-min-value class=hash>#</a></h3><p>???+ danger &ldquo;Minimum value in a binary tree&rdquo;
 Write a function, tree_min_value, that takes in the root of a binary tree that contains number values.
-The function should return the minimum value within the tree.</p>
-<pre><code>You may assume that the input tree is non-empty.
+The function should return the minimum value within the tree.</p><pre><code>You may assume that the input tree is non-empty.
 
 ```python
 a = Node(3)
@@ -412,9 +230,7 @@ c.right = f
 tree_min_value(a) # -&gt; -2
 
 ```
-</code></pre>
-<p>???+ done &ldquo;Solution&rdquo;</p>
-<pre><code>```python
+</code></pre><p>???+ done &ldquo;Solution&rdquo;</p><pre><code>```python
 # class Node:
 #   def __init__(self, val):
 #     self.val = val
@@ -430,13 +246,10 @@ def tree_min_value(root):
   return min(root.val, left_min, right_min)   ## return minimum of root, lef, &amp; right subtrees
 
 ```
-</code></pre>
-<h3 id="30-root-to-leaf-path-w-max-sum">30: Root-to-Leaf path w/ MAX sum <a href="#30-root-to-leaf-path-w-max-sum" class="hash">#</a></h3>
-<p>???+ danger &ldquo;Problem&rdquo;
+</code></pre><h3 id=30-root-to-leaf-path-w-max-sum>30: Root-to-Leaf path w/ MAX sum <a href=#30-root-to-leaf-path-w-max-sum class=hash>#</a></h3><p>???+ danger &ldquo;Problem&rdquo;
 Write a function <strong><code>max_path_sum()</code></strong> that takes in the root of a Binary Tree
 that conatins number values. The functions should return the maximum sum of any
-root-to-leaf path in the tree.</p>
-<pre><code>Assumption: The tree is non-empty
+root-to-leaf path in the tree.</p><pre><code>Assumption: The tree is non-empty
 
 An example of the scenario is shown below:
 
@@ -468,9 +281,7 @@ f.right = h
 
 max_path_sum(a) # -&gt; -8
 ```
-</code></pre>
-<p>???+ done &ldquo;Solution&rdquo;</p>
-<pre><code>```python hl_lines=&quot;11-17 21&quot;
+</code></pre><p>???+ done &ldquo;Solution&rdquo;</p><pre><code>```python hl_lines=&quot;11-17 21&quot;
 import math
 
 class Node:
@@ -493,13 +304,10 @@ def max_path_sum(root):
     right_sum = max_path_sum(root.right)
     return root.val + max(left_sum, right_sum)
 ```
-</code></pre>
-<h3 id="31-tree-path-finder">31: Tree Path Finder <a href="#31-tree-path-finder" class="hash">#</a></h3>
-<p>???+ danger &ldquo;Problem&rdquo;
+</code></pre><h3 id=31-tree-path-finder>31: Tree Path Finder <a href=#31-tree-path-finder class=hash>#</a></h3><p>???+ danger &ldquo;Problem&rdquo;
 Write a function <strong><code>path_finder</code></strong> that takes in the <em>root</em> of a BT and a <em>target value</em>
 The function should return an array representing the path to teh target value.
-If the target value is not found, then return <code>None</code>.</p>
-<pre><code>Assumption: Every node in teh tree contains unique value.
+If the target value is not found, then return <code>None</code>.</p><pre><code>Assumption: Every node in teh tree contains unique value.
 
 Sample example:
 
@@ -531,9 +339,7 @@ f.right = h
 
 path_finder(a, &quot;h&quot;) # -&gt; ['a', 'c', 'f', 'h']
 ```
-</code></pre>
-<p>???+ done &ldquo;Solution&rdquo;</p>
-<pre><code>```python hl_lines=&quot;36&quot;
+</code></pre><p>???+ done &ldquo;Solution&rdquo;</p><pre><code>```python hl_lines=&quot;36&quot;
 class Node:
     def __init__(self, val):
         self.val = val
@@ -571,12 +377,9 @@ def path_finder(root, target):
         return None
     return path[::-1]       ## return the path in reverse order (from root to target)
 ```
-</code></pre>
-<h3 id="32-tree-value-count">32: Tree Value Count <a href="#32-tree-value-count" class="hash">#</a></h3>
-<p>???+ danger &ldquo;Problem&rdquo;
+</code></pre><h3 id=32-tree-value-count>32: Tree Value Count <a href=#32-tree-value-count class=hash>#</a></h3><p>???+ danger &ldquo;Problem&rdquo;
 Write a function, tree_value_count, that takes in the root of a binary tree and a target value.
-The function should return the number of times that the target occurs in the tree.</p>
-<pre><code>```python
+The function should return the number of times that the target occurs in the tree.</p><pre><code>```python
 a = Node(12)
 b = Node(6)
 c = Node(6)
@@ -598,9 +401,7 @@ c.right = f
 
 tree_value_count(a,  6) # -&gt; 3
 ```
-</code></pre>
-<p>???+ done &ldquo;Solution&rdquo;</p>
-<pre><code>```python
+</code></pre><p>???+ done &ldquo;Solution&rdquo;</p><pre><code>```python
 class Node:
     def __init__(self, val):
         self.val = val
@@ -622,12 +423,9 @@ def tree_value_count(root, target):
         return 1 + left_count + right_count
     return left_count + right_count
 ```
-</code></pre>
-<h3 id="33-height-of-a-bt">33: Height of a BT <a href="#33-height-of-a-bt" class="hash">#</a></h3>
-<p>???+ danger &ldquo;Problem&rdquo;
+</code></pre><h3 id=33-height-of-a-bt>33: Height of a BT <a href=#33-height-of-a-bt class=hash>#</a></h3><p>???+ danger &ldquo;Problem&rdquo;
 Write a function, <code>how_high()</code>, that takes in the root of a binary tree.
-The function should return a number representing the height of the tree.</p>
-<pre><code>The height of a binary tree is defined as the maximal number of edges from the root node to any leaf node.
+The function should return a number representing the height of the tree.</p><pre><code>The height of a binary tree is defined as the maximal number of edges from the root node to any leaf node.
 
 **If the tree is empty, return -1.**
 
@@ -657,9 +455,7 @@ e.left = g
 
 how_high(a) # -&gt; 3
 ```
-</code></pre>
-<p>???+ done &ldquo;Solution&rdquo;</p>
-<pre><code>```python
+</code></pre><p>???+ done &ldquo;Solution&rdquo;</p><pre><code>```python
 class Node:
     def __init__(self, val):
         self.val = val
@@ -676,12 +472,9 @@ def how_high(root):
     right_height = how_high(root.right)
     return 1 + max(left_height, right_height)
 ```
-</code></pre>
-<h3 id="34-botton-right-value">34: Botton Right Value <a href="#34-botton-right-value" class="hash">#</a></h3>
-<p>???+ danger &ldquo;Problem&rdquo;
+</code></pre><h3 id=34-botton-right-value>34: Botton Right Value <a href=#34-botton-right-value class=hash>#</a></h3><p>???+ danger &ldquo;Problem&rdquo;
 Write a function, <code>bottom_right_value()</code>, that takes in the root of a binary tree.
-The function should return the right-most value in the bottom-most level of the tree.</p>
-<pre><code>You may assume that the input tree is non-empty.
+The function should return the right-most value in the bottom-most level of the tree.</p><pre><code>You may assume that the input tree is non-empty.
 
 ```python
 a = Node(-1)
@@ -711,9 +504,7 @@ e.right = h
 
 bottom_right_value(a) # -&gt; 6
 ```
-</code></pre>
-<p>???+ done &ldquo;Solution&rdquo;</p>
-<pre><code>```python hl_lines=&quot;1 4 14&quot;
+</code></pre><p>???+ done &ldquo;Solution&rdquo;</p><pre><code>```python hl_lines=&quot;1 4 14&quot;
 from collections import deque
 
 def bottom_right_value(root):
@@ -729,51 +520,44 @@ def bottom_right_value(root):
 
     return current.val
 ```
-</code></pre>
-<h3 id="35-all-tree-paths">35: All tree paths <a href="#35-all-tree-paths" class="hash">#</a></h3>
-<p>Write a function, <strong><code>all_tree_paths()</code></strong>, that takes in the root of a binary tree.
+</code></pre><h3 id=35-all-tree-paths>35: All tree paths <a href=#35-all-tree-paths class=hash>#</a></h3><p>Write a function, <strong><code>all_tree_paths()</code></strong>, that takes in the root of a binary tree.
 The function should return a 2-Dimensional list where each subarray represents
-a root-to-leaf path in the tree.</p>
-<p>The order within an individual path must start at the root and end at the leaf,
-but the relative order among paths in the outer list does not matter.</p>
-<p>You may assume that the input tree is non-empty.</p>
-<p>An example use case is shown below:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">d</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">e</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">f</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">g</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">h</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">i</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">b</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">c</span>
-</span></span><span class="line"><span class="cl"><span class="n">b</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">d</span>
-</span></span><span class="line"><span class="cl"><span class="n">b</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">e</span>
-</span></span><span class="line"><span class="cl"><span class="n">c</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">f</span>
-</span></span><span class="line"><span class="cl"><span class="n">e</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">g</span>
-</span></span><span class="line"><span class="cl"><span class="n">e</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">h</span>
-</span></span><span class="line"><span class="cl"><span class="n">f</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">i</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#         a</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#      /    \</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#     b      c</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#   /  \      \</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#  d    e      f</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#      / \    /   </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#     g  h   i </span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">all_tree_paths</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># -&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># [ </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#   [ &#39;a&#39;, &#39;b&#39;, &#39;d&#39; ], </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#   [ &#39;a&#39;, &#39;b&#39;, &#39;e&#39;, &#39;g&#39; ], </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#   [ &#39;a&#39;, &#39;b&#39;, &#39;e&#39;, &#39;h&#39; ], </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#   [ &#39;a&#39;, &#39;c&#39;, &#39;f&#39;, &#39;i&#39; ] </span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ] </span>
-</span></span></code></pre></div><p>???+ done &ldquo;Solution&rdquo;</p>
-<pre><code>```python hl_lines=&quot;15 19 21-24 32&quot;
+a root-to-leaf path in the tree.</p><p>The order within an individual path must start at the root and end at the leaf,
+but the relative order among paths in the outer list does not matter.</p><p>You may assume that the input tree is non-empty.</p><p>An example use case is shown below:</p><pre><code class=language-python>a = Node('a')
+b = Node('b')
+c = Node('c')
+d = Node('d')
+e = Node('e')
+f = Node('f')
+g = Node('g')
+h = Node('h')
+i = Node('i')
+
+a.left = b
+a.right = c
+b.left = d
+b.right = e
+c.right = f
+e.left = g
+e.right = h
+f.left = i
+
+#         a
+#      /    \
+#     b      c
+#   /  \      \
+#  d    e      f
+#      / \    /   
+#     g  h   i 
+
+all_tree_paths(a) # -&gt;
+# [ 
+#   [ 'a', 'b', 'd' ], 
+#   [ 'a', 'b', 'e', 'g' ], 
+#   [ 'a', 'b', 'e', 'h' ], 
+#   [ 'a', 'c', 'f', 'i' ] 
+# ] 
+</code></pre><p>???+ done &ldquo;Solution&rdquo;</p><pre><code>```python hl_lines=&quot;15 19 21-24 32&quot;
 # class Node:
 #   def __init__(self, val):
 #     self.val = val
@@ -808,66 +592,40 @@ def all_tree_paths(root):
     return [path[::-1] for path in all_paths]
 
 ```
-</code></pre>
-<h3 id="36-tree-levels">36: Tree levels <a href="#36-tree-levels" class="hash">#</a></h3>
-<p>Write a function, <strong><code>tree_levels()</code></strong>, that takes in the root of a binary tree.
-The function should return a 2D list where each sublist represents a level of the tree.</p>
-<p>An example use-case is shown below:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">d</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">e</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">f</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">g</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">h</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">i</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">b</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">c</span>
-</span></span><span class="line"><span class="cl"><span class="n">b</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">d</span>
-</span></span><span class="line"><span class="cl"><span class="n">b</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">e</span>
-</span></span><span class="line"><span class="cl"><span class="n">c</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">f</span>
-</span></span><span class="line"><span class="cl"><span class="n">e</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">g</span>
-</span></span><span class="line"><span class="cl"><span class="n">e</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">h</span>
-</span></span><span class="line"><span class="cl"><span class="n">f</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">i</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#         a</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#      /    \</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#     b      c</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#   /  \      \</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#  d    e      f</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#      / \    /</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#     g  h   i</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">tree_levels</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># -&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># [</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#   [&#39;a&#39;],</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#   [&#39;b&#39;, &#39;c&#39;],</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#   [&#39;d&#39;, &#39;e&#39;, &#39;f&#39;],</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#   [&#39;g&#39;, &#39;h&#39;, &#39;i&#39;]</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ]</span>
-</span></span></code></pre></div><p>???+ done &ldquo;Solution&rdquo;</p>
-<pre><code>...
-</code></pre>
+</code></pre><h3 id=36-tree-levels>36: Tree levels <a href=#36-tree-levels class=hash>#</a></h3><p>Write a function, <strong><code>tree_levels()</code></strong>, that takes in the root of a binary tree.
+The function should return a 2D list where each sublist represents a level of the tree.</p><p>An example use-case is shown below:</p><pre><code class=language-python>a = Node('a')
+b = Node('b')
+c = Node('c')
+d = Node('d')
+e = Node('e')
+f = Node('f')
+g = Node('g')
+h = Node('h')
+i = Node('i')
 
-      </span>
-       
+a.left = b
+a.right = c
+b.left = d
+b.right = e
+c.right = f
+e.left = g
+e.right = h
+f.left = i
 
-    </section>
-    <hr>
-<footer>
-	  <nav>
-      
-  <ul>
-    <li>
-      © 2025
-    </li>
-  
-  </ul>
-    </nav>
-</footer>
+#         a
+#      /    \
+#     b      c
+#   /  \      \
+#  d    e      f
+#      / \    /
+#     g  h   i
 
-  </main>
-</body>
-</html>
+tree_levels(a) # -&gt;
+# [
+#   ['a'],
+#   ['b', 'c'],
+#   ['d', 'e', 'f'],
+#   ['g', 'h', 'i']
+# ]
+</code></pre><p>???+ done &ldquo;Solution&rdquo;</p><pre><code>...
+</code></pre></span></section><hr><footer><nav><ul><li>© 2025</li></ul></nav></footer></main></body></html>

@@ -1,213 +1,31 @@
-<!doctype html>
-<html lang="en">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Ronalds Vilcins - http://localhost:1313/">
-  <title> | Vinay Kumar</title>
-  <meta name="description" content="Blogs &amp; Articles on Machine Learning by @imflash217">
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="numpy v/s pandas # One subtle aspect that lot of engineers miss is the access control design of numpy and pandas.
+<!doctype html><html lang=en><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Ronalds Vilcins - http://localhost:1313/"><title>| Vinay Kumar</title>
+<meta name=description content><meta name=twitter:card content="summary"><meta name=twitter:title content><meta name=twitter:description content="numpy v/s pandas # One subtle aspect that lot of engineers miss is the access control design of numpy and pandas.
 numpy uses row-major access control. pandas uses column-major access control. Genrally its seen that engineers complain about slow-nature of numpy compared to pandas. One of the prime culprits of this issue is the lack of knowledge about the access control used in these libraries.
-By default, numpy uses row-major but it allows the user to specify the access control while creating the ndarray."/>
-
-<meta property="og:title" content="" />
-<meta property="og:description" content="numpy v/s pandas # One subtle aspect that lot of engineers miss is the access control design of numpy and pandas.
+By default, numpy uses row-major but it allows the user to specify the access control while creating the ndarray."><meta property="og:title" content><meta property="og:description" content="numpy v/s pandas # One subtle aspect that lot of engineers miss is the access control design of numpy and pandas.
 numpy uses row-major access control. pandas uses column-major access control. Genrally its seen that engineers complain about slow-nature of numpy compared to pandas. One of the prime culprits of this issue is the lack of knowledge about the access control used in these libraries.
-By default, numpy uses row-major but it allows the user to specify the access control while creating the ndarray." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/til/042123/" /><meta property="article:section" content="post" />
-
-
-
-
-<meta itemprop="name" content="">
-<meta itemprop="description" content="numpy v/s pandas # One subtle aspect that lot of engineers miss is the access control design of numpy and pandas.
+By default, numpy uses row-major but it allows the user to specify the access control while creating the ndarray."><meta property="og:type" content="article"><meta property="og:url" content="http://localhost:1313/post/til/042123/"><meta property="article:section" content="post"><meta itemprop=name content><meta itemprop=description content="numpy v/s pandas # One subtle aspect that lot of engineers miss is the access control design of numpy and pandas.
 numpy uses row-major access control. pandas uses column-major access control. Genrally its seen that engineers complain about slow-nature of numpy compared to pandas. One of the prime culprits of this issue is the lack of knowledge about the access control used in these libraries.
-By default, numpy uses row-major but it allows the user to specify the access control while creating the ndarray.">
+By default, numpy uses row-major but it allows the user to specify the access control while creating the ndarray."><meta itemprop=wordCount content="170"><meta itemprop=keywords content><link rel=canonical href=http://localhost:1313/post/til/042123/><link rel=dns-prefetch href=https://www.google-analytics.com><link href=https://www.google-analytics.com rel=preconnect crossorigin><link rel=alternate type=application/atom+xml title="Vinay Kumar" href=http://localhost:1313/atom.xml><link rel=alternate type=application/json title="Vinay Kumar" href=http://localhost:1313/feed.json><link rel="shortcut icon" type=image/png href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="><style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","articleSection":"post","name":"","headline":"","alternativeHeadline":"","description":"numpy v\/s pandas # One subtle aspect that lot of engineers miss is the access control design of numpy and pandas.\nnumpy uses row-major access control. pandas uses column-major access control. Genrally its seen that engineers complain about slow-nature of numpy compared to pandas. One of the prime culprits of this issue is the lack of knowledge about the access control used in these libraries.\nBy default, numpy uses row-major but it allows the user to specify the access control while creating the ndarray.","inLanguage":"en-us","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/localhost:1313\/post\/til\/042123\/"},"author":{"@type":"Person","name":""},"creator":{"@type":"Person","name":""},"accountablePerson":{"@type":"Person","name":""},"copyrightHolder":"Vinay Kumar","copyrightYear":"0001","dateCreated":"0001-01-01T00:00:00.00Z","datePublished":"0001-01-01T00:00:00.00Z","dateModified":"0001-01-01T00:00:00.00Z","publisher":{"@type":"Organization","name":"Vinay Kumar","url":"http://localhost:1313/","logo":{"@type":"ImageObject","url":"http:\/\/localhost:1313\/","width":"32","height":"32"}},"image":"http://localhost:1313/","url":"http:\/\/localhost:1313\/post\/til\/042123\/","wordCount":"170","genre":[],"keywords":[]}</script></head><body><main><header><nav><ul><li><a href=/>Index</a></li><li><a href=/about/>About</a></li><li><a href=/atom.xml>RSS</a></li></ul></nav></header><hr><section><span itemprop=articleBody><h1 id=numpy-vs-pandas><code>numpy</code> v/s <code>pandas</code> <a href=#numpy-vs-pandas class=hash>#</a></h1><p>One subtle aspect that lot of engineers miss is the <code>access control</code> design of <code>numpy</code> and <code>pandas</code>.</p><ol><li><code>numpy</code> uses <strong>row-major</strong> access control.</li><li><code>pandas</code> uses <strong>column-major</strong> access control.</li></ol><p>Genrally its seen that engineers complain about slow-nature of <code>numpy</code> compared to <code>pandas</code>. One of the prime culprits of this issue is the lack of knowledge about the <em>access control</em> used in these libraries.</p><p>By default, <code>numpy</code> uses row-major but it allows the user to specify the access control while creating the <code>ndarray</code>. Below, are all senarios of accessing the row/col using pandas or numpy is shown.</p><h3 id=itertating-numpy-ndarray-using-column-major>Itertating numpy <code>ndarray</code> using column-major <a href=#itertating-numpy-ndarray-using-column-major class=hash>#</a></h3><pre><code class=language-python>import numpy as np
+df_np = df.to_numpy()
+n_rows, n_cols = df_np.shape
 
-<meta itemprop="wordCount" content="170">
-<meta itemprop="keywords" content="" />
-  <link rel="canonical" href="http://localhost:1313/post/til/042123/">
-  <link rel="dns-prefetch" href="https://www.google-analytics.com">
-  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
-  <link rel="alternate" type="application/atom+xml" title="Vinay Kumar" href="http://localhost:1313/atom.xml" />
-  <link rel="alternate" type="application/json" title="Vinay Kumar" href="http://localhost:1313/feed.json" />
-  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
-  
-  <style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style>
+start = time.time()
+for j in range(n_cols):
+    for item in df_np[:, j]:
+        pass
 
-  
+print(time.time() - start, &quot;seconds&quot;)
+</code></pre><pre><code>&gt;&gt;&gt; 0.0058 seconds
+</code></pre><h3 id=itertating-numpy-ndarray-using-row-major-default>Itertating numpy <code>ndarray</code> using row-major (default) <a href=#itertating-numpy-ndarray-using-row-major-default class=hash>#</a></h3><pre><code class=language-python>import numpy as np
+df_np = df.to_numpy()
+n_rows, n_cols = df_np.shape
 
+start = time.time()
 
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "BlogPosting",
-    "articleSection": "post",
-    "name": "",
-    "headline": "",
-    "alternativeHeadline": "",
-    "description": "numpy v\/s pandas # One subtle aspect that lot of engineers miss is the access control design of numpy and pandas.\nnumpy uses row-major access control. pandas uses column-major access control. Genrally its seen that engineers complain about slow-nature of numpy compared to pandas. One of the prime culprits of this issue is the lack of knowledge about the access control used in these libraries.\nBy default, numpy uses row-major but it allows the user to specify the access control while creating the ndarray.",
-    "inLanguage": "en",
-    "isFamilyFriendly": "true",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "http:\/\/localhost:1313\/post\/til\/042123\/"
-    },
-    "author" : {
-        "@type": "Person",
-        "name": ""
-    },
-    "creator" : {
-        "@type": "Person",
-        "name": ""
-    },
-    "accountablePerson" : {
-        "@type": "Person",
-        "name": ""
-    },
-    "copyrightHolder" : "Vinay Kumar",
-    "copyrightYear" : "0001",
-    "dateCreated": "0001-01-01T00:00:00.00Z",
-    "datePublished": "0001-01-01T00:00:00.00Z",
-    "dateModified": "0001-01-01T00:00:00.00Z",
-    "publisher":{
-        "@type":"Organization",
-        "name": "Vinay Kumar",
-        "url": "http://localhost:1313/",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "http:\/\/localhost:1313\/",
-            "width":"32",
-            "height":"32"
-        }
-    },
-    "image": "http://localhost:1313/",
-    "url" : "http:\/\/localhost:1313\/post\/til\/042123\/",
-    "wordCount" : "170",
-    "genre" : [ ],
-    "keywords" : [ ]
-}
-</script>
+for i in range(n_rows):
+    for item in df_np[i]:
+        pass
 
-
-</head>
-<body>
-<main>
-      <header>
-    <nav>
-      
-  <ul>
-    <li>
-      
-      
-      
-      
-      <a href="archives" >Archive</a>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <a href="search/" >Search</a>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <a href="tags/" >Tags</a>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <a href="https://www.github.com/imflash217/" >Github</a>
-    </li>
-  
-    <li>
-      
-      
-      
-      
-      <a href="https://www.linkedin.com/in/imflash217" >LinkedIn</a>
-    </li>
-  
-  </ul>
-    </nav>
-  </header>
-  <hr>
-
-
-
-  <section>
-
-      
-
-      <span itemprop="articleBody">
-      <!-- ---
-hide:
-  - navigation # Hide navigation
-  - toc        # Hide table of contents
---- -->
-<h1 id="numpy-vs-pandas"><code>numpy</code> v/s <code>pandas</code> <a href="#numpy-vs-pandas" class="hash">#</a></h1>
-<p>One subtle aspect that lot of engineers miss is the <code>access control</code> design of <code>numpy</code> and <code>pandas</code>.</p>
-<ol>
-<li><code>numpy</code> uses <strong>row-major</strong> access control.</li>
-<li><code>pandas</code> uses <strong>column-major</strong> access control.</li>
-</ol>
-<p>Genrally its seen that engineers complain about slow-nature of <code>numpy</code> compared to <code>pandas</code>. One of the prime culprits of this issue is the lack of knowledge about the <em>access control</em> used in these libraries.</p>
-<p>By default, <code>numpy</code> uses row-major but it allows the user to specify the access control while creating the <code>ndarray</code>. Below, are all senarios of accessing the row/col using pandas or numpy is shown.</p>
-<h3 id="itertating-numpy-ndarray-using-column-major">Itertating numpy <code>ndarray</code> using column-major <a href="#itertating-numpy-ndarray-using-column-major" class="hash">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl"><span class="n">df_np</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="n">n_rows</span><span class="p">,</span> <span class="n">n_cols</span> <span class="o">=</span> <span class="n">df_np</span><span class="o">.</span><span class="n">shape</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_cols</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">df_np</span><span class="p">[:,</span> <span class="n">j</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">pass</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">,</span> <span class="s2">&#34;seconds&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><pre tabindex="0"><code>&gt;&gt;&gt; 0.0058 seconds
-</code></pre><h3 id="itertating-numpy-ndarray-using-row-major-default">Itertating numpy <code>ndarray</code> using row-major (default) <a href="#itertating-numpy-ndarray-using-row-major-default" class="hash">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl"><span class="n">df_np</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="n">n_rows</span><span class="p">,</span> <span class="n">n_cols</span> <span class="o">=</span> <span class="n">df_np</span><span class="o">.</span><span class="n">shape</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_rows</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">df_np</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">pass</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">start</span><span class="p">,</span> <span class="s2">&#34;seconds&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><pre tabindex="0"><code>&gt;&gt;&gt; 0.0195 seconds
-</code></pre>
-      </span>
-       
-
-    </section>
-    <hr>
-<footer>
-	  <nav>
-      
-  <ul>
-    <li>
-      © 2025
-    </li>
-  
-  </ul>
-    </nav>
-</footer>
-
-  </main>
-</body>
-</html>
+print(time.time()-start, &quot;seconds&quot;)
+</code></pre><pre><code>&gt;&gt;&gt; 0.0195 seconds
+</code></pre></span></section><hr><footer><nav><ul><li>© 2025</li></ul></nav></footer></main></body></html>
