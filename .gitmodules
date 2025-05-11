@@ -7,3 +7,6 @@
 [submodule "themes/LinesNew"]
 	path = themes/LinesNew
 	url = git@github.com:ronv/lines.git
+[submodule "themes/Lines"]
+	path = themes/Lines
+	url = git@github.com:ronv/lines.git
