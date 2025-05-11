@@ -1,15 +1,214 @@
-<!doctype html><html lang=en><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Ronalds Vilcins - http://localhost:1313/"><title>| Vinay Kumar</title>
-<meta name=description content><meta name=twitter:card content="summary"><meta name=twitter:title content><meta name=twitter:description content="Dictionary Abstract Data Types # Another Solution # Can do better with Hash Tables in $O(1)$ expected time, $O(n+m)$ space; where m is the table size An example # Let keys be the student ids of students registered in class CLS201; eg. 2022CS10110. There are $100$ students in the class, so we create a hash-table of size say 100. Hash function hash() is say, the last two digits of the student-id."><meta property="og:title" content><meta property="og:description" content="Dictionary Abstract Data Types # Another Solution # Can do better with Hash Tables in $O(1)$ expected time, $O(n+m)$ space; where m is the table size An example # Let keys be the student ids of students registered in class CLS201; eg. 2022CS10110. There are $100$ students in the class, so we create a hash-table of size say 100. Hash function hash() is say, the last two digits of the student-id."><meta property="og:type" content="article"><meta property="og:url" content="http://localhost:1313/post/algorithms/dict/"><meta property="article:section" content="post"><meta itemprop=name content><meta itemprop=description content="Dictionary Abstract Data Types # Another Solution # Can do better with Hash Tables in $O(1)$ expected time, $O(n+m)$ space; where m is the table size An example # Let keys be the student ids of students registered in class CLS201; eg. 2022CS10110. There are $100$ students in the class, so we create a hash-table of size say 100. Hash function hash() is say, the last two digits of the student-id."><meta itemprop=wordCount content="200"><meta itemprop=keywords content><link rel=canonical href=http://localhost:1313/post/algorithms/dict/><link rel=dns-prefetch href=https://www.google-analytics.com><link href=https://www.google-analytics.com rel=preconnect crossorigin><link rel=alternate type=application/atom+xml title="Vinay Kumar" href=http://localhost:1313/atom.xml><link rel=alternate type=application/json title="Vinay Kumar" href=http://localhost:1313/feed.json><link rel="shortcut icon" type=image/png href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="><style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","articleSection":"post","name":"","headline":"","alternativeHeadline":"","description":"Dictionary Abstract Data Types # Another Solution # Can do better with Hash Tables in $O(1)$ expected time, $O(n\u002bm)$ space; where m is the table size An example # Let keys be the student ids of students registered in class CLS201; eg. 2022CS10110. There are $100$ students in the class, so we create a hash-table of size say 100. Hash function hash() is say, the last two digits of the student-id.","inLanguage":"en-us","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/localhost:1313\/post\/algorithms\/dict\/"},"author":{"@type":"Person","name":""},"creator":{"@type":"Person","name":""},"accountablePerson":{"@type":"Person","name":""},"copyrightHolder":"Vinay Kumar","copyrightYear":"0001","dateCreated":"0001-01-01T00:00:00.00Z","datePublished":"0001-01-01T00:00:00.00Z","dateModified":"0001-01-01T00:00:00.00Z","publisher":{"@type":"Organization","name":"Vinay Kumar","url":"http://localhost:1313/","logo":{"@type":"ImageObject","url":"http:\/\/localhost:1313\/","width":"32","height":"32"}},"image":"http://localhost:1313/","url":"http:\/\/localhost:1313\/post\/algorithms\/dict\/","wordCount":"200","genre":[],"keywords":[]}</script></head><body><main><header><nav><ul><li><a href=/>Index</a></li><li><a href=/about/>About</a></li><li><a href=/atom.xml>RSS</a></li></ul></nav></header><hr><section><span itemprop=articleBody><h1 id=dictionary-abstract-data-types>Dictionary Abstract Data Types <a href=#dictionary-abstract-data-types class=hash>#</a></h1><h2 id=another-solution>Another Solution <a href=#another-solution class=hash>#</a></h2><ul><li><input disabled type=checkbox> Can do better with <strong>Hash Tables</strong> in $O(1)$ expected time, $O(n+m)$ space;
-<em>where <strong>m</strong> is the table size</em></li></ul><h2 id=an-example>An example <a href=#an-example class=hash>#</a></h2><ul><li><input disabled type=checkbox> Let <code>keys</code> be the student ids of students registered in class <strong>CLS201</strong>; <em>eg.</em> <code>2022CS10110</code>.</li><li><input disabled type=checkbox> There are $100$ students in the class, so we create a hash-table of size <em>say</em> 100.</li><li><input disabled type=checkbox> Hash function <strong><code>hash()</code></strong> is <em>say</em>, the last two digits of the <em>student-id</em>.</li><li><input disabled type=checkbox> So, now, <code>2022CS10110</code> goes to location <code>10</code> in the hash-table.</li><li><input disabled type=checkbox></li></ul><h2 id=multiply-add-divide-mad>Multiply-Add-Divide (MAD) <a href=#multiply-add-divide-mad class=hash>#</a></h2><p>This technique is used to create pseudo-unique <strong>hash values</strong>.</p><blockquote><p>:rotating_light: It is also used in <strong>pseudo random number generators</strong></p></blockquote><p>The method is as follows:</p><p>$$ \text{hash}(k) = |a\cdot k + b|\ \text{mod}\ N$$</p><h2 id=collisions>Collisions <a href=#collisions class=hash>#</a></h2><p>Methods to resolve <strong>collisions</strong></p><ol><li>Chaining</li><li>Open Addressing:<ol><li>Linear Probing</li><li>Double Hashing</li></ol></li></ol><h3 id=linear-probing>Linear Probing <a href=#linear-probing class=hash>#</a></h3><pre><code class=language-python>def linear_probing_insert(hash_table, key):
-    if hash_table.isfull():
-        raise TableFullError
-    
-    slots = len(hash_table)                 ## the total number of slots
-    probe = hash_fn(key)                    ## the hash of the 'key'
-    
-    while hash_table[probe] == None:
-        probe += 1                          ## go to the next index if the current index is occupied
-        probe = probe % slots               ## wrap-arround to support in-range indexing
-    hash_table[probe] = key                 ## INSERT the key in the hash-table
-    return hash_table
-</code></pre></span></section><hr><footer><nav><ul><li>© 2025</li></ul></nav></footer></main></body></html>
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ronalds Vilcins - http://localhost:1313/">
+  <title> | Vinay Kumar</title>
+  <meta name="description" content="Blogs &amp; Articles on Machine Learning by @imflash217">
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Dictionary Abstract Data Types # Another Solution # Can do better with Hash Tables in $O(1)$ expected time, $O(n&#43;m)$ space; where m is the table size An example # Let keys be the student ids of students registered in class CLS201; eg. 2022CS10110. There are $100$ students in the class, so we create a hash-table of size say 100. Hash function hash() is say, the last two digits of the student-id."/>
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Dictionary Abstract Data Types # Another Solution # Can do better with Hash Tables in $O(1)$ expected time, $O(n&#43;m)$ space; where m is the table size An example # Let keys be the student ids of students registered in class CLS201; eg. 2022CS10110. There are $100$ students in the class, so we create a hash-table of size say 100. Hash function hash() is say, the last two digits of the student-id." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/algorithms/dict/" /><meta property="article:section" content="post" />
+
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Dictionary Abstract Data Types # Another Solution # Can do better with Hash Tables in $O(1)$ expected time, $O(n&#43;m)$ space; where m is the table size An example # Let keys be the student ids of students registered in class CLS201; eg. 2022CS10110. There are $100$ students in the class, so we create a hash-table of size say 100. Hash function hash() is say, the last two digits of the student-id.">
+
+<meta itemprop="wordCount" content="200">
+<meta itemprop="keywords" content="" />
+  <link rel="canonical" href="http://localhost:1313/post/algorithms/dict/">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
+  <link rel="alternate" type="application/atom+xml" title="Vinay Kumar" href="http://localhost:1313/atom.xml" />
+  <link rel="alternate" type="application/json" title="Vinay Kumar" href="http://localhost:1313/feed.json" />
+  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
+  
+  <style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style>
+
+  
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "post",
+    "name": "",
+    "headline": "",
+    "alternativeHeadline": "",
+    "description": "Dictionary Abstract Data Types # Another Solution # Can do better with Hash Tables in $O(1)$ expected time, $O(n\u002bm)$ space; where m is the table size An example # Let keys be the student ids of students registered in class CLS201; eg. 2022CS10110. There are $100$ students in the class, so we create a hash-table of size say 100. Hash function hash() is say, the last two digits of the student-id.",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http:\/\/localhost:1313\/post\/algorithms\/dict\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "copyrightHolder" : "Vinay Kumar",
+    "copyrightYear" : "0001",
+    "dateCreated": "0001-01-01T00:00:00.00Z",
+    "datePublished": "0001-01-01T00:00:00.00Z",
+    "dateModified": "0001-01-01T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Vinay Kumar",
+        "url": "http://localhost:1313/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http:\/\/localhost:1313\/",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "http://localhost:1313/",
+    "url" : "http:\/\/localhost:1313\/post\/algorithms\/dict\/",
+    "wordCount" : "200",
+    "genre" : [ ],
+    "keywords" : [ ]
+}
+</script>
+
+
+</head>
+<body>
+<main>
+      <header>
+    <nav>
+      
+  <ul>
+    <li>
+      
+      
+      
+      
+      <a href="archives" >Archive</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="search/" >Search</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="tags/" >Tags</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.github.com/imflash217/" >Github</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.linkedin.com/in/imflash217" >LinkedIn</a>
+    </li>
+  
+  </ul>
+    </nav>
+  </header>
+  <hr>
+
+
+
+  <section>
+
+      
+
+      <span itemprop="articleBody">
+      <h1 id="dictionary-abstract-data-types">Dictionary Abstract Data Types <a href="#dictionary-abstract-data-types" class="hash">#</a></h1>
+<h2 id="another-solution">Another Solution <a href="#another-solution" class="hash">#</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> Can do better with <strong>Hash Tables</strong> in $O(1)$ expected time, $O(n+m)$ space;
+<em>where <strong>m</strong> is the table size</em></li>
+</ul>
+<h2 id="an-example">An example <a href="#an-example" class="hash">#</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> Let <code>keys</code> be the student ids of students registered in class <strong>CLS201</strong>; <em>eg.</em> <code>2022CS10110</code>.</li>
+<li><input disabled="" type="checkbox"> There are $100$ students in the class, so we create a hash-table of size <em>say</em> 100.</li>
+<li><input disabled="" type="checkbox"> Hash function <strong><code>hash()</code></strong> is <em>say</em>, the last two digits of the <em>student-id</em>.</li>
+<li><input disabled="" type="checkbox"> So, now, <code>2022CS10110</code> goes to location <code>10</code> in the hash-table.</li>
+<li><input disabled="" type="checkbox"> </li>
+</ul>
+<h2 id="multiply-add-divide-mad">Multiply-Add-Divide (MAD) <a href="#multiply-add-divide-mad" class="hash">#</a></h2>
+<p>This technique is used to create pseudo-unique <strong>hash values</strong>.</p>
+<blockquote>
+<p>&#x1f6a8; It is also used in <strong>pseudo random number generators</strong></p>
+</blockquote>
+<p>The method is as follows:</p>
+<p>$$ \text{hash}(k) = |a\cdot k + b|\ \text{mod}\ N$$</p>
+<h2 id="collisions">Collisions <a href="#collisions" class="hash">#</a></h2>
+<p>Methods to resolve <strong>collisions</strong></p>
+<ol>
+<li>Chaining</li>
+<li>Open Addressing:
+<ol>
+<li>Linear Probing</li>
+<li>Double Hashing</li>
+</ol>
+</li>
+</ol>
+<h3 id="linear-probing">Linear Probing <a href="#linear-probing" class="hash">#</a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">linear_probing_insert</span><span class="p">(</span><span class="n">hash_table</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">hash_table</span><span class="o">.</span><span class="n">isfull</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="k">raise</span> <span class="n">TableFullError</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">slots</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">hash_table</span><span class="p">)</span>                 <span class="c1">## the total number of slots</span>
+</span></span><span class="line"><span class="cl">    <span class="n">probe</span> <span class="o">=</span> <span class="n">hash_fn</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>                    <span class="c1">## the hash of the &#39;key&#39;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">hash_table</span><span class="p">[</span><span class="n">probe</span><span class="p">]</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">probe</span> <span class="o">+=</span> <span class="mi">1</span>                          <span class="c1">## go to the next index if the current index is occupied</span>
+</span></span><span class="line"><span class="cl">        <span class="n">probe</span> <span class="o">=</span> <span class="n">probe</span> <span class="o">%</span> <span class="n">slots</span>               <span class="c1">## wrap-arround to support in-range indexing</span>
+</span></span><span class="line"><span class="cl">    <span class="n">hash_table</span><span class="p">[</span><span class="n">probe</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>                 <span class="c1">## INSERT the key in the hash-table</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">hash_table</span>
+</span></span></code></pre></div>
+      </span>
+       
+
+    </section>
+    <hr>
+<footer>
+	  <nav>
+      
+  <ul>
+    <li>
+      © 2025
+    </li>
+  
+  </ul>
+    </nav>
+</footer>
+
+  </main>
+</body>
+</html>

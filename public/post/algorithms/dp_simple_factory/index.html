@@ -1,59 +1,245 @@
-<!doctype html><html lang=en><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Ronalds Vilcins - http://localhost:1313/"><title>| Vinay Kumar</title>
-<meta name=description content><meta name=twitter:card content="summary"><meta name=twitter:title content><meta name=twitter:description content="A real world example: # Consider, you are building house and you need doors. You can either put on some carpenter clothes, bring some glue, wood, tools and make the door yourself. Or, you can call the factory and get the door delivered to you; so that you don&rsquo;t need to learn anything about door making or deal with the mess it brings.
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ronalds Vilcins - http://localhost:1313/">
+  <title> | Vinay Kumar</title>
+  <meta name="description" content="Blogs &amp; Articles on Machine Learning by @imflash217">
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="A real world example: # Consider, you are building house and you need doors. You can either put on some carpenter clothes, bring some glue, wood, tools and make the door yourself. Or, you can call the factory and get the door delivered to you; so that you don&rsquo;t need to learn anything about door making or deal with the mess it brings.
 In simple words,
-Simple Factory generates an instance for client without exposing any instantiation logic to the clients."><meta property="og:title" content><meta property="og:description" content="A real world example: # Consider, you are building house and you need doors. You can either put on some carpenter clothes, bring some glue, wood, tools and make the door yourself. Or, you can call the factory and get the door delivered to you; so that you don&rsquo;t need to learn anything about door making or deal with the mess it brings.
+Simple Factory generates an instance for client without exposing any instantiation logic to the clients."/>
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="A real world example: # Consider, you are building house and you need doors. You can either put on some carpenter clothes, bring some glue, wood, tools and make the door yourself. Or, you can call the factory and get the door delivered to you; so that you don&rsquo;t need to learn anything about door making or deal with the mess it brings.
 In simple words,
-Simple Factory generates an instance for client without exposing any instantiation logic to the clients."><meta property="og:type" content="article"><meta property="og:url" content="http://localhost:1313/post/algorithms/dp_simple_factory/"><meta property="article:section" content="post"><meta itemprop=name content><meta itemprop=description content="A real world example: # Consider, you are building house and you need doors. You can either put on some carpenter clothes, bring some glue, wood, tools and make the door yourself. Or, you can call the factory and get the door delivered to you; so that you don&rsquo;t need to learn anything about door making or deal with the mess it brings.
+Simple Factory generates an instance for client without exposing any instantiation logic to the clients." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/algorithms/dp_simple_factory/" /><meta property="article:section" content="post" />
+
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="A real world example: # Consider, you are building house and you need doors. You can either put on some carpenter clothes, bring some glue, wood, tools and make the door yourself. Or, you can call the factory and get the door delivered to you; so that you don&rsquo;t need to learn anything about door making or deal with the mess it brings.
 In simple words,
-Simple Factory generates an instance for client without exposing any instantiation logic to the clients."><meta itemprop=wordCount content="312"><meta itemprop=keywords content><link rel=canonical href=http://localhost:1313/post/algorithms/dp_simple_factory/><link rel=dns-prefetch href=https://www.google-analytics.com><link href=https://www.google-analytics.com rel=preconnect crossorigin><link rel=alternate type=application/atom+xml title="Vinay Kumar" href=http://localhost:1313/atom.xml><link rel=alternate type=application/json title="Vinay Kumar" href=http://localhost:1313/feed.json><link rel="shortcut icon" type=image/png href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="><style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","articleSection":"post","name":"","headline":"","alternativeHeadline":"","description":"A real world example: # Consider, you are building house and you need doors. You can either put on some carpenter clothes, bring some glue, wood, tools and make the door yourself. Or, you can call the factory and get the door delivered to you; so that you don\u0026rsquo;t need to learn anything about door making or deal with the mess it brings.\nIn simple words,\nSimple Factory generates an instance for client without exposing any instantiation logic to the clients.","inLanguage":"en-us","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/localhost:1313\/post\/algorithms\/dp_simple_factory\/"},"author":{"@type":"Person","name":""},"creator":{"@type":"Person","name":""},"accountablePerson":{"@type":"Person","name":""},"copyrightHolder":"Vinay Kumar","copyrightYear":"0001","dateCreated":"0001-01-01T00:00:00.00Z","datePublished":"0001-01-01T00:00:00.00Z","dateModified":"0001-01-01T00:00:00.00Z","publisher":{"@type":"Organization","name":"Vinay Kumar","url":"http://localhost:1313/","logo":{"@type":"ImageObject","url":"http:\/\/localhost:1313\/","width":"32","height":"32"}},"image":"http://localhost:1313/","url":"http:\/\/localhost:1313\/post\/algorithms\/dp_simple_factory\/","wordCount":"312","genre":[],"keywords":[]}</script></head><body><main><header><nav><ul><li><a href=/>Index</a></li><li><a href=/about/>About</a></li><li><a href=/atom.xml>RSS</a></li></ul></nav></header><hr><section><span itemprop=articleBody><h2 id=a-real-world-example>A real world example: <a href=#a-real-world-example class=hash>#</a></h2><blockquote><p>Consider, you are building house and you need doors.
+Simple Factory generates an instance for client without exposing any instantiation logic to the clients.">
+
+<meta itemprop="wordCount" content="312">
+<meta itemprop="keywords" content="" />
+  <link rel="canonical" href="http://localhost:1313/post/algorithms/dp_simple_factory/">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
+  <link rel="alternate" type="application/atom+xml" title="Vinay Kumar" href="http://localhost:1313/atom.xml" />
+  <link rel="alternate" type="application/json" title="Vinay Kumar" href="http://localhost:1313/feed.json" />
+  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
+  
+  <style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style>
+
+  
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "post",
+    "name": "",
+    "headline": "",
+    "alternativeHeadline": "",
+    "description": "A real world example: # Consider, you are building house and you need doors. You can either put on some carpenter clothes, bring some glue, wood, tools and make the door yourself. Or, you can call the factory and get the door delivered to you; so that you don\u0026rsquo;t need to learn anything about door making or deal with the mess it brings.\nIn simple words,\nSimple Factory generates an instance for client without exposing any instantiation logic to the clients.",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http:\/\/localhost:1313\/post\/algorithms\/dp_simple_factory\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "copyrightHolder" : "Vinay Kumar",
+    "copyrightYear" : "0001",
+    "dateCreated": "0001-01-01T00:00:00.00Z",
+    "datePublished": "0001-01-01T00:00:00.00Z",
+    "dateModified": "0001-01-01T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Vinay Kumar",
+        "url": "http://localhost:1313/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http:\/\/localhost:1313\/",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "http://localhost:1313/",
+    "url" : "http:\/\/localhost:1313\/post\/algorithms\/dp_simple_factory\/",
+    "wordCount" : "312",
+    "genre" : [ ],
+    "keywords" : [ ]
+}
+</script>
+
+
+</head>
+<body>
+<main>
+      <header>
+    <nav>
+      
+  <ul>
+    <li>
+      
+      
+      
+      
+      <a href="archives" >Archive</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="search/" >Search</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="tags/" >Tags</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.github.com/imflash217/" >Github</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.linkedin.com/in/imflash217" >LinkedIn</a>
+    </li>
+  
+  </ul>
+    </nav>
+  </header>
+  <hr>
+
+
+
+  <section>
+
+      
+
+      <span itemprop="articleBody">
+      <h2 id="a-real-world-example">A real world example: <a href="#a-real-world-example" class="hash">#</a></h2>
+<blockquote>
+<p>Consider, you are building house and you need doors.
 You can either put on some carpenter clothes, bring some glue, wood, tools and make the door yourself.
 Or, you can call the factory and get the door delivered to you;
-so that you don&rsquo;t need to learn anything about door making or deal with the mess it brings.</p></blockquote><p>In simple words,</p><blockquote><p><strong>Simple Factory</strong> generates an instance for client without exposing any instantiation logic to the clients.</p></blockquote><p>Wikipedia says,</p><p>{==</p><p>In Object oriented Programming language (OOP), <strong>Factory</strong> is an object for creating other objects.
+so that you don&rsquo;t need to learn anything about door making or deal with the mess it brings.</p>
+</blockquote>
+<p>In simple words,</p>
+<blockquote>
+<p><strong>Simple Factory</strong> generates an instance for client without exposing any instantiation logic to the clients.</p>
+</blockquote>
+<p>Wikipedia says,</p>
+<p>{==</p>
+<p>In Object oriented Programming language (OOP), <strong>Factory</strong> is an object for creating other objects.
 Formally, a factory is a <em>function</em> or <em>method</em> that returns objects of a varying protoype
-or class from some method call, which is assumed to be <code>new</code>.</p><p>==}</p><h2 id=a-programatic-example>A Programatic example: <a href=#a-programatic-example class=hash>#</a></h2><p>First of all, we have a door interface and implementation of a wooden door.</p><pre><code class=language-php>&lt;?php
-// The Simple Factory INTERFACE
-// 
-interface Door{
-    public function get_width(): float;
-    public function get_height(): float;
-}
+or class from some method call, which is assumed to be <code>new</code>.</p>
+<p>==}</p>
+<h2 id="a-programatic-example">A Programatic example: <a href="#a-programatic-example" class="hash">#</a></h2>
+<p>First of all, we have a door interface and implementation of a wooden door.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// The Simple Factory INTERFACE
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">interface</span> <span class="nx">Door</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">get_width</span><span class="p">()</span><span class="o">:</span> <span class="nx">float</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">get_height</span><span class="p">()</span><span class="o">:</span> <span class="nx">float</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// A CONCRETE implementation of Door interface
+</span></span></span><span class="line"><span class="cl"><span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">WoodenDoor</span> <span class="k">implements</span> <span class="nx">Door</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">protected</span> <span class="nv">$width</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">protected</span> <span class="nv">$height</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nx">float</span> <span class="nv">$width</span><span class="p">,</span> <span class="nx">float</span> <span class="nv">$height</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="nv">$width</span> <span class="o">=</span> <span class="nv">$width</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$this</span><span class="o">-&gt;</span><span class="nv">$height</span> <span class="o">=</span> <span class="nv">$height</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">get_width</span><span class="p">()</span><span class="o">:</span> <span class="nx">float</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nv">$width</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">function</span> <span class="nf">get_height</span><span class="p">()</span><span class="o">:</span> <span class="nx">float</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nv">$height</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Then we have our door factory that makes the door and returns it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">DoorFactory</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">make_door</span><span class="p">(</span><span class="nv">$width</span><span class="p">,</span> <span class="nv">$height</span><span class="p">)</span><span class="o">:</span> <span class="nx">Door</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="k">new</span> <span class="nx">WoodenDoor</span><span class="p">(</span><span class="nv">$height</span><span class="p">,</span> <span class="nv">$width</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>And then it can be used as:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Make a door of 100x200
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$door</span> <span class="o">=</span> <span class="nx">DoorFactory</span><span class="o">::</span><span class="na">make_door</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s2">&#34;Width = &#34;</span> <span class="o">.</span> <span class="nv">$door</span><span class="o">-&gt;</span><span class="na">get_width</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s2">&#34;Height = &#34;</span> <span class="o">.</span> <span class="nv">$door</span><span class="o">-&gt;</span><span class="na">get_width</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Make a door of 50x100
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$door2</span> <span class="o">=</span> <span class="nx">DoorFactory</span><span class="o">::</span><span class="na">make_door</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+</span></span></code></pre></div><h2 id="-when-to-use">❓ When to use? <a href="#-when-to-use" class="hash">#</a></h2>
+<p>{==</p>
+<p>When creating an object is not just a few assignments, but involves some logic;
+it makes sense to put it in a dedicated factory instead of repeating same code everywhere.</p>
+<p>==}</p>
 
-// A CONCRETE implementation of Door interface
-//
-class WoodenDoor implements Door{
-    protected $width;
-    protected $height;
+      </span>
+       
 
-    public function __construct(float $width, float $height){
-        $this-&gt;$width = $width;
-        $this-&gt;$height = $height;
-    }
+    </section>
+    <hr>
+<footer>
+	  <nav>
+      
+  <ul>
+    <li>
+      © 2025
+    </li>
+  
+  </ul>
+    </nav>
+</footer>
 
-    public function get_width(): float{
-        return $this-&gt;$width;
-    }
-
-    public function get_height(): float{
-        return $this-&gt;$height;
-    }
-}
-</code></pre><p>Then we have our door factory that makes the door and returns it.</p><pre><code class=language-php>&lt;?php
-
-class DoorFactory{
-    public static function make_door($width, $height): Door {
-        return new WoodenDoor($height, $width);
-    }
-}
-</code></pre><p>And then it can be used as:</p><pre><code class=language-php>&lt;?php
-
-// Make a door of 100x200
-$door = DoorFactory::make_door(100, 200);
-
-echo &quot;Width = &quot; . $door-&gt;get_width();
-echo &quot;Height = &quot; . $door-&gt;get_width();
-
-// Make a door of 50x100
-$door2 = DoorFactory::make_door(50, 100);
-
-</code></pre><h2 id=-when-to-use>❓ When to use? <a href=#-when-to-use class=hash>#</a></h2><p>{==</p><p>When creating an object is not just a few assignments, but involves some logic;
-it makes sense to put it in a dedicated factory instead of repeating same code everywhere.</p><p>==}</p></span></section><hr><footer><nav><ul><li>© 2025</li></ul></nav></footer></main></body></html>
+  </main>
+</body>
+</html>

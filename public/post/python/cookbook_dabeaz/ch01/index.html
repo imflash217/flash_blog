@@ -1,14 +1,170 @@
-<!doctype html><html lang=en><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Ronalds Vilcins - http://localhost:1313/"><title>| Vinay Kumar</title>
-<meta name=description content><meta name=twitter:card content="summary"><meta name=twitter:title content><meta name=twitter:description content="1.1: Unpacking a sequence into separate variables # ???+ danger &ldquo;Problem&rdquo; You have a N-element tuple or sequence that you would like to unpack into a collection of N variables.
-???+ done &ldquo;Solution&rdquo; 1. Any sequence or iterable can be unpacked into variables using a simple assignment operation. 2. The only requirement is that the the number of variables and structure of the sequence must match.
-```python ##---------------------------------------------------------- p = (4,5) ## create a tuple x, y = p ## unpack the tuple into variables 'x' & 'y'."><meta property="og:title" content><meta property="og:description" content="1.1: Unpacking a sequence into separate variables # ???+ danger &ldquo;Problem&rdquo; You have a N-element tuple or sequence that you would like to unpack into a collection of N variables.
-???+ done &ldquo;Solution&rdquo; 1. Any sequence or iterable can be unpacked into variables using a simple assignment operation. 2. The only requirement is that the the number of variables and structure of the sequence must match.
-```python ##---------------------------------------------------------- p = (4,5) ## create a tuple x, y = p ## unpack the tuple into variables 'x' & 'y'."><meta property="og:type" content="article"><meta property="og:url" content="http://localhost:1313/post/python/cookbook_dabeaz/ch01/"><meta property="article:section" content="post"><meta itemprop=name content><meta itemprop=description content="1.1: Unpacking a sequence into separate variables # ???+ danger &ldquo;Problem&rdquo; You have a N-element tuple or sequence that you would like to unpack into a collection of N variables.
-???+ done &ldquo;Solution&rdquo; 1. Any sequence or iterable can be unpacked into variables using a simple assignment operation. 2. The only requirement is that the the number of variables and structure of the sequence must match.
-```python ##---------------------------------------------------------- p = (4,5) ## create a tuple x, y = p ## unpack the tuple into variables 'x' & 'y'."><meta itemprop=wordCount content="3082"><meta itemprop=keywords content><link rel=canonical href=http://localhost:1313/post/python/cookbook_dabeaz/ch01/><link rel=dns-prefetch href=https://www.google-analytics.com><link href=https://www.google-analytics.com rel=preconnect crossorigin><link rel=alternate type=application/atom+xml title="Vinay Kumar" href=http://localhost:1313/atom.xml><link rel=alternate type=application/json title="Vinay Kumar" href=http://localhost:1313/feed.json><link rel="shortcut icon" type=image/png href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="><style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","articleSection":"post","name":"","headline":"","alternativeHeadline":"","description":"1.1: Unpacking a sequence into separate variables # ???\u002b danger \u0026ldquo;Problem\u0026rdquo; You have a N-element tuple or sequence that you would like to unpack into a collection of N variables.\n???\u002b done \u0026ldquo;Solution\u0026rdquo; 1. Any sequence or iterable can be unpacked into variables using a simple assignment operation. 2. The only requirement is that the the number of variables and structure of the sequence must match.\n\u0060\u0060\u0060python ##---------------------------------------------------------- p = (4,5) ## create a tuple x, y = p ## unpack the tuple into variables \u0027x\u0027 \u0026amp; \u0027y\u0027.","inLanguage":"en-us","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/localhost:1313\/post\/python\/cookbook_dabeaz\/ch01\/"},"author":{"@type":"Person","name":""},"creator":{"@type":"Person","name":""},"accountablePerson":{"@type":"Person","name":""},"copyrightHolder":"Vinay Kumar","copyrightYear":"0001","dateCreated":"0001-01-01T00:00:00.00Z","datePublished":"0001-01-01T00:00:00.00Z","dateModified":"0001-01-01T00:00:00.00Z","publisher":{"@type":"Organization","name":"Vinay Kumar","url":"http://localhost:1313/","logo":{"@type":"ImageObject","url":"http:\/\/localhost:1313\/","width":"32","height":"32"}},"image":"http://localhost:1313/","url":"http:\/\/localhost:1313\/post\/python\/cookbook_dabeaz\/ch01\/","wordCount":"3082","genre":[],"keywords":[]}</script></head><body><main><header><nav><ul><li><a href=/>Index</a></li><li><a href=/about/>About</a></li><li><a href=/atom.xml>RSS</a></li></ul></nav></header><hr><section><span itemprop=articleBody><h2 id=11-unpacking-a-sequence-into-separate-variables>1.1: Unpacking a sequence into separate variables <a href=#11-unpacking-a-sequence-into-separate-variables class=hash>#</a></h2><p>???+ danger &ldquo;Problem&rdquo;
-You have a <code>N-element</code> tuple or sequence that you would like to unpack into a collection of <code>N</code> variables.</p><p>???+ done &ldquo;Solution&rdquo;
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ronalds Vilcins - http://localhost:1313/">
+  <title> | Vinay Kumar</title>
+  <meta name="description" content="Blogs &amp; Articles on Machine Learning by @imflash217">
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="1.1: Unpacking a sequence into separate variables # ???&#43; danger &ldquo;Problem&rdquo; You have a N-element tuple or sequence that you would like to unpack into a collection of N variables.
+???&#43; done &ldquo;Solution&rdquo; 1. Any sequence or iterable can be unpacked into variables using a simple assignment operation. 2. The only requirement is that the the number of variables and structure of the sequence must match.
+```python ##---------------------------------------------------------- p = (4,5) ## create a tuple x, y = p ## unpack the tuple into variables &#39;x&#39; &amp; &#39;y&#39;."/>
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="1.1: Unpacking a sequence into separate variables # ???&#43; danger &ldquo;Problem&rdquo; You have a N-element tuple or sequence that you would like to unpack into a collection of N variables.
+???&#43; done &ldquo;Solution&rdquo; 1. Any sequence or iterable can be unpacked into variables using a simple assignment operation. 2. The only requirement is that the the number of variables and structure of the sequence must match.
+```python ##---------------------------------------------------------- p = (4,5) ## create a tuple x, y = p ## unpack the tuple into variables &#39;x&#39; &amp; &#39;y&#39;." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/python/cookbook_dabeaz/ch01/" /><meta property="article:section" content="post" />
+
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="1.1: Unpacking a sequence into separate variables # ???&#43; danger &ldquo;Problem&rdquo; You have a N-element tuple or sequence that you would like to unpack into a collection of N variables.
+???&#43; done &ldquo;Solution&rdquo; 1. Any sequence or iterable can be unpacked into variables using a simple assignment operation. 2. The only requirement is that the the number of variables and structure of the sequence must match.
+```python ##---------------------------------------------------------- p = (4,5) ## create a tuple x, y = p ## unpack the tuple into variables &#39;x&#39; &amp; &#39;y&#39;.">
+
+<meta itemprop="wordCount" content="3082">
+<meta itemprop="keywords" content="" />
+  <link rel="canonical" href="http://localhost:1313/post/python/cookbook_dabeaz/ch01/">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
+  <link rel="alternate" type="application/atom+xml" title="Vinay Kumar" href="http://localhost:1313/atom.xml" />
+  <link rel="alternate" type="application/json" title="Vinay Kumar" href="http://localhost:1313/feed.json" />
+  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
+  
+  <style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style>
+
+  
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "post",
+    "name": "",
+    "headline": "",
+    "alternativeHeadline": "",
+    "description": "1.1: Unpacking a sequence into separate variables # ???\u002b danger \u0026ldquo;Problem\u0026rdquo; You have a N-element tuple or sequence that you would like to unpack into a collection of N variables.\n???\u002b done \u0026ldquo;Solution\u0026rdquo; 1. Any sequence or iterable can be unpacked into variables using a simple assignment operation. 2. The only requirement is that the the number of variables and structure of the sequence must match.\n\u0060\u0060\u0060python ##---------------------------------------------------------- p = (4,5) ## create a tuple x, y = p ## unpack the tuple into variables \u0027x\u0027 \u0026amp; \u0027y\u0027.",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http:\/\/localhost:1313\/post\/python\/cookbook_dabeaz\/ch01\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "copyrightHolder" : "Vinay Kumar",
+    "copyrightYear" : "0001",
+    "dateCreated": "0001-01-01T00:00:00.00Z",
+    "datePublished": "0001-01-01T00:00:00.00Z",
+    "dateModified": "0001-01-01T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Vinay Kumar",
+        "url": "http://localhost:1313/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http:\/\/localhost:1313\/",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "http://localhost:1313/",
+    "url" : "http:\/\/localhost:1313\/post\/python\/cookbook_dabeaz\/ch01\/",
+    "wordCount" : "3082",
+    "genre" : [ ],
+    "keywords" : [ ]
+}
+</script>
+
+
+</head>
+<body>
+<main>
+      <header>
+    <nav>
+      
+  <ul>
+    <li>
+      
+      
+      
+      
+      <a href="archives" >Archive</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="search/" >Search</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="tags/" >Tags</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.github.com/imflash217/" >Github</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.linkedin.com/in/imflash217" >LinkedIn</a>
+    </li>
+  
+  </ul>
+    </nav>
+  </header>
+  <hr>
+
+
+
+  <section>
+
+      
+
+      <span itemprop="articleBody">
+      <!-- ---
+hide:
+  - navigation # Hide navigation
+  - toc        # Hide table of contents
+--- -->
+<!-- ######################################################################################################### -->
+<h2 id="11-unpacking-a-sequence-into-separate-variables">1.1: Unpacking a sequence into separate variables <a href="#11-unpacking-a-sequence-into-separate-variables" class="hash">#</a></h2>
+<p>???+ danger &ldquo;Problem&rdquo;
+You have a <code>N-element</code> tuple or sequence that you would like to unpack into a collection of <code>N</code> variables.</p>
+<p>???+ done &ldquo;Solution&rdquo;
 1. Any <strong>sequence</strong> or <strong>iterable</strong> can be unpacked into variables using a simple assignment operation.
-2. The only requirement is that the <strong>the number of variables and structure of the sequence must match</strong>.</p><pre><code>```python
+2. The only requirement is that the <strong>the number of variables and structure of the sequence must match</strong>.</p>
+<pre><code>```python
 ##----------------------------------------------------------
 p = (4,5)   ## create a tuple
 x, y = p    ## unpack the tuple into variables 'x' &amp; 'y'. 
@@ -35,11 +191,21 @@ Traceback (most recent call last):
     File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
     ValueError: need more than 2 values to unpack
 ```
-</code></pre><p>???+ quote &ldquo;Discussion&rdquo;
-Unpacking actually works with any object that happens to be <strong>iterable</strong> (tuples, lists, dicts, str, files, iteratirs, generators&mldr;)</p><h2 id=12-unpacking-elements-from-iterables-of-arbitrary-length>1.2: Unpacking elements from iterables of arbitrary length <a href=#12-unpacking-elements-from-iterables-of-arbitrary-length class=hash>#</a></h2><p>???+ danger &ldquo;Problem&rdquo;
-You need to unpack <code>N</code> elements from an <strong>iterable</strong>; but the iterable may be longer than <code>N</code> elements (causing a <code>too many values to unpack</code> exception)</p><p>???+ done &ldquo;Solution&rdquo;</p><h2 id=13-keeping-last-n-items>1.3 Keeping last N items <a href=#13-keeping-last-n-items class=hash>#</a></h2><p>???+ danger &ldquo;Problem&rdquo;
-You want to keep a limited history of last few items seen during iteration.</p><p>???+ done &ldquo;Solution&rdquo;
-1. Keeping a limited history is a perfect use for <code>collections.deque</code></p><pre><code>```python
+</code></pre>
+<p>???+ quote &ldquo;Discussion&rdquo;
+Unpacking actually works with any object that happens to be <strong>iterable</strong> (tuples, lists, dicts, str, files, iteratirs, generators&hellip;)</p>
+<!-- ######################################################################################################### -->
+<h2 id="12-unpacking-elements-from-iterables-of-arbitrary-length">1.2: Unpacking elements from iterables of arbitrary length <a href="#12-unpacking-elements-from-iterables-of-arbitrary-length" class="hash">#</a></h2>
+<p>???+ danger &ldquo;Problem&rdquo;
+You need to unpack <code>N</code> elements from an <strong>iterable</strong>; but the iterable may be longer than <code>N</code> elements (causing a <code>too many values to unpack</code> exception)</p>
+<p>???+ done &ldquo;Solution&rdquo;</p>
+<!-- ######################################################################################################### -->
+<h2 id="13-keeping-last-n-items">1.3 Keeping last N items <a href="#13-keeping-last-n-items" class="hash">#</a></h2>
+<p>???+ danger &ldquo;Problem&rdquo;
+You want to keep a limited history of last few items seen during iteration.</p>
+<p>???+ done &ldquo;Solution&rdquo;
+1. Keeping a limited history is a perfect use for <code>collections.deque</code></p>
+<pre><code>```python
 &quot;&quot;&quot;
 Performs a simple text match on a sequence of lines
 and yields the matching line &amp; previous N lines of context when found
@@ -64,10 +230,15 @@ if __name__ == &quot;__main__&quot;:
             print(line, end=&quot;&quot;)
             print(&quot;--&quot;*10)
 ```
-</code></pre><h2 id=15-priority-queue>1.5: Priority Queue <a href=#15-priority-queue class=hash>#</a></h2><p>???+ danger &ldquo;Problem&rdquo;
+</code></pre>
+<!-- ######################################################################################################### -->
+<h2 id="15-priority-queue">1.5: Priority Queue <a href="#15-priority-queue" class="hash">#</a></h2>
+<p>???+ danger &ldquo;Problem&rdquo;
 You want to implement a <code>queue</code> that sorts items by a given priority
-& always <strong>returns the item with highest priority</strong> on each <code>pop</code> operation.</p><p>???+ done &ldquo;Solution&rdquo;
-The following class uses <code>heapq</code> module to implement a simple <strong>priority queue</strong></p><pre><code>```python
+&amp; always <strong>returns the item with highest priority</strong> on each <code>pop</code> operation.</p>
+<p>???+ done &ldquo;Solution&rdquo;
+The following class uses <code>heapq</code> module to implement a simple <strong>priority queue</strong></p>
+<pre><code>```python
 import heapq
 
 class PriorityQueue:
@@ -123,10 +294,12 @@ q.pop()                             ## Item(&quot;grok&quot;)
 
 In the above example note that the items with same priority (`Item(&quot;foo&quot;)` and `Item(&quot;grok&quot;)`)
 are returned in the same order as they were inserted into the queue.
-</code></pre><p>???+ quote &ldquo;Discussion&rdquo;
+</code></pre>
+<p>???+ quote &ldquo;Discussion&rdquo;
 The core of this recipe concerns with the use of <code>heapq</code> module.
 The methods <code>heapq.heappush()</code> and <code>heapq.heappop()</code> insert and remove items
-from <code>self._queue</code> in such a way that the first tem in the list has the <strong>smallest priority</strong>.</p><pre><code>The `heappop()` method always returns the **smallest** item; so that is the key idea to make 
+from <code>self._queue</code> in such a way that the first tem in the list has the <strong>smallest priority</strong>.</p>
+<pre><code>The `heappop()` method always returns the **smallest** item; so that is the key idea to make 
 our `PriorityQueue` pop correct items.
 
 In this recipe the queue consists of tuple `(-priority, idx, item)`. 
@@ -179,12 +352,17 @@ b = (1, 8, Item(&quot;bar&quot;))
 a &lt; b                   ## Returns &quot;True&quot;
                         ## because idx: 7 &lt; 8 
 ```
-</code></pre><h2 id=16-collectionsdefaultdict>1.6: collections.defaultdict <a href=#16-collectionsdefaultdict class=hash>#</a></h2><p>???+ danger &ldquo;Mapping Keys to multiple values in Dictionary&rdquo;
+</code></pre>
+<!-- ######################################################################################################### -->
+<h2 id="16-collectionsdefaultdict">1.6: collections.defaultdict <a href="#16-collectionsdefaultdict" class="hash">#</a></h2>
+<p>???+ danger &ldquo;Mapping Keys to multiple values in Dictionary&rdquo;
 You want to make a dictionary that maps keys to more than one value
-(so called <code>multdict</code>)</p><p>???+ done &ldquo;Solution&rdquo;
+(so called <code>multdict</code>)</p>
+<p>???+ done &ldquo;Solution&rdquo;
 A dictionary is a <code>mapping</code> where each <code>key</code> is mapped to a single value.
 If you want to map keys to <strong>multiple values</strong>; you need to store multiple values
-in another container (like <code>list</code> or <code>set</code> or other <code>container types</code>)</p><pre><code>```python
+in another container (like <code>list</code> or <code>set</code> or other <code>container types</code>)</p>
+<pre><code>```python
 d = {&quot;a&quot;: [1,2,3],
      &quot;b&quot;: [4,5],
     }
@@ -234,10 +412,12 @@ d.setdefault(&quot;a&quot;, []).append(1)     ## d = {&quot;a&quot;: [1]}
 d.setdefault(&quot;a&quot;, []).append(2)     ## d = {&quot;a&quot;: [1,2]}
 d.setdefault(&quot;b&quot;, []).append(5)     ## d = {&quot;a&quot;: [1,2], &quot;b&quot;: [5]}
 ```
-</code></pre><p>???+ quote &ldquo;Discussion&rdquo;
+</code></pre>
+<p>???+ quote &ldquo;Discussion&rdquo;
 In principle, constructing a multivariate dictionary is simple.
 However, initialization of the first value can be messy if you try to do it yourself.
-Below two code-snippets show this tradeoff.</p><pre><code>```python
+Below two code-snippets show this tradeoff.</p>
+<pre><code>```python
 d = {}
 for key, value in pairs:
     if key not in d:
@@ -251,9 +431,14 @@ d = defaultdict()
 for key, value in items:
     d[key].append(value)
 ```
-</code></pre><h2 id=19-finding-commonalities-in-two-dictionaries>1.9: Finding commonalities in two dictionaries <a href=#19-finding-commonalities-in-two-dictionaries class=hash>#</a></h2><p>???+ danger &ldquo;Problem&rdquo;
-You have two dictionaries and you want to find what they have in common (like same <code>keys</code>, same <code>values</code> etc.)</p><p>???+ done &ldquo;Solution&rdquo;
-Consider two dictionaries</p><pre><code>```python
+</code></pre>
+<!-- ######################################################################################################### -->
+<h2 id="19-finding-commonalities-in-two-dictionaries">1.9: Finding commonalities in two dictionaries <a href="#19-finding-commonalities-in-two-dictionaries" class="hash">#</a></h2>
+<p>???+ danger &ldquo;Problem&rdquo;
+You have two dictionaries and you want to find what they have in common (like same <code>keys</code>, same <code>values</code> etc.)</p>
+<p>???+ done &ldquo;Solution&rdquo;
+Consider two dictionaries</p>
+<pre><code>```python
 a = {&quot;x&quot;:1, &quot;y&quot;:2, &quot;z&quot;:3}
 b = {&quot;w&quot;:10, &quot;x&quot;:11, &quot;y&quot;:2}
 ```
@@ -284,8 +469,10 @@ Below is a sample code using a **dictionary comprehension**
 ## make a new dictionary with certain keys removed
 c = {key:a[key] for key in a.keys()-{&quot;z&quot;, &quot;w&quot;}}     ## {&quot;x&quot;:1, &quot;y&quot;:2}
 ```
-</code></pre><p>???+ quote &ldquo;Discussion&rdquo;
-A <strong>dictionary</strong> is a mapping between a set of <strong>keys</strong> and <strong>values</strong></p><pre><code>The **`.keys()`** method on a dict returns **keys-view** object of the dict.
+</code></pre>
+<p>???+ quote &ldquo;Discussion&rdquo;
+A <strong>dictionary</strong> is a mapping between a set of <strong>keys</strong> and <strong>values</strong></p>
+<pre><code>The **`.keys()`** method on a dict returns **keys-view** object of the dict.
 This keys-view object support common **set** operations like **join**, **intersection**, **difference** etc.
 These set operations are supported because it is **guranteed** that the keys of a dict are uniquely hashable.
 
@@ -297,9 +484,13 @@ BUT, this **values-view** object DOES-NOT SUPPORT common set operations
 because the **values of a dict are not guranteed to be unique**.
 Although, if necessary we can always convert this _values-view object_ into a _set_ and 
 then perform required set-operations as usual.
-</code></pre><h2 id=110-removing-duplicates-from-a-sequence-maintaining-order>1.10: Removing duplicates from a Sequence (maintaining order) <a href=#110-removing-duplicates-from-a-sequence-maintaining-order class=hash>#</a></h2><p>???+ danger &ldquo;Problem&rdquo;
-You want to remove duplicates from the sequence while maintaining order</p><p>???+ done &ldquo;Solution&rdquo;
-If the values in a <strong>sequence</strong> are hashable, then we solve this problem by using <strong><code>set</code></strong> and <strong><code>generator</code></strong></p><pre><code>```python
+</code></pre>
+<h2 id="110-removing-duplicates-from-a-sequence-maintaining-order">1.10: Removing duplicates from a Sequence (maintaining order) <a href="#110-removing-duplicates-from-a-sequence-maintaining-order" class="hash">#</a></h2>
+<p>???+ danger &ldquo;Problem&rdquo;
+You want to remove duplicates from the sequence while maintaining order</p>
+<p>???+ done &ldquo;Solution&rdquo;
+If the values in a <strong>sequence</strong> are hashable, then we solve this problem by using <strong><code>set</code></strong> and <strong><code>generator</code></strong></p>
+<pre><code>```python
 def dedupe(items):
     seen = set()
     for x in items:
@@ -361,10 +552,14 @@ list(dedupe_unhashable(a, key=lambda d: (d[&quot;x&quot;])))
 ```
 
 This solution will work for any kind of data structure and a `key` function that returns a **hashable** value
-</code></pre><h2 id=112-frequency-of-items-in-a-sequence>1.12: Frequency of items in a Sequence <a href=#112-frequency-of-items-in-a-sequence class=hash>#</a></h2><p>???+ danger &ldquo;Problem&rdquo;
+</code></pre>
+<h2 id="112-frequency-of-items-in-a-sequence">1.12: Frequency of items in a Sequence <a href="#112-frequency-of-items-in-a-sequence" class="hash">#</a></h2>
+<p>???+ danger &ldquo;Problem&rdquo;
 You have a sequence of <strong>hashable</strong> items asn you would want ot count the frequency
-of each item in the sequence.</p><p>???+ done &ldquo;Solution&rdquo;
-Use <strong><code>collections.Counter</code></strong></p><pre><code>Suppose we are give a list of strings `words` as shown below and we want to find 
+of each item in the sequence.</p>
+<p>???+ done &ldquo;Solution&rdquo;
+Use <strong><code>collections.Counter</code></strong></p>
+<pre><code>Suppose we are give a list of strings `words` as shown below and we want to find 
 the frequency of each word in the list
 
 ```python
@@ -386,10 +581,12 @@ print(top_three)                            ## [('eyes', 8), ('the', 5), ('look'
 
 The **`Counter`** class has a method `most_common()` which returns the topn &quot;n&quot; most common
 items in the sequence.
-</code></pre><p>???+ quote &ldquo;Discussion&rdquo;
-:dart: As input, the <code>Counter</code> object can be fed any sequence of <strong>hashable</strong> items.
+</code></pre>
+<p>???+ quote &ldquo;Discussion&rdquo;
+&#x1f3af; As input, the <code>Counter</code> object can be fed any sequence of <strong>hashable</strong> items.
 The <code>Counter</code> object is basically just a <strong>dictionary</strong> that holds the unique items
-in the input sequence as its <strong><code>keys</code></strong> and their resepective counts as its <strong><code>values</code></strong>.</p><pre><code>:dart: If you want to increment the count **manually**, simply use _addition_ op.
+in the input sequence as its <strong><code>keys</code></strong> and their resepective counts as its <strong><code>values</code></strong>.</p>
+<pre><code>:dart: If you want to increment the count **manually**, simply use _addition_ op.
 
 ```python
 morewords = ['why','are','you','not','looking','in','my','eyes']
@@ -421,12 +618,16 @@ a + b                                       ## {&quot;hello&quot;:3, &quot;world
 ## subtracting the two counter objects
 a - b                                       ## {&quot;hello&quot;:1, &quot;world&quot;:2, &quot;vinay&quot;:1}
 ```
-</code></pre><h2 id=113-sorting-a-list-of-dicts-by-a-common-key>1.13: Sorting a List of dicts by a common key <a href=#113-sorting-a-list-of-dicts-by-a-common-key class=hash>#</a></h2><p>???+ danger &ldquo;Problem&rdquo;
+</code></pre>
+<h2 id="113-sorting-a-list-of-dicts-by-a-common-key">1.13: Sorting a List of dicts by a common key <a href="#113-sorting-a-list-of-dicts-by-a-common-key" class="hash">#</a></h2>
+<p>???+ danger &ldquo;Problem&rdquo;
 You have a list of dictionaries and you would like to sort the items according to
-one or more of the dict values</p><p>???+ done &ldquo;Solution&rdquo;
+one or more of the dict values</p>
+<p>???+ done &ldquo;Solution&rdquo;
 Sorting this type of structure is easy using <strong><code>operator</code></strong> module&rsquo;s <strong><code>itemgetter()</code></strong> function.
 Let&rsquo;s say you&rsquo;ve queried a database table to get a listing of the members on your website,
-and you receive the following data structure in return.</p><pre><code>```python
+and you receive the following data structure in return.</p>
+<pre><code>```python
 rows = [
     {'fname': 'Brian', 'lname': 'Jones', 'uid': 1003},
     {'fname': 'David', 'lname': 'Beazley', 'uid': 1002},
@@ -474,11 +675,13 @@ print(rows_by_lfname)
  {'fname': 'Big', 'uid': 1004, 'lname': 'Jones'},
  {'fname': 'Brian', 'uid': 1003, 'lname': 'Jones'}]
 ```
-</code></pre><p>???+ quote &ldquo;Discussion&rdquo;
+</code></pre>
+<p>???+ quote &ldquo;Discussion&rdquo;
 In this example, <code>rows</code> is passed to the built-in <strong><code>sorted()</code></strong> function which accepts a keyword
 argument <strong><code>key</code></strong>. The <strong><code>key</code></strong> argument is expected to be a callable that accepts a single item
 from <code>rows</code> as input and returns a single value that is used as a basis for sorting.
-The <strong><code>itemgetter()</code></strong> is just such a callable.</p><pre><code>The **`operator.itemgetter()`** function takes as argument the lookup indices 
+The <strong><code>itemgetter()</code></strong> is just such a callable.</p>
+<pre><code>The **`operator.itemgetter()`** function takes as argument the lookup indices 
 which is used to extract the desired values from the records in the `rows`.
 It can be a dictionary key name, a numeric list element, or any value that can be fed to the 
 object's **`__getitem__()`** method.
@@ -505,10 +708,14 @@ from operator import itemgetter
 min(rows, key=itemgetter(&quot;uid&quot;))    ## {'fname': 'John', 'lname': 'Cleese', 'uid': 1001}
 max(rows, key=itemgetter(&quot;uid&quot;))    ## {'fname': 'Big', 'lname': 'Jones', 'uid': 1004}
 ```
-</code></pre><h2 id=114-sorting-objects-wo-native-comparision-support>1.14: Sorting objects w/o native comparision support <a href=#114-sorting-objects-wo-native-comparision-support class=hash>#</a></h2><p>???+ danger &ldquo;Problem&rdquo;
-You want to sort objects of the same class; but they don&rsquo;t natively support comparision operation.</p><p>???+ done &ldquo;Solution&rdquo;
+</code></pre>
+<h2 id="114-sorting-objects-wo-native-comparision-support">1.14: Sorting objects w/o native comparision support <a href="#114-sorting-objects-wo-native-comparision-support" class="hash">#</a></h2>
+<p>???+ danger &ldquo;Problem&rdquo;
+You want to sort objects of the same class; but they don&rsquo;t natively support comparision operation.</p>
+<p>???+ done &ldquo;Solution&rdquo;
 The built-in <strong><code>sorted()</code></strong> function takes a <strong><code>key</code></strong> argument that can be passed a callable
-that will return a value in the object that <strong><code>sorted()</code></strong> will use to compare the objects.</p><pre><code>For example, if you have sequence of `User` instances and you want to sort the items in the sequence
+that will return a value in the object that <strong><code>sorted()</code></strong> will use to compare the objects.</p>
+<pre><code>For example, if you have sequence of `User` instances and you want to sort the items in the sequence
 using their `used_id` attribute; you would supply a **callable** that will take a `User` instance 
 as input and return the `user_id` of that input which can then be used by **`sorted()`** function
 as a key to sort the instances in the sequence. This is illustrated in the below code.
@@ -534,10 +741,12 @@ sorted(users, key=lambda u: u.user_id)  ## [User(1), User(9), User(23)]
 from operator import attrgetter
 sorted(users, key=attrgetter(&quot;user_id&quot;))    ## [user(1), User(9), User(23)]
 ```
-</code></pre><p>???+ quote &ldquo;Discussion&rdquo;
+</code></pre>
+<p>???+ quote &ldquo;Discussion&rdquo;
 The choice of whether to use <code>lambda</code> or <code>operator.attrgetter()</code> is personal,
 but <strong><code>operator.attrgetter()</code></strong> is a bit faster and <strong>supports multiple attribute indexing</strong>
-as shown below.</p><pre><code>Suppose the `User` class has two attributes `user_id` and `user_name` and we want to sort
+as shown below.</p>
+<pre><code>Suppose the `User` class has two attributes `user_id` and `user_name` and we want to sort
 sequence of `User` instances based on both these attributes; then we can use **`operator.attrgetter()`**
 very easily.
 
@@ -557,4 +766,25 @@ comparision operations that require a `key` attribute such as **`min()`, `max()`
 min(users, key=attrgetter(&quot;user_id&quot;))
 max(users, key=attrgetter(&quot;user_id&quot;))
 ```
-</code></pre></span></section><hr><footer><nav><ul><li>© 2025</li></ul></nav></footer></main></body></html>
+</code></pre>
+
+      </span>
+       
+
+    </section>
+    <hr>
+<footer>
+	  <nav>
+      
+  <ul>
+    <li>
+      © 2025
+    </li>
+  
+  </ul>
+    </nav>
+</footer>
+
+  </main>
+</body>
+</html>

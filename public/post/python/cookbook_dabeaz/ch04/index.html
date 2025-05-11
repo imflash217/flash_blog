@@ -1,15 +1,166 @@
-<!doctype html><html lang=en><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Ronalds Vilcins - http://localhost:1313/"><title>| Vinay Kumar</title>
-<meta name=description content><meta name=twitter:card content="summary"><meta name=twitter:title content><meta name=twitter:description content="Iterators are one of Python&rsquo;s most powerful features. At a high level, you might view iteration simply as a way to process items in a sequence, but there is much more than this such as creating your own iterator object, applying useful iterator patterns in itertools module, make generator functions etc.
-4.1: Manually consuming an iterator # ???+ danger &ldquo;problem&rdquo; You wan tto consume items in an iterable but for whatever reasons you can&rsquo;t or don&rsquo;t want to use a for loop"><meta property="og:title" content><meta property="og:description" content="Iterators are one of Python&rsquo;s most powerful features. At a high level, you might view iteration simply as a way to process items in a sequence, but there is much more than this such as creating your own iterator object, applying useful iterator patterns in itertools module, make generator functions etc.
-4.1: Manually consuming an iterator # ???+ danger &ldquo;problem&rdquo; You wan tto consume items in an iterable but for whatever reasons you can&rsquo;t or don&rsquo;t want to use a for loop"><meta property="og:type" content="article"><meta property="og:url" content="http://localhost:1313/post/python/cookbook_dabeaz/ch04/"><meta property="article:section" content="post"><meta itemprop=name content><meta itemprop=description content="Iterators are one of Python&rsquo;s most powerful features. At a high level, you might view iteration simply as a way to process items in a sequence, but there is much more than this such as creating your own iterator object, applying useful iterator patterns in itertools module, make generator functions etc.
-4.1: Manually consuming an iterator # ???+ danger &ldquo;problem&rdquo; You wan tto consume items in an iterable but for whatever reasons you can&rsquo;t or don&rsquo;t want to use a for loop"><meta itemprop=wordCount content="501"><meta itemprop=keywords content><link rel=canonical href=http://localhost:1313/post/python/cookbook_dabeaz/ch04/><link rel=dns-prefetch href=https://www.google-analytics.com><link href=https://www.google-analytics.com rel=preconnect crossorigin><link rel=alternate type=application/atom+xml title="Vinay Kumar" href=http://localhost:1313/atom.xml><link rel=alternate type=application/json title="Vinay Kumar" href=http://localhost:1313/feed.json><link rel="shortcut icon" type=image/png href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="><style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","articleSection":"post","name":"","headline":"","alternativeHeadline":"","description":"Iterators are one of Python\u0026rsquo;s most powerful features. At a high level, you might view iteration simply as a way to process items in a sequence, but there is much more than this such as creating your own iterator object, applying useful iterator patterns in itertools module, make generator functions etc.\n4.1: Manually consuming an iterator # ???\u002b danger \u0026ldquo;problem\u0026rdquo; You wan tto consume items in an iterable but for whatever reasons you can\u0026rsquo;t or don\u0026rsquo;t want to use a for loop","inLanguage":"en-us","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/localhost:1313\/post\/python\/cookbook_dabeaz\/ch04\/"},"author":{"@type":"Person","name":""},"creator":{"@type":"Person","name":""},"accountablePerson":{"@type":"Person","name":""},"copyrightHolder":"Vinay Kumar","copyrightYear":"0001","dateCreated":"0001-01-01T00:00:00.00Z","datePublished":"0001-01-01T00:00:00.00Z","dateModified":"0001-01-01T00:00:00.00Z","publisher":{"@type":"Organization","name":"Vinay Kumar","url":"http://localhost:1313/","logo":{"@type":"ImageObject","url":"http:\/\/localhost:1313\/","width":"32","height":"32"}},"image":"http://localhost:1313/","url":"http:\/\/localhost:1313\/post\/python\/cookbook_dabeaz\/ch04\/","wordCount":"501","genre":[],"keywords":[]}</script></head><body><main><header><nav><ul><li><a href=/>Index</a></li><li><a href=/about/>About</a></li><li><a href=/atom.xml>RSS</a></li></ul></nav></header><hr><section><span itemprop=articleBody><p>Iterators are one of Python&rsquo;s most powerful features.
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ronalds Vilcins - http://localhost:1313/">
+  <title> | Vinay Kumar</title>
+  <meta name="description" content="Blogs &amp; Articles on Machine Learning by @imflash217">
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Iterators are one of Python&rsquo;s most powerful features. At a high level, you might view iteration simply as a way to process items in a sequence, but there is much more than this such as creating your own iterator object, applying useful iterator patterns in itertools module, make generator functions etc.
+4.1: Manually consuming an iterator # ???&#43; danger &ldquo;problem&rdquo; You wan tto consume items in an iterable but for whatever reasons you can&rsquo;t or don&rsquo;t want to use a for loop"/>
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Iterators are one of Python&rsquo;s most powerful features. At a high level, you might view iteration simply as a way to process items in a sequence, but there is much more than this such as creating your own iterator object, applying useful iterator patterns in itertools module, make generator functions etc.
+4.1: Manually consuming an iterator # ???&#43; danger &ldquo;problem&rdquo; You wan tto consume items in an iterable but for whatever reasons you can&rsquo;t or don&rsquo;t want to use a for loop" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/python/cookbook_dabeaz/ch04/" /><meta property="article:section" content="post" />
+
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Iterators are one of Python&rsquo;s most powerful features. At a high level, you might view iteration simply as a way to process items in a sequence, but there is much more than this such as creating your own iterator object, applying useful iterator patterns in itertools module, make generator functions etc.
+4.1: Manually consuming an iterator # ???&#43; danger &ldquo;problem&rdquo; You wan tto consume items in an iterable but for whatever reasons you can&rsquo;t or don&rsquo;t want to use a for loop">
+
+<meta itemprop="wordCount" content="501">
+<meta itemprop="keywords" content="" />
+  <link rel="canonical" href="http://localhost:1313/post/python/cookbook_dabeaz/ch04/">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
+  <link rel="alternate" type="application/atom+xml" title="Vinay Kumar" href="http://localhost:1313/atom.xml" />
+  <link rel="alternate" type="application/json" title="Vinay Kumar" href="http://localhost:1313/feed.json" />
+  <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
+  
+  <style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 '-apple-system',BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;text-rendering:optimizeSpeed}.posts hr{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:none;border-bottom:1px #353535;flex:1 0 1rem}main{max-width:70ch;padding:2ch;margin:auto}a,body{color:#353535}::selection,a:focus,a:hover{background-color:#353535;color:#fff}.meta{margin:0 0 2.5rem}.tags::before{content:"\2022";margin-left:1rem}code,pre{color:#353535;font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;border:1px solid #353535;font-size:small}.highlight [class^=language-]{color:#fff}code{padding:.1rem;border:none}pre{padding:.5rem;overflow-x:auto}pre code{border:none}img{max-width:100%;border:1px solid #353535}hr{background:#353535;height:1px;border:0}ul{list-style-type:square}ul,ol{padding-left:1.2rem}header li,footer li{display:inline;text-transform:uppercase}header a,footer a{text-decoration:none}header ul,footer ul{justify-content:space-between;display:flex}[aria-current=page]{text-decoration:line-through}header,section,footer{padding:1rem 0}blockquote{border-left:5px solid #353535;padding-left:1rem}.posts ul,header ul,footer ul{list-style:none}.posts,header ul,footer ul{padding:0}.posts li{align-items:center;display:flex;justify-content:space-between;margin-bottom:.7rem}.posts li a,.posts li div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.posts li time{padding-left:1rem;white-space:nowrap;font-variant-numeric:tabular-nums}.hash{opacity:.25;text-decoration:none}table{border-collapse:collapse;text-align:left;width:100%}table tr{background:#fff;border-bottom:1px solid}table th,table td{padding:10px 20px}</style>
+
+  
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "post",
+    "name": "",
+    "headline": "",
+    "alternativeHeadline": "",
+    "description": "Iterators are one of Python\u0026rsquo;s most powerful features. At a high level, you might view iteration simply as a way to process items in a sequence, but there is much more than this such as creating your own iterator object, applying useful iterator patterns in itertools module, make generator functions etc.\n4.1: Manually consuming an iterator # ???\u002b danger \u0026ldquo;problem\u0026rdquo; You wan tto consume items in an iterable but for whatever reasons you can\u0026rsquo;t or don\u0026rsquo;t want to use a for loop",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http:\/\/localhost:1313\/post\/python\/cookbook_dabeaz\/ch04\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": ""
+    },
+    "copyrightHolder" : "Vinay Kumar",
+    "copyrightYear" : "0001",
+    "dateCreated": "0001-01-01T00:00:00.00Z",
+    "datePublished": "0001-01-01T00:00:00.00Z",
+    "dateModified": "0001-01-01T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Vinay Kumar",
+        "url": "http://localhost:1313/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http:\/\/localhost:1313\/",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "http://localhost:1313/",
+    "url" : "http:\/\/localhost:1313\/post\/python\/cookbook_dabeaz\/ch04\/",
+    "wordCount" : "501",
+    "genre" : [ ],
+    "keywords" : [ ]
+}
+</script>
+
+
+</head>
+<body>
+<main>
+      <header>
+    <nav>
+      
+  <ul>
+    <li>
+      
+      
+      
+      
+      <a href="archives" >Archive</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="search/" >Search</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="tags/" >Tags</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.github.com/imflash217/" >Github</a>
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      <a href="https://www.linkedin.com/in/imflash217" >LinkedIn</a>
+    </li>
+  
+  </ul>
+    </nav>
+  </header>
+  <hr>
+
+
+
+  <section>
+
+      
+
+      <span itemprop="articleBody">
+      <p>Iterators are one of Python&rsquo;s most powerful features.
 At a high level, you might view <strong>iteration</strong> simply as a way to process items in a sequence,
 but there is much more than this such as creating your own iterator object, applying useful
-iterator patterns in <strong><code>itertools</code></strong> module, make generator functions etc.</p><h2 id=41-manually-consuming-an-iterator>4.1: Manually consuming an iterator <a href=#41-manually-consuming-an-iterator class=hash>#</a></h2><p>???+ danger &ldquo;problem&rdquo;
+iterator patterns in <strong><code>itertools</code></strong> module, make generator functions etc.</p>
+<h2 id="41-manually-consuming-an-iterator">4.1: Manually consuming an iterator <a href="#41-manually-consuming-an-iterator" class="hash">#</a></h2>
+<p>???+ danger &ldquo;problem&rdquo;
 You wan tto consume items in an <strong>iterable</strong> but for whatever reasons you can&rsquo;t
-or don&rsquo;t want to use a <strong><code>for</code></strong> loop</p><p>???+ done &ldquo;Solution&rdquo;
+or don&rsquo;t want to use a <strong><code>for</code></strong> loop</p>
+<p>???+ done &ldquo;Solution&rdquo;
 To manually consume the <strong>iterable</strong>, use the <strong><code>next()</code></strong> function and write
-code to catch the <strong><code>StopIteration</code></strong> exception as shown below.</p><pre><code>```python hl_lines=&quot;4 6-7&quot;
+code to catch the <strong><code>StopIteration</code></strong> exception as shown below.</p>
+<pre><code>```python hl_lines=&quot;4 6-7&quot;
 with open(&quot;etc/passwd&quot;) as f:
     try:
         while True:
@@ -33,11 +184,13 @@ with open(&quot;etc/passwd&quot;) as f:
                 break
             print(line, end=&quot;&quot;)
 ```
-</code></pre><p>???+ quote &ldquo;Discussion&rdquo;
+</code></pre>
+<p>???+ quote &ldquo;Discussion&rdquo;
 In most cases the <strong><code>for</code></strong> is used to consume the iterable.
 However every now and then a problem statement calls for precise control over
 the underlying mechanism. The below example explains what happens underneath
-the iteration protocol.</p><pre><code>```zsh hl_lines=&quot;4 5 12-14&quot;
+the iteration protocol.</p>
+<pre><code>```zsh hl_lines=&quot;4 5 12-14&quot;
 &gt;&gt;&gt; items= [1, 2, 3]        ## the iterable
 &gt;&gt;&gt; 
 &gt;&gt;&gt; ## Get the iterator
@@ -53,11 +206,15 @@ Traceback (most recent call last):
     file &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
 StopIteration
 ```
-</code></pre><h2 id=42-delegating-iteration>4.2: Delegating Iteration <a href=#42-delegating-iteration class=hash>#</a></h2><p>???+ danger &ldquo;Problem&rdquo;
+</code></pre>
+<h2 id="42-delegating-iteration">4.2: Delegating Iteration <a href="#42-delegating-iteration" class="hash">#</a></h2>
+<p>???+ danger &ldquo;Problem&rdquo;
 You have built a custom container object that internallt holds a <code>list</code> or <code>tuple</code>
-or other <strong>iterables</strong>. You want the <strong>iteration</strong> to work with this custom container.</p><p>???+ done &ldquo;Solution&rdquo;
+or other <strong>iterables</strong>. You want the <strong>iteration</strong> to work with this custom container.</p>
+<p>???+ done &ldquo;Solution&rdquo;
 Typically all you need to do is to define an internal <strong><code>iter()</code></strong> method that delegates iteration
-to internally held container as shown below.</p><pre><code>```python hl_lines=&quot;4 12-13 24-25&quot;
+to internally held container as shown below.</p>
+<pre><code>```python hl_lines=&quot;4 12-13 24-25&quot;
 class Node:
     def __init__(self, value):
         self._value = value
@@ -90,12 +247,36 @@ if __naame__ == &quot;__main__&quot;:
 ```
 :trophy: In the above example, the **`__iter__()`** method simply forwards the iteration request
 to the internally held **`self._children`** attribute.
-</code></pre><p>???+ quote &ldquo;Discussion&rdquo;
+</code></pre>
+<p>???+ quote &ldquo;Discussion&rdquo;
 Python&rsquo;s <strong>iterator protocol</strong> requires the <strong><code>__iter__()</code></strong> method to return a special
 iterator object that implements a <strong><code>__next__()</code></strong> method which actually carries out
-the actual iteration.</p><pre><code>In the above example, we are delegating the implemeation of **`__next__()`** method 
+the actual iteration.</p>
+<pre><code>In the above example, we are delegating the implemeation of **`__next__()`** method 
 by returning a **list** (`iter(self._children)`) which internally implements **`__iter__()`**.
 
 :rotating_light: Calling the **`iter(x)`** function internally calls **`x.__iter__()`**.
 Note that this behaviour is similar to `len(seq)` and `seq.__len__()`
-</code></pre><h2 id=43-creating-new-iteration-patterns-with-generators>4.3: Creating new iteration patterns with GENERATORS <a href=#43-creating-new-iteration-patterns-with-generators class=hash>#</a></h2></span></section><hr><footer><nav><ul><li>© 2025</li></ul></nav></footer></main></body></html>
+</code></pre>
+<h2 id="43-creating-new-iteration-patterns-with-generators">4.3: Creating new iteration patterns with GENERATORS <a href="#43-creating-new-iteration-patterns-with-generators" class="hash">#</a></h2>
+
+      </span>
+       
+
+    </section>
+    <hr>
+<footer>
+	  <nav>
+      
+  <ul>
+    <li>
+      © 2025
+    </li>
+  
+  </ul>
+    </nav>
+</footer>
+
+  </main>
+</body>
+</html>
